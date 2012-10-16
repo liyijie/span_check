@@ -86,9 +86,9 @@ module SpanCheck
           struct_name = ""
           step = 1;
 
-          worksheet.each(skip) do |row|
-            next if row.nil?
-            row = row_format row
+          worksheet.each(skip) do |raw_row|
+            next if raw_row.nil?
+            row = row_format raw_row
             keyname = row[0]
             if keyname == IEMAP_KEY
               step = 2
@@ -103,17 +103,18 @@ module SpanCheck
               @recent_struct = struct_parse
               @msgparse.add_struct struct_parse unless @msgparse.nil?
             else
-                #数据
-                if step == 1
-                  attr_parse = AttrParse.create(row)
-                  @recent_struct << attr_parse
-                #IEMap
-                elsif step == 2
-                  ie_rule = IemapParse.new(row)
-                  @msgparse.add_ie_rule ie_rule unless @msgparse.nil?
-                end
+              #strcut
+              if step == 1
+                next if row[2].nil?
+                attr_parse = AttrParse.create(row)
+                @recent_struct << attr_parse
+              #IEMap
+              elsif step == 2
+                ie_rule = IemapParse.new(row)
+                @msgparse.add_ie_rule ie_rule unless @msgparse.nil?
               end
             end
+          end
             @msgparse.write_xml_element e
           end
 

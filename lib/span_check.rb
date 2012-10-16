@@ -11,5 +11,5 @@ module SpanCheck
   autoload :IemapParse, "./span_check/iemap_parse"
 end
 
-ieconvert = SpanCheck::IeExpConvert.new("../doc/HISI_LTE_IE.xls")
+ieconvert = SpanCheck::IeExpConvert.new("../doc/LC_LTE_IE.xls")
 ieconvert.parse
