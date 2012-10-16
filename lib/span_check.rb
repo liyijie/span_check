@@ -8,6 +8,7 @@ require 'builder'
 module SpanCheck
   autoload :AttrParse, "./span_check/attr_parse"
   autoload :IeExpConvert, "./span_check/ie_exp_convert"
+  autoload :IemapParse, "./span_check/iemap_parse"
 end
 
 ieconvert = SpanCheck::IeExpConvert.new("../doc/HISI_LTE_IE.xls")

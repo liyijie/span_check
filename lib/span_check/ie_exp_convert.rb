@@ -30,10 +30,15 @@ module SpanCheck
         @msgname = infos[0]
         @msgid = infos[1]
         @structs = []
+        @ie_rules = []
       end
 
-      def << struct_parse
+      def add_struct struct_parse
         @structs << struct_parse
+      end
+
+      def add_ie_rule ie_rule
+        @ie_rules << ie_rule
       end
 
       def write_xml_element e
@@ -41,6 +46,11 @@ module SpanCheck
           e.msgbody("skip_length" => "", "msg_length" => "") do
             @structs.each do |struct_parse|
               struct_parse.write_xml_element e
+            end
+          end
+          e.iemap do
+            @ie_rules.each do |ie_rule|
+              ie_rule.write_xml_element e
             end
           end
         end
@@ -91,17 +101,22 @@ module SpanCheck
                 struct_parse = StructParse.new(struct_name)
               end
               @recent_struct = struct_parse
-              @msgparse << struct_parse unless @msgparse.nil?
+              @msgparse.add_struct struct_parse unless @msgparse.nil?
             else
                 #数据
                 if step == 1
                   attr_parse = AttrParse.create(row)
                   @recent_struct << attr_parse
+                #IEMap
+                elsif step == 2
+                  ie_rule = IemapParse.new(row)
+                  @msgparse.add_ie_rule ie_rule unless @msgparse.nil?
                 end
               end
             end
             @msgparse.write_xml_element e
           end
+
           File.open("IE.xml", "w") do |f|
             f.puts xml_string
           end
