@@ -1,0 +1,661 @@
+<?xml version="1.0" ?>
+<root>
+<MessageUnit Color="1586" Group="RRC" MessageName="SYSTEMINFORMATION NO SEGMENT" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="SYSTEMINFORMATION CRC ERROR!" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Unknowable!" Mode="GSM"/>
+<MessageUnit Color="255" Group="Others" MessageName="Reserved for tests procedures" Mode="TD"/>
+<MessageUnit Color="255" Group="Others" MessageName="Reserved for extension of the PD to one octet length" Mode="TD"/>
+<MessageUnit Color="255" Group="Others" MessageName="Location Services" Mode="TD"/>
+<MessageUnit Color="255" Group="Others" MessageName="None Call Related SS Messages" Mode="TD"/>
+<MessageUnit Color="255" Group="Others" MessageName="SMS Messages" Mode="TD"/>
+<MessageUnit Color="255" Group="Others" MessageName="Radio Resources Management Messages" Mode="TD"/>
+<MessageUnit Color="255" Group="Others" MessageName="GPRS Transparent Transport Protocol (GTTP)" Mode="TD"/>
+<MessageUnit Color="255" Group="Others" MessageName="Reserved: was allocated in earlier phases of the protocol" Mode="TD"/>
+<MessageUnit Color="255" Group="Others" MessageName="Broadcast Call Control" Mode="TD"/>
+<MessageUnit Color="255" Group="Others" MessageName="Group Call Control" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Start CC" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Recall" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="CC-Establishment Confirmed" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="CC-Establishment" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="CM Service Prompt" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="Authentication Failure" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Authentication and Ciphering Failure" Mode="TD"/>
+<MessageUnit Color="65535" Group="SM" MessageName="SM Status" Mode="TD"/>
+<MessageUnit Color="65535" Group="SM" MessageName="Deactivate PDP Context Accept" Mode="TD"/>
+<MessageUnit Color="65535" Group="SM" MessageName="Deactivate PDP Context Request" Mode="TD"/>
+<MessageUnit Color="65535" Group="SM" MessageName="Modify PDP Context Reject" Mode="TD"/>
+<MessageUnit Color="65535" Group="SM" MessageName="Modify PDP Context Accept (Network to MS direction)" Mode="TD"/>
+<MessageUnit Color="65535" Group="SM" MessageName="Modify PDP Context Accept (MS to Network direction)" Mode="TD"/>
+<MessageUnit Color="65535" Group="SM" MessageName="Modify PDP Context Request (MS to Network direction)" Mode="TD"/>
+<MessageUnit Color="65535" Group="SM" MessageName="Modify PDP Context Request (Network to MS direction)" Mode="TD"/>
+<MessageUnit Color="65535" Group="SM" MessageName="Request PDP Context Activation Reject" Mode="TD"/>
+<MessageUnit Color="65535" Group="SM" MessageName="Request PDP Context Activation" Mode="TD"/>
+<MessageUnit Color="65535" Group="SM" MessageName="Activate Secondary PDP Context Reject" Mode="TD"/>
+<MessageUnit Color="65535" Group="SM" MessageName="Activate Secondary PDP Context Accept" Mode="TD"/>
+<MessageUnit Color="65535" Group="SM" MessageName="Activate Secondary PDP Context Request" Mode="TD"/>
+<MessageUnit Color="65535" Group="SM" MessageName="Activate PDP Context Reject" Mode="TD"/>
+<MessageUnit Color="65535" Group="SM" MessageName="Activate PDP Context Accept" Mode="TD"/>
+<MessageUnit Color="65535" Group="SM" MessageName="Activate PDP Context Request" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Service Reject" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Service Accept" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Service Request" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="GMM Information" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="GMM Status" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Routing Area Update Reject" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Routing Area Update Complete" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Routing Area Update Accept" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Routing Area Update Request" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Identity Response" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Identity Request" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Authentication and Ciphering Reject" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Authentication and Ciphering Response" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Authentication and Ciphering Request" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="P-TMSI Reallocation Complete" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="P-TMSI Reallocation Command" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Detach Accept" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Detach Request" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Attach Reject" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Attach Complete" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Attach Accept" Mode="TD"/>
+<MessageUnit Color="46586" Group="GMM" MessageName="Attach Request" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Stop DTMF Acknowledge" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Stop DTMF" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Status Enquiry" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Status" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Start DTMF Reject" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Start DTMF Acknowledge" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Start DTMF" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Notify" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Congestion Control" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Retrieve Reject" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Retrieve Acknowledge" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Retrieve" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Hold Reject" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Hold Acknowledge" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Hold" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Facility" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Release Complete" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Release" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Disconnect" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="User Information" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Modify Reject" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Modify Complete" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Modify" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Setup" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Progress" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Emergency Setup" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Connect Acknowledge" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Connect" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Call Proceeding" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Call Confirmed" Mode="TD"/>
+<MessageUnit Color="16333305" Group="CC" MessageName="Alerting" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="MM Null" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="MM Status" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="MM Information" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="Abort" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="CM Re-establishment Request" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="CM Service Request" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="CM Service Abort" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="CM Service Reject" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="CM Service Accept" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="TMSI Reallocation Complete" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="TMSI Reallocation Command" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="Identity Response" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="Identity Request" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="Authentication Response" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="Authentication Request" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="Authentication Reject" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="Location Updating Request" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="Location Updating Reject" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="Location Updating Accept" Mode="TD"/>
+<MessageUnit Color="1646586" Group="MM" MessageName="IMSI Detach Indication" Mode="TD"/>
+<MessageUnit Color="644656" Group="Layer2" MessageName="UA-RSP" Mode="TD"/>
+<MessageUnit Color="644656" Group="Layer2" MessageName="DM-RSP" Mode="TD"/>
+<MessageUnit Color="644656" Group="Layer2" MessageName="REJ-RSP" Mode="TD"/>
+<MessageUnit Color="644656" Group="Layer2" MessageName="RNR-RSP" Mode="TD"/>
+<MessageUnit Color="644656" Group="Layer2" MessageName="RR-RSP" Mode="TD"/>
+<MessageUnit Color="644656" Group="Layer2" MessageName="I-CMD" Mode="TD"/>
+<MessageUnit Color="644656" Group="Layer2" MessageName="DISC-CMD" Mode="TD"/>
+<MessageUnit Color="644656" Group="Layer2" MessageName="SABM-CMD" Mode="TD"/>
+<MessageUnit Color="644656" Group="Layer2" MessageName="UI-CMD" Mode="TD"/>
+<MessageUnit Color="644656" Group="Layer2" MessageName="REJ-CMD" Mode="TD"/>
+<MessageUnit Color="644656" Group="Layer2" MessageName="RNR-CMD" Mode="TD"/>
+<MessageUnit Color="644656" Group="Layer2" MessageName="RR-CMD" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Uplink Dummy Control Block" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Uplink Assignment" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Uplink Ack/Nack" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Timeslot Reconfigure" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet TBF Release" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet System Information Type 15" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet System Information Type 14" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet System Information Type 13" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet System Information Type 8" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet System Information Type 7" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet System Information Type 6" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet System Information Type 5" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet System Information Type 4" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet System Information Type 3ter" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet System Information Type 3quater" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet System Information Type 3bis" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet System Information Type 3" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet System Information Type 2" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet System Information Type 1" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet SI Status" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Serving Cell Data" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Resource Request" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Queueing Notification" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet PSI Status" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Power Control/Timing Advance" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Polling Request" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Pause" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Paging Request" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Neighbor Cell Data" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Mobile TBF Status" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Measurement Report" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Measurement Order" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Enhanced Measurement Report" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Downlink Dummy Control Block" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Downlink Assignment" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Downlink Ack/Nack" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Control Acknowledgement (11-bit)" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Control Acknowledgement (8-bit)" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Control Acknowledgement" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Channel Request" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Cell Change Order" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Cell Change Notification" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Cell Change Failure" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Cell Change Continue" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet Access Reject" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet PRACH Parameters" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Packet PDCH Release" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="EGPRS Packet Downlink Ack/Nack" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="EGPRS Packet Channel Request" Mode="TD"/>
+<MessageUnit Color="163333056" Group="GRR" MessageName="Additional MS Radio Access Capabilities" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Application Information" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Configuration Change Reject" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Configuration Change Acknowledge" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Configuration Change Command" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="GPRS Suspension Request" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="RR Status" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Synchronization Channel Information" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Measurement Report" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Frequency Redefinition" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Geran Iu Mode Classmark Change" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="CDMA2000 Classmark Change" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="UTRAN Classmark Change" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Classmark Enquiry" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Classmark Change" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Channel Request" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Channel Mode Modify Acknowledge" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Channel Mode Modify" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Enhanced Measurement Report" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Measurement Information" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Measurement Report" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Extended Measurement Report" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Extended Measurement Order" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Priority Uplink Request" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="VGCS Uplink Grant" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Uplink Release" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Uplink Free" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Uplink Busy" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Uplink Access" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Talker Indication" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="VBS/VGCS Reconfigure2" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="VBS/VGCS Reconfigure" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Notification Response" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Notification/(NCH)" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Notification FACCH" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 20" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 19" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 18" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 17" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 16" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 15" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 14" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 13alt" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 13" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 10" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 9" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 8" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 7" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 6" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 5ter" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 5bis" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 5" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 4" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 3" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 2n" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 2quater" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 2ter" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 2bis" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 2" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="System Information Type 1" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Paging Response" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Paging Request Type 3" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Paging Request Type 2" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Paging Request Type 1" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Packet Notification" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Partial Release Complete" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Partial Release" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Channel Release" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Inter-System To CDMA2000 Handover Command" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Physical Information" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Handover Failure" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Handover Complete" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Handover Command" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Handover Access" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Inter-System To UTRAN Handover Command" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="DTM Assignment Command" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Assignment Failure" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Assignment Complete" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Assignment Command" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Ciphering Mode Complete" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Ciphering Mode Command" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Packet Assignment" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="DTM Request" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="DTM Reject" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="DTM Assignment Failure" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Immediate Assignment Reject" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Immediate Assignment Extended" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Immediate Assignment" Mode="TD"/>
+<MessageUnit Color="3407769" Group="RR" MessageName="Additional Assignment" Mode="TD"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="mbmsModificationRequest" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="MCCH_MessageType_spare1" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="MCCH_MessageType_spare2" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="MCCH_MessageType_spare3" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="MCCH_MessageType_spare4" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="MCCH_MessageType_spare5" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="MCCH_MessageType_spare6" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="MCCH_MessageType_spare7" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="MCCH_MessageType_spare8" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="MCCH_MessageType_spare9" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="mbmsUnmodifiedServicesInformation" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="mbmsNeighbouringCellPTMRBInformation" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="MCCH_MessageType_mbmsModifiedServicesInformation" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="mbmsGeneralInformation" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="mbmsCurrentCellPTMRBInformation" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="mbmsCommonPTMRBInformation" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="mbmsAccessInformation" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="genericIndication" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="mobileMultilinkReconfigurationIndication" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="flowControlIndication" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="logicalChannelRateRelease" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="multilinkIndication" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="functionNotSupported" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="vendorIdentification" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="conferenceIndication" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="mcLocationIndication" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="h2250MaximumSkewIndication" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="userInput" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="newATMVCIndication" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="h223SkewIndication" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="jitterIndication" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="miscellaneousIndication" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="requestModeRelease" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="requestMultiplexEntryRelease" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="multiplexEntrySendRelease" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="requestChannelCloseRelease" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="openLogicalChannelConfirm" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="terminalCapabilitySetRelease" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="masterSlaveDeterminationRelease" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="functionNotUnderstood" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="genericCommand" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="mobileMultilinkReconfigurationCommand" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="newATMVCCommand" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="h223MultiplexReconfiguration" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="conferenceCommand" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="communicationModeCommand" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="miscellaneousCommand" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="endSessionCommand" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="flowControlCommand" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="encryptionCommand" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="sendTerminalCapabilitySet" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="maintenanceLoopOffCommand" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="genericResponse" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="logicalChannelRateReject" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="logicalChannelRateAcknowledge" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="multilinkResponse" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="conferenceResponse" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="communicationModeResponse" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="maintenanceLoopReject" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="maintenanceLoopAck" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="roundTripDelayResponse" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="requestModeReject" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="requestModeAck" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="requestMultiplexEntryReject" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="requestMultiplexEntryAck" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="multiplexEntrySendReject" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="multiplexEntrySendAck" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="requestChannelCloseReject" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="requestChannelCloseAck" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="closeLogicalChannelAck" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="openLogicalChannelReject" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="openLogicalChannelAck" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="terminalCapabilitySetReject" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="terminalCapabilitySetAck" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="masterSlaveDeterminationReject" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="masterSlaveDeterminationAck" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="genericRequest" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="logicalChannelRateRequest" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="multilinkRequest" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="conferenceRequest" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="communicationModeRequest" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="maintenanceLoopRequest" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="roundTripDelayRequest" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="requestMode" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="requestMultiplexEntry" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="multiplexEntrySend" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="requestChannelClose" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="closeLogicalChannel" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="openLogicalChannel" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="terminalCapabilitySet" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="masterSlaveDetermination" Mode="GSM"/>
+<MessageUnit Color="144658" Group="H245" MessageName="nonStandard" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Message Type Spare 1 (DL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Message Type Spare 2 (DL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Message Type Spare 3 (DL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Message Type Spare 4 (DL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Message Type Spare 5 (DL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Message Type Spare 6 (DL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Message Type Spare 7 (DL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Message Type Spare 1 (DL-CCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Message Type Spare 2 (DL-CCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Message Type Spare 3 (DL-CCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Message Type Spare 1 (UL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Message Type Spare 2 (UL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Paging Response" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Cell Change Order From UTRAN Failure" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Message Type Spare1 (UL-CCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Message Type Spare 1 (BCCH-FACH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Message Type Spare 2 (BCCH-FACH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information (FACH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Message Type Spare (PCCH)" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Start CC" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Recall" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="CC-Establishment Confirmed" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="CC-Establishment" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="CM Service Prompt" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="Authentication Failure" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Authentication and Ciphering Failure" Mode="GSM"/>
+<MessageUnit Color="1644586" Group="SM" MessageName="SM Status" Mode="GSM"/>
+<MessageUnit Color="1644586" Group="SM" MessageName="Deactivate PDP Context Accept" Mode="GSM"/>
+<MessageUnit Color="1644586" Group="SM" MessageName="Deactivate PDP Context Request" Mode="GSM"/>
+<MessageUnit Color="1644586" Group="SM" MessageName="Modify PDP Context Reject" Mode="GSM"/>
+<MessageUnit Color="1644586" Group="SM" MessageName="Modify PDP Context Accept (Network to MS direction)" Mode="GSM"/>
+<MessageUnit Color="1644586" Group="SM" MessageName="Modify PDP Context Accept (MS to Network direction)" Mode="GSM"/>
+<MessageUnit Color="1644586" Group="SM" MessageName="Modify PDP Context Request (MS to Network direction)" Mode="GSM"/>
+<MessageUnit Color="1644586" Group="SM" MessageName="Modify PDP Context Request (Network to MS direction)" Mode="GSM"/>
+<MessageUnit Color="1644586" Group="SM" MessageName="Request PDP Context Activation Reject" Mode="GSM"/>
+<MessageUnit Color="1644586" Group="SM" MessageName="Request PDP Context Activation" Mode="GSM"/>
+<MessageUnit Color="1644586" Group="SM" MessageName="Activate Secondary PDP Context Reject" Mode="GSM"/>
+<MessageUnit Color="1644586" Group="SM" MessageName="Activate Secondary PDP Context Accept" Mode="GSM"/>
+<MessageUnit Color="1644586" Group="SM" MessageName="Activate Secondary PDP Context Request" Mode="GSM"/>
+<MessageUnit Color="1644586" Group="SM" MessageName="Activate PDP Context Reject" Mode="GSM"/>
+<MessageUnit Color="1644586" Group="SM" MessageName="Activate PDP Context Accept" Mode="GSM"/>
+<MessageUnit Color="1644586" Group="SM" MessageName="Activate PDP Context Request" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Service Reject" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Service Accept" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Service Request" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="GMM Information" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="GMM Status" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Routing Area Update Reject" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Routing Area Update Complete" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Routing Area Update Accept" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Routing Area Update Request" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Identity Response" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Identity Request" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Authentication and Ciphering Reject" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Authentication and Ciphering Response" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Authentication and Ciphering Request" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="P-TMSI Reallocation Complete" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="P-TMSI Reallocation Command" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Detach Accept" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Detach Request" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Attach Reject" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Attach Complete" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Attach Accept" Mode="GSM"/>
+<MessageUnit Color="6446586" Group="GMM" MessageName="Attach Request" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Stop DTMF Acknowledge" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Stop DTMF" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Status Enquiry" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Status" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Start DTMF Reject" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Start DTMF Acknowledge" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Start DTMF" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Notify" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Congestion Control" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Retrieve Reject" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Retrieve Acknowledge" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Retrieve" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Hold Reject" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Hold Acknowledge" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Hold" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Facility" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Release Complete" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Release" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Disconnect" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="User Information" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Modify Reject" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Modify Complete" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Modify" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Setup" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Progress" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Emergency Setup" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Connect Acknowledge" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Connect" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Call Proceeding" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Call Confirmed" Mode="GSM"/>
+<MessageUnit Color="16737792" Group="CC" MessageName="Alerting" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="MM Null" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="MM Status" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="MM Information" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="Abort" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="CM Re-establishment Request" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="CM Service Request" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="CM Service Abort" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="CM Service Reject" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="CM Service Accept" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="TMSI Reallocation Complete" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="TMSI Reallocation Command" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="Identity Response" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="Identity Request" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="Authentication Response" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="Authentication Request" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="Authentication Reject" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="Location Updating Request" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="Location Updating Reject" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="Location Updating Accept" Mode="GSM"/>
+<MessageUnit Color="163333056" Group="MM" MessageName="IMSI Detach Indication" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type Spare 2" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type Spare 1" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 15_5" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Scheduling Block 2" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Scheduling Block 1" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 18" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 15_4" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 17" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 16" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 15_3" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 15_2" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 15_1" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 15" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 14" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 13_4" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 13_3" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 13_2" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 13_1" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 13" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 12" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 11" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 10" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 9" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 8" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 7" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 6" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 5" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 4" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 3" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 2" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Block Type 1" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="System Information Change Indication" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Master Information Block" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Paging Type 1" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="URA Update" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="RRC Connection Request" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Cell Update" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="URA Update Confirm (DL-CCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="RRC Connection Setup" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="RRC Connection Release (DL-CCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="RRC Connection Reject" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Cell Update Confirm (DL-CCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="UTRAN Mobility Information Failure" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="UTRAN Mobility Information Confirm" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Uplink Direct Transfer" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="UE Capability Information" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Transport Format Combination Control Failure" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Transport Channel Reconfiguration Failure" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Transport Channel Reconfiguration Complete" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Signalling Connection Release Indication" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Security Mode Failure" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Security Mode Complete" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="RRC Status" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="RRC Connection Setup Complete" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="RRC Connection Release Complete" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Radio Bearer Setup Failure" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Radio Bearer Setup Complete" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Radio Bearer Release Failure" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Radio Bearer Release Complete" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Radio Bearer Reconfiguration Failure" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Radio Bearer Reconfiguration Complete" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Physical Channel Reconfiguration Failure" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Physical Channel Reconfiguration Complete" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Measurement Report" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Measurement Control Failure" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Handover From UTRAN Failure" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Initial Direct Transfer" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Handover To UTRAN Complete" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Counter Check Response" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Active Set Update Failure" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Active Set Update Complete" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="UTRAN Mobility Information" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="URA Update Confirm (DL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Uplink Physical Channel Control" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="UE Capability Information Confirm" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="UE Capability Enquiry" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Transport Format Combination Control" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Transport Channel Reconfiguration (DL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Signalling Connection Release" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Security Mode Command" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="RRC Connection Release (DL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Radio Bearer Setup (DL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Radio Bearer Release (DL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Radio Bearer Reconfiguration (DL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Physical Shared Channel Allocation (DL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Physical Channel Reconfiguration (DL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Paging Type 2" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Measurement Control" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Handover From UTRAN Command-CDMA2000" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Handover From UTRAN Command-GSM" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Downlink Direct Transfer" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Counter Check" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Cell Update Confirm (DL-DCCH)" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Cell Change Order From UTRAN" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Assistance Data Delivery" Mode="GSM"/>
+<MessageUnit Color="1586" Group="RRC" MessageName="Active Set Update" Mode="GSM"/>
+<MessageUnit Color="16586" Group="others" MessageName="Reserved for tests procedures" Mode="GSM"/>
+<MessageUnit Color="16586" Group="others" MessageName="Reserved for extension of the PD to one octet length" Mode="GSM"/>
+<MessageUnit Color="16586" Group="others" MessageName="Location Services" Mode="GSM"/>
+<MessageUnit Color="16586" Group="others" MessageName="None Call Related SS Messages" Mode="GSM"/>
+<MessageUnit Color="16586" Group="others" MessageName="SMS Messages" Mode="GSM"/>
+<MessageUnit Color="16586" Group="others" MessageName="Radio Resources Management Messages" Mode="GSM"/>
+<MessageUnit Color="16586" Group="others" MessageName="GPRS Transparent Transport Protocol (GTTP)" Mode="GSM"/>
+<MessageUnit Color="16586" Group="others" MessageName="Reserved: was allocated in earlier phases of the protocol" Mode="GSM"/>
+<MessageUnit Color="16586" Group="others" MessageName="Broadcast Call Control" Mode="GSM"/>
+<MessageUnit Color="16586" Group="others" MessageName="Group Call Control" Mode="GSM"/>
+<MessageUnit Color="255" Group="Protocol" MessageName="message name" Mode="LTE" /> 
+<MessageUnit Color="255" Group="RRC" MessageName="CounterCheck" Mode="LTE" /> 
+<MessageUnit Color="255" Group="RRC" MessageName="CounterCheckResponse" Mode="LTE" /> 
+<MessageUnit Color="255" Group="RRC" MessageName="CSFBParametersRequestCDMA2000" Mode="LTE" /> 
+<MessageUnit Color="255" Group="RRC" MessageName="CSFBParametersResponseCDMA2000" Mode="LTE" /> 
+<MessageUnit Color="255" Group="RRC" MessageName="DLInformationTransfer" Mode="LTE" /> 
+<MessageUnit Color="255" Group="RRC" MessageName="HandoverFromEUTRAPreparationRequest (CDMA2000)" Mode="LTE" /> 
+<MessageUnit Color="255" Group="RRC" MessageName="MasterInformationBlock" Mode="LTE" /> 
+<MessageUnit Color="255" Group="RRC" MessageName="MBSFNAreaConfiguration" Mode="LTE" /> 
+<MessageUnit Color="255" Group="RRC" MessageName="MeasurementReport" Mode="LTE" /> 
+<MessageUnit Color="255" Group="RRC" MessageName="MobilityFromEUTRACommand" Mode="LTE" /> 
+<MessageUnit Color="255" Group="RRC" MessageName="Paging" Mode="LTE" /> 
+<MessageUnit Color="255" Group="RRC" MessageName="ProximityIndication" Mode="LTE" /> 
+<MessageUnit Color="255" Group="RRC" MessageName="RRCConnectionReconfiguration" Mode="LTE" /> 
+<MessageUnit Color="255" Group="RRC" MessageName="RRCConnectionReconfigurationComplete" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="RRCConnectionReestablishment" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="RRCConnectionReestablishmentComplete" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="RRCConnectionReestablishmentReject" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="RRCConnectionReestablishmentRequest" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="RRCConnectionReject" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="RRCConnectionRelease" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="RRCConnectionRequest" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="RRCConnectionSetup" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="RRCConnectionSetupComplete" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="SystemInformation" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="SystemInformationBlockType1" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="UECapabilityEnquiry" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="UECapabilityInformation" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="UEInformationRequest" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="UEInformationResponse" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="ULHandoverPreparationTransfer (CDMA2000)" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="RRC" MessageName="ULInformationTransfer" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Attach accept" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Attach complete" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Attach reject" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Attach request" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Authentication failure" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Authentication reject" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Authentication request" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Authentication response" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="CS service notification" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Detach accept" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Detach request" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Downlink NAS Transport" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="EMM information" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="EMM status" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Extended service request" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="GUTI reallocation command" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="GUTI reallocation complete" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Identity request" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Identity response" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Security mode command" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Security mode complete" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Security mode failure" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Security mode reject" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Security protected NAS message" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Service reject" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Service request" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Tracking area update accept" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Tracking area update complete" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Tracking area update reject" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Tracking area update request" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Uplink NAS Transport" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="EMM" MessageName="Downlink generic NAS transport" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="Activate dedicated EPS bearer context accept" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="Activate dedicated EPS bearer context reject" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="Activate dedicated EPS bearer context request" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="Activate default EPS bearer context accept" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="Activate default EPS bearer context reject" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="Activate default EPS bearer context request" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="Bearer resource allocation reject" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="Bearer resource allocation request" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="Bearer resource modification reject" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="Bearer resource modification request" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="Deactivate EPS bearer context accept" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="Deactivate EPS bearer context request" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="ESM information request" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="ESM information response" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="ESM status" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="Modify EPS bearer context accept" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="Modify EPS bearer context reject" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="Modify EPS bearer context request" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="PDN connectivity reject" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="PDN connectivity request" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="PDN disconnect reject" Mode="LTE" /> 
+  <MessageUnit Color="255" Group="ESM" MessageName="PDN disconnect request" Mode="LTE" /> 
+</root>

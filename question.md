@@ -1,0 +1,5 @@
+UINT8#1，这里#代表是什么意思？
+ierule的insidepara和outsidepara是什么意思
+attar的bitrelatedetailinfo是什么意思
+UINT16_REVERSE，什么时候用REVERSE，只对LC_LTE有效
+<ierule equalrule="i740[Inter_frequency_measurement_parameter.Inter_freq_info_ast[Inter_frequency_measurement_parameter.Inter_freq_num].inter_freq_neigh_cell_num]=Inter_frequency_measurement_parameter.Inter_freq_info_ast[x].inter_freq_neigh_cell_info_list_ast[y].phy_cell_id" iemax="32"/>，下标问题

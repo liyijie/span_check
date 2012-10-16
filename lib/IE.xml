@@ -1,0 +1,1569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<all>
+  <msg id="0x301" msgname="Cell_Quality_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="Cell_Quality_Info">
+        <attr name="CRS_Rx0Rsrp" type="INT16#2" extend="[-140,25]"/>
+        <attr name="CRS_Rx1Rsrp" type="INT16#2" extend="[-140,25]"/>
+        <attr name="CRS_AvgSinr" type="INT16#2" extend=""/>
+        <attr name="reverse" type="UINT16#4" extend=""/>
+        <attr name="DRS_Rsrp" type="UINT16#4" extend=""/>
+        <attr name="DRS_Sinr" type="UINT16#4" extend=""/>
+        <attr name="PDSCH_RSRP" type="UINT16#4" extend=""/>
+        <attr name="PDSCH_SINR" type="UINT16#4" extend=""/>
+        <attr name="PDCCH_RSRP" type="UINT16#4" extend=""/>
+        <attr name="PDCCH_SINR" type="UINT16#4" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x302" msgname="PUSCH_Grant_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PUSCH_Grant_Info">
+        <attr name="RecordNum" type="UINT16#4" extend=""/>
+        <attr name="Rsd" type="UINT16#4" extend=""/>
+        <attr name="PUSCH_G_Info" type="ARRAY#12" extend=""/>
+      </struct>
+      <struct name="PUSCH_Grant_Info_st">
+        <attr name="SFN" type="UINT16#4" extend=""/>
+        <attr name="SBFN" type="UINT8#1" extend=""/>
+        <attr name="RntiType" type="UINT8#1" extend=""/>
+        <attr name="DciPayload" type="UINT32#8" extend=""/>
+        <attr name="HoppingFlag" type="UINT8#1" extend="{0,1}"/>
+        <attr name="Slot0RbStart" type="UINT8#1" extend="[0,99]"/>
+        <attr name="Slot1RbStart" type="UINT8#1" extend="[0,99]"/>
+        <attr name="RbNum" type="UINT8#1" extend="[0,100]"/>
+        <attr name="Mcs" type="UINT8#1" extend="[0,31]"/>
+        <attr name="Ndi" type="UINT8#1" extend="{0,1}"/>
+        <attr name="Tpc" type="UINT8#1" extend="[0,3]"/>
+        <attr name="DMRS" type="UINT8#1" extend="[0,9]"/>
+        <attr name="UlIndex" type="UINT8#1" extend="[0,3]"/>
+        <attr name="Dai" type="UINT8#1" extend="[0,3]"/>
+        <attr name="CqiReq" type="UINT8#1" extend="{0,1}"/>
+        <attr name="Rsd" type="UINT8#1" extend=""/>
+        <attr name="Tbsize" type="UINT32#8" extend="[16,75376]"/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x303" msgname="PUSCH_Power_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PUSCH_Power_Info">
+        <attr name="RecordNum" type="UINT16#4" extend=""/>
+        <attr name="Rsd" type="UINT16#4" extend=""/>
+        <attr name="PUSCH_P_Info" type="ARRAY#12" extend=""/>
+      </struct>
+      <struct name="PUSCH_Power_Info_st">
+        <attr name="SFN" type="UINT16#4" extend="[0,1023]"/>
+        <attr name="SBFN" type="UINT8#1" extend="[0,9]"/>
+        <attr name="Mpusch" type="UINT8#1" extend="[0,100]"/>
+        <attr name="TxPower" type="INT16#2" extend="[-40,23]"/>
+        <attr name="Alf" type="UINT16#4" extend="[0,7]"/>
+        <attr name="PL" type="UINT16#4" extend=""/>
+        <attr name="sDeltaF" type="INT16#2" extend=""/>
+        <attr name="fi" type="INT16#2" extend=""/>
+        <attr name="sP0" type="INT16#2" extend=""/>
+        <attr name="Tpc" type="INT16#2" extend="{–1, 0, 1,3}"/>
+        <attr name="usRsd" type="UINT16#4" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x304" msgname="Power_Headroom_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="Power_Headroom_Info">
+        <attr name="SFN" type="UINT16#4" extend="[0,1023]"/>
+        <attr name="SBFN" type="UINT8#1" extend="[0,9]"/>
+        <attr name="usRsd1" type="UINT8#1" extend=""/>
+        <attr name="Phr" type="INT16#2" extend="[-23,40]"/>
+        <attr name="usRsd2" type="UINT16#4" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x305" msgname="PUCCH_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PUCCH_Info">
+        <attr name="RecordNum" type="UINT16#4" extend=""/>
+        <attr name="Rsd" type="UINT16#4" extend=""/>
+        <attr name="PUCCH_array_Info" type="ARRAY#12" extend=""/>
+      </struct>
+      <struct name="PUCCH_Info_st">
+        <attr name="SFN" type="UINT16#4" extend="[0,1023]"/>
+        <attr name="SBFN" type="UINT8#1" extend="[0,9]"/>
+        <attr name="Format" type="UINT8#1" extend=""/>
+        <attr name="TxPower" type="INT16#2" extend=""/>
+        <attr name="sP0" type="INT16#2" extend=""/>
+        <attr name="PL" type="UINT16#4" extend=""/>
+        <attr name="sDeltaF" type="INT16#2" extend=""/>
+        <attr name="sGiValue" type="INT16#2" extend=""/>
+        <attr name="sTpcValue" type="INT16#2" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x319" msgname="SRS_power_info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="SRS_power_info">
+        <attr name="RecordNum" type="UINT16#4" extend=""/>
+        <attr name="Rsd" type="UINT16#4" extend=""/>
+        <attr name="SRS_array_Info" type="ARRAY#12" extend=""/>
+      </struct>
+      <struct name="SRS_power_info_st">
+        <attr name="SFN" type="UINT16#4" extend="[0,1023]"/>
+        <attr name="SBFN" type="UINT8#1" extend="[0,9]"/>
+        <attr name="usRsd" type="UINT8#1" extend=""/>
+        <attr name="SrsRBNum" type="UINT16#4" extend="[0,100]"/>
+        <attr name="usMSrs" type="UINT16#4" extend="[0,20]"/>
+        <attr name="sP0" type="INT16#2" extend=""/>
+        <attr name="Alf" type="UINT16#4" extend="[0,7]"/>
+        <attr name="sfi" type="INT16#2" extend=""/>
+        <attr name="PL" type="UINT16#4" extend=""/>
+        <attr name="sSrsOffset" type="INT16#2" extend=""/>
+        <attr name="TxPower" type="INT16#2" extend="[-40,23]"/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x307" msgname="DSCH_BLER_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="DSCH_BLER_Info">
+        <attr name="Code0Total" type="UINT16#4" extend=""/>
+        <attr name="Code0Error" type="UINT16#4" extend=""/>
+        <attr name="Code1Total" type="UINT16#4" extend=""/>
+        <attr name="Code1Error" type="UINT16#4" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x308" msgname="DSCH_Harq_BLER_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="DSCH_Harq_BLER_Info">
+        <attr name="Code0InitTotal" type="UINT16#4" extend=""/>
+        <attr name="Code0InitError" type="UINT16#4" extend=""/>
+        <attr name="Code1InitTotal" type="UINT16#4" extend=""/>
+        <attr name="Code1InitError" type="UINT16#4" extend=""/>
+        <attr name="Code0ReTotal" type="UINT16#4" extend=""/>
+        <attr name="Code0ReError" type="UINT16#4" extend=""/>
+        <attr name="Code1ReTotal" type="UINT16#4" extend=""/>
+        <attr name="Code1ReError" type="UINT16#4" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x315" msgname="PUSCH_Harq_BLER_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PUSCH_Harq_BLER_Info">
+        <attr name="InitTotal" type="UINT16#4" extend=""/>
+        <attr name="InitError" type="UINT16#4" extend=""/>
+        <attr name="ReTotal" type="UINT16#4" extend=""/>
+        <attr name="ReError" type="UINT16#4" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x30b" msgname="PHY_DL_Throughput_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PHY_DL_Throughput_Info">
+        <attr name="Cw0TotalBitNum" type="UINT32#8" extend=""/>
+        <attr name="Cw1TotalBitNum" type="UINT32#8" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x318" msgname="PHY_UL_Throughput_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PHY_UL_Throughput_Info">
+        <attr name="TotalBitNum" type="UINT32#8" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x306" msgname="CCE_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="CCE_Info">
+        <attr name="RecordNum" type="UINT16#4" extend=""/>
+        <attr name="Rsd1" type="UINT16#4" extend=""/>
+        <attr name="CCE_array_Info" type="ARRAY#12" extend=""/>
+      </struct>
+      <struct name="CCE_Info_st">
+        <attr name="SFN" type="UINT16#4" extend=""/>
+        <attr name="SBFN" type="UINT8#1" extend=""/>
+        <attr name="Format" type="UINT8#1" extend=""/>
+        <attr name="RntiType" type="UINT8#1" extend=""/>
+        <attr name="CceStart" type="UINT8#1" extend=""/>
+        <attr name="CceNum" type="UINT8#1" extend=""/>
+        <attr name="Rsd2" type="UINT8#1" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x30c" msgname="DL_Assignment_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="DL_Assignment_Info">
+        <attr name="RecordNum" type="UINT16#4" extend=""/>
+        <attr name="Rsd" type="UINT16#4" extend=""/>
+        <attr name="DL_Assignment_array_Info" type="ARRAY#12" extend=""/>
+      </struct>
+      <struct name="DL_Assignment_Info_st">
+        <attr name="SFN" type="UINT16#4" extend=""/>
+        <attr name="SBFN" type="UINT8#1" extend=""/>
+        <attr name="Format" type="UINT8#1" extend=""/>
+        <attr name="DciPayload1" type="UINT32#8" extend=""/>
+        <attr name="DciPayload2" type="UINT32#8" extend=""/>
+        <attr name="RntiType" type="UINT8#1" extend=""/>
+        <attr name="RbNum" type="UINT8#1" extend="[0,100]"/>
+        <attr name="Tpc" type="UINT8#1" extend=""/>
+        <attr name="Dai" type="UINT8#1" extend="[0,3]"/>
+        <attr name="HarqNum" type="UINT8#1" extend="[0,14]"/>
+        <attr name="SwapFlag" type="UINT8#1" extend=""/>
+        <attr name="Precoding information" type="UINT8#1" extend="[0,63]"/>
+        <attr name="usRsd1" type="UINT8#1" extend=""/>
+        <attr name="b1_Mcs1" type="UINT8#1" extend=""/>
+        <attr name="b1_Ndi1" type="UINT8#1" extend=""/>
+        <attr name="b1_ RV1" type="UINT8#1" extend=""/>
+        <attr name="b1_usRsd1" type="UINT8#1" extend=""/>
+        <attr name="b1_Tbsize1" type="UINT32#8" extend=""/>
+        <attr name="b2_Mcs2" type="UINT8#1" extend=""/>
+        <attr name="b2_Ndi2" type="UINT8#1" extend=""/>
+        <attr name="b2_ RV2" type="UINT8#1" extend=""/>
+        <attr name="b2_usRsd2" type="UINT8#1" extend=""/>
+        <attr name="b2_Tbsize2" type="UINT32#8" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x316" msgname="UL_Power_Grant_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UL_Power_Grant_Info">
+        <attr name="SFN" type="UINT16#4" extend=""/>
+        <attr name="SBFN" type="UINT8#1" extend=""/>
+        <attr name="Format" type="UINT8#1" extend=""/>
+        <attr name="DciPayload" type="UINT32#8" extend=""/>
+        <attr name="RntiType" type="UINT8#1" extend=""/>
+        <attr name="PuschTpcIndex" type="UINT8#1" extend=""/>
+        <attr name="PucchTpcIndex" type="UINT8#1" extend=""/>
+        <attr name="ucRsv" type="UINT8#1" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x317" msgname="PDCCH_Static_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PDCCH_Static_Info">
+        <attr name="CFI_Count" type="STRUCT#11" extend=""/>
+        <attr name="UL_Grant_Count" type="UINT16#4" extend=""/>
+        <attr name="DL_Assignment_Count" type="UINT16#4" extend=""/>
+        <attr name="CCE_Count" type="STRUCT#11" extend=""/>
+        <attr name="DCI_format" type="STRUCT#11" extend=""/>
+      </struct>
+      <struct name="CFI_Count_st">
+        <attr name="CFI1" type="UINT16#4" extend=""/>
+        <attr name="CFI2" type="UINT16#4" extend=""/>
+        <attr name="CFI3" type="UINT16#4" extend=""/>
+        <attr name="Rsd" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="CCE_Count_st">
+        <attr name="CCE1" type="UINT16#4" extend=""/>
+        <attr name="CCE2" type="UINT16#4" extend=""/>
+        <attr name="CCE4" type="UINT16#4" extend=""/>
+        <attr name="CCE8" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="DCI_format_st">
+        <attr name="DCI0" type="UINT16#4" extend=""/>
+        <attr name="DCI1" type="UINT16#4" extend=""/>
+        <attr name="DCI1A" type="UINT16#4" extend=""/>
+        <attr name="DCI1B" type="UINT16#4" extend=""/>
+        <attr name="DCI1C" type="UINT16#4" extend=""/>
+        <attr name="DCI1D" type="UINT16#4" extend=""/>
+        <attr name="DCI2" type="UINT16#4" extend=""/>
+        <attr name="DCI2A" type="UINT16#4" extend=""/>
+        <attr name="DCI2B" type="UINT16#4" extend=""/>
+        <attr name="DCI3" type="UINT16#4" extend=""/>
+        <attr name="DCI3A" type="UINT16#4" extend=""/>
+        <attr name="Rsd" type="UINT16#4" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x30d" msgname="PRACH_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PRACH_Info">
+        <attr name="SFN" type="UINT16#4" extend=""/>
+        <attr name="SBFN" type="UINT8#1" extend=""/>
+        <attr name="usRsd1" type="UINT8#1" extend=""/>
+        <attr name="PreambleIndex" type="UINT16#4" extend=""/>
+        <attr name="PrachCfgIndex" type="UINT16#4" extend=""/>
+        <attr name="PreambleTranSfn" type="UINT16#4" extend=""/>
+        <attr name="PreambleTranSbfn" type="UINT16#4" extend=""/>
+        <attr name="sTransPwr" type="INT16#2" extend=""/>
+        <attr name="PathLoss" type="UINT16#4" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x30e" msgname="CQI_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="CQI_Info">
+        <attr name="RecordNum" type="UINT16#4" extend=""/>
+        <attr name="Rsd" type="UINT16#4" extend=""/>
+        <attr name="CQI_array_Info" type="ARRAY#12" extend=""/>
+      </struct>
+      <struct name="CQI_Info_st">
+        <attr name="SFN" type="UINT16#4" extend=""/>
+        <attr name="SBFN" type="UINT8#1" extend=""/>
+        <attr name="RankIndicator" type="UINT8#1" extend=""/>
+        <attr name="Rank1Sinr" type="INT16#2" extend=""/>
+        <attr name="Rank2Sinr1" type="INT16#2" extend=""/>
+        <attr name="Rank2Sinr2" type="INT16#2" extend=""/>
+        <attr name="Rsd0" type="UINT16#4" extend=""/>
+        <attr name="Rank1Band_Info" type="STRUCT#11" extend=""/>
+        <attr name="Rank2Code0Band_Info" type="STRUCT#11" extend=""/>
+        <attr name="Rank2Code1Band_Info" type="STRUCT#11" extend=""/>
+        <attr name="Wide_CQI_Info" type="STRUCT#11" extend=""/>
+        <attr name="Periodicity" type="UINT8#1" extend=""/>
+        <attr name="CqiRptTypeIndicator" type="UINT8#1" extend=""/>
+        <attr name="PeriodMode" type="UINT8#1" extend=""/>
+        <attr name="AperiodMode" type="UINT8#1" extend=""/>
+        <attr name="WidePMI" type="UINT8#1" extend=""/>
+        <attr name="Rsd10" type="UINT8#1" extend=""/>
+        <attr name="SubPMI_Info" type="STRUCT#11" extend=""/>
+      </struct>
+      <struct name="Rank1Band_Info_st">
+        <attr name="Rank1Band0" type="UINT8#1" extend=""/>
+        <attr name="Rank1Band1" type="UINT8#1" extend=""/>
+        <attr name="Rank1Band2" type="UINT8#1" extend=""/>
+        <attr name="Rank1Band3" type="UINT8#1" extend=""/>
+        <attr name="Rank1Band4" type="UINT8#1" extend=""/>
+        <attr name="Rank1Band5" type="UINT8#1" extend=""/>
+        <attr name="Rank1Band6" type="UINT8#1" extend=""/>
+        <attr name="Rank1Band7" type="UINT8#1" extend=""/>
+        <attr name="Rank1Band8" type="UINT8#1" extend=""/>
+        <attr name="Rank1Band9" type="UINT8#1" extend=""/>
+        <attr name="Rank1Band10" type="UINT8#1" extend=""/>
+        <attr name="Rank1Band11" type="UINT8#1" extend=""/>
+        <attr name="Rank1Band12" type="UINT8#1" extend=""/>
+        <attr name="Rsd1" type="UINT8#1" extend=""/>
+        <attr name="Rsd2" type="UINT8#1" extend=""/>
+        <attr name="Rsd3" type="UINT8#1" extend=""/>
+      </struct>
+      <struct name="Rank2Code0Band_Info_st">
+        <attr name="Rank2Code0Band0" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code0Band1" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code0Band2" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code0Band3" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code0Band4" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code0Band5" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code0Band6" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code0Band7" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code0Band8" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code0Band9" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code0Band10" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code0Band11" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code0Band12" type="UINT8#1" extend=""/>
+        <attr name="Rsd4" type="UINT8#1" extend=""/>
+        <attr name="Rsd5" type="UINT8#1" extend=""/>
+        <attr name="Rsd6" type="UINT8#1" extend=""/>
+      </struct>
+      <struct name="Rank2Code1Band_Info_st">
+        <attr name="Rank2Code1Band0" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code1Band1" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code1Band2" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code1Band3" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code1Band4" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code1Band5" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code1Band6" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code1Band7" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code1Band8" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code1Band9" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code1Band10" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code1Band11" type="UINT8#1" extend=""/>
+        <attr name="Rank2Code1Band12" type="UINT8#1" extend=""/>
+        <attr name="Rsd7" type="UINT8#1" extend=""/>
+        <attr name="Rsd8" type="UINT8#1" extend=""/>
+        <attr name="Rsd9" type="UINT8#1" extend=""/>
+      </struct>
+      <struct name="Wide_CQI_Info_st">
+        <attr name="WideCQI0" type="UINT8#1" extend=""/>
+        <attr name="WideCQI1" type="UINT8#1" extend=""/>
+      </struct>
+      <struct name="SubPMI_Info_st">
+        <attr name="SubPMI0" type="UINT8#1" extend=""/>
+        <attr name="SubPMI1" type="UINT8#1" extend=""/>
+        <attr name="SubPMI2" type="UINT8#1" extend=""/>
+        <attr name="SubPMI3" type="UINT8#1" extend=""/>
+        <attr name="SubPMI4" type="UINT8#1" extend=""/>
+        <attr name="SubPMI5" type="UINT8#1" extend=""/>
+        <attr name="SubPMI6" type="UINT8#1" extend=""/>
+        <attr name="SubPMI7" type="UINT8#1" extend=""/>
+        <attr name="SubPMI8" type="UINT8#1" extend=""/>
+        <attr name="SubPMI9" type="UINT8#1" extend=""/>
+        <attr name="SubPMI10" type="UINT8#1" extend=""/>
+        <attr name="SubPMI11" type="UINT8#1" extend=""/>
+        <attr name="SubPMI12" type="UINT8#1" extend=""/>
+        <attr name="DlCorr" type="UINT8#1" extend=""/>
+        <attr name="Rsd12" type="UINT16#4" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x30f" msgname="UL_Schedul_Static_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UL_Schedul_Static_Info">
+        <attr name="UL_MCS_Count_Info" type="STRUCT#11" extend=""/>
+        <attr name="Modulation_Info" type="STRUCT#11" extend=""/>
+        <attr name="Slot0_RB_Num_Static" type="STRUCT#11" extend=""/>
+        <attr name="Slot1_RB_Num_Static" type="STRUCT#11" extend=""/>
+        <attr name="VRB_Num_Static" type="STRUCT#11" extend=""/>
+      </struct>
+      <struct name="UL_MCS_Count_Info_st">
+        <attr name="MCS0" type="UINT16#4" extend=""/>
+        <attr name="MCS1" type="UINT16#4" extend=""/>
+        <attr name="MCS2" type="UINT16#4" extend=""/>
+        <attr name="MCS3" type="UINT16#4" extend=""/>
+        <attr name="MCS4" type="UINT16#4" extend=""/>
+        <attr name="MCS5" type="UINT16#4" extend=""/>
+        <attr name="MCS6" type="UINT16#4" extend=""/>
+        <attr name="MCS7" type="UINT16#4" extend=""/>
+        <attr name="MCS8" type="UINT16#4" extend=""/>
+        <attr name="MCS9" type="UINT16#4" extend=""/>
+        <attr name="MCS10" type="UINT16#4" extend=""/>
+        <attr name="MCS11" type="UINT16#4" extend=""/>
+        <attr name="MCS12" type="UINT16#4" extend=""/>
+        <attr name="MCS13" type="UINT16#4" extend=""/>
+        <attr name="MCS14" type="UINT16#4" extend=""/>
+        <attr name="MCS15" type="UINT16#4" extend=""/>
+        <attr name="MCS16" type="UINT16#4" extend=""/>
+        <attr name="MCS17" type="UINT16#4" extend=""/>
+        <attr name="MCS18" type="UINT16#4" extend=""/>
+        <attr name="MCS19" type="UINT16#4" extend=""/>
+        <attr name="MCS20" type="UINT16#4" extend=""/>
+        <attr name="MCS21" type="UINT16#4" extend=""/>
+        <attr name="MCS22" type="UINT16#4" extend=""/>
+        <attr name="MCS23" type="UINT16#4" extend=""/>
+        <attr name="MCS24" type="UINT16#4" extend=""/>
+        <attr name="MCS25" type="UINT16#4" extend=""/>
+        <attr name="MCS26" type="UINT16#4" extend=""/>
+        <attr name="MCS27" type="UINT16#4" extend=""/>
+        <attr name="MCS28" type="UINT16#4" extend=""/>
+        <attr name="MCS29" type="UINT16#4" extend=""/>
+        <attr name="MCS30" type="UINT16#4" extend=""/>
+        <attr name="MCS31" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="Modulation_Info_st">
+        <attr name="QPSK" type="UINT16#4" extend=""/>
+        <attr name="16QAM" type="UINT16#4" extend=""/>
+        <attr name="64QAM" type="UINT16#4" extend=""/>
+        <attr name="Rsd" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="Slot0_RB_Num_Static_st">
+        <attr name="PRB1" type="UINT16#4" extend=""/>
+        <attr name="PRB2" type="UINT16#4" extend=""/>
+        <attr name="PRB3" type="UINT16#4" extend=""/>
+        <attr name="PRB4" type="UINT16#4" extend=""/>
+        <attr name="PRB5" type="UINT16#4" extend=""/>
+        <attr name="PRB6" type="UINT16#4" extend=""/>
+        <attr name="PRB7" type="UINT16#4" extend=""/>
+        <attr name="PRB8" type="UINT16#4" extend=""/>
+        <attr name="PRB9" type="UINT16#4" extend=""/>
+        <attr name="PRB10" type="UINT16#4" extend=""/>
+        <attr name="PRB11" type="UINT16#4" extend=""/>
+        <attr name="PRB12" type="UINT16#4" extend=""/>
+        <attr name="PRB13" type="UINT16#4" extend=""/>
+        <attr name="PRB14" type="UINT16#4" extend=""/>
+        <attr name="PRB15" type="UINT16#4" extend=""/>
+        <attr name="PRB16" type="UINT16#4" extend=""/>
+        <attr name="PRB17" type="UINT16#4" extend=""/>
+        <attr name="PRB18" type="UINT16#4" extend=""/>
+        <attr name="PRB19" type="UINT16#4" extend=""/>
+        <attr name="PRB20" type="UINT16#4" extend=""/>
+        <attr name="PRB21" type="UINT16#4" extend=""/>
+        <attr name="PRB22" type="UINT16#4" extend=""/>
+        <attr name="PRB23" type="UINT16#4" extend=""/>
+        <attr name="PRB24" type="UINT16#4" extend=""/>
+        <attr name="PRB25" type="UINT16#4" extend=""/>
+        <attr name="PRB26" type="UINT16#4" extend=""/>
+        <attr name="PRB27" type="UINT16#4" extend=""/>
+        <attr name="PRB28" type="UINT16#4" extend=""/>
+        <attr name="PRB29" type="UINT16#4" extend=""/>
+        <attr name="PRB30" type="UINT16#4" extend=""/>
+        <attr name="PRB31" type="UINT16#4" extend=""/>
+        <attr name="PRB32" type="UINT16#4" extend=""/>
+        <attr name="PRB33" type="UINT16#4" extend=""/>
+        <attr name="PRB34" type="UINT16#4" extend=""/>
+        <attr name="PRB35" type="UINT16#4" extend=""/>
+        <attr name="PRB36" type="UINT16#4" extend=""/>
+        <attr name="PRB37" type="UINT16#4" extend=""/>
+        <attr name="PRB38" type="UINT16#4" extend=""/>
+        <attr name="PRB39" type="UINT16#4" extend=""/>
+        <attr name="PRB40" type="UINT16#4" extend=""/>
+        <attr name="PRB41" type="UINT16#4" extend=""/>
+        <attr name="PRB42" type="UINT16#4" extend=""/>
+        <attr name="PRB43" type="UINT16#4" extend=""/>
+        <attr name="PRB44" type="UINT16#4" extend=""/>
+        <attr name="PRB45" type="UINT16#4" extend=""/>
+        <attr name="PRB46" type="UINT16#4" extend=""/>
+        <attr name="PRB47" type="UINT16#4" extend=""/>
+        <attr name="PRB48" type="UINT16#4" extend=""/>
+        <attr name="PRB49" type="UINT16#4" extend=""/>
+        <attr name="PRB50" type="UINT16#4" extend=""/>
+        <attr name="PRB51" type="UINT16#4" extend=""/>
+        <attr name="PRB52" type="UINT16#4" extend=""/>
+        <attr name="PRB53" type="UINT16#4" extend=""/>
+        <attr name="PRB54" type="UINT16#4" extend=""/>
+        <attr name="PRB55" type="UINT16#4" extend=""/>
+        <attr name="PRB56" type="UINT16#4" extend=""/>
+        <attr name="PRB57" type="UINT16#4" extend=""/>
+        <attr name="PRB58" type="UINT16#4" extend=""/>
+        <attr name="PRB59" type="UINT16#4" extend=""/>
+        <attr name="PRB60" type="UINT16#4" extend=""/>
+        <attr name="PRB61" type="UINT16#4" extend=""/>
+        <attr name="PRB62" type="UINT16#4" extend=""/>
+        <attr name="PRB63" type="UINT16#4" extend=""/>
+        <attr name="PRB64" type="UINT16#4" extend=""/>
+        <attr name="PRB65" type="UINT16#4" extend=""/>
+        <attr name="PRB66" type="UINT16#4" extend=""/>
+        <attr name="PRB67" type="UINT16#4" extend=""/>
+        <attr name="PRB68" type="UINT16#4" extend=""/>
+        <attr name="PRB69" type="UINT16#4" extend=""/>
+        <attr name="PRB70" type="UINT16#4" extend=""/>
+        <attr name="PRB71" type="UINT16#4" extend=""/>
+        <attr name="PRB72" type="UINT16#4" extend=""/>
+        <attr name="PRB73" type="UINT16#4" extend=""/>
+        <attr name="PRB74" type="UINT16#4" extend=""/>
+        <attr name="PRB75" type="UINT16#4" extend=""/>
+        <attr name="PRB76" type="UINT16#4" extend=""/>
+        <attr name="PRB77" type="UINT16#4" extend=""/>
+        <attr name="PRB78" type="UINT16#4" extend=""/>
+        <attr name="PRB79" type="UINT16#4" extend=""/>
+        <attr name="PRB80" type="UINT16#4" extend=""/>
+        <attr name="PRB81" type="UINT16#4" extend=""/>
+        <attr name="PRB82" type="UINT16#4" extend=""/>
+        <attr name="PRB83" type="UINT16#4" extend=""/>
+        <attr name="PRB84" type="UINT16#4" extend=""/>
+        <attr name="PRB85" type="UINT16#4" extend=""/>
+        <attr name="PRB86" type="UINT16#4" extend=""/>
+        <attr name="PRB87" type="UINT16#4" extend=""/>
+        <attr name="PRB88" type="UINT16#4" extend=""/>
+        <attr name="PRB89" type="UINT16#4" extend=""/>
+        <attr name="PRB90" type="UINT16#4" extend=""/>
+        <attr name="PRB91" type="UINT16#4" extend=""/>
+        <attr name="PRB92" type="UINT16#4" extend=""/>
+        <attr name="PRB93" type="UINT16#4" extend=""/>
+        <attr name="PRB94" type="UINT16#4" extend=""/>
+        <attr name="PRB95" type="UINT16#4" extend=""/>
+        <attr name="PRB96" type="UINT16#4" extend=""/>
+        <attr name="PRB97" type="UINT16#4" extend=""/>
+        <attr name="PRB98" type="UINT16#4" extend=""/>
+        <attr name="PRB99" type="UINT16#4" extend=""/>
+        <attr name="PRB100" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="Slot1_RB_Num_Static_st">
+        <attr name="PRB1" type="UINT16#4" extend=""/>
+        <attr name="PRB2" type="UINT16#4" extend=""/>
+        <attr name="PRB3" type="UINT16#4" extend=""/>
+        <attr name="PRB4" type="UINT16#4" extend=""/>
+        <attr name="PRB5" type="UINT16#4" extend=""/>
+        <attr name="PRB6" type="UINT16#4" extend=""/>
+        <attr name="PRB7" type="UINT16#4" extend=""/>
+        <attr name="PRB8" type="UINT16#4" extend=""/>
+        <attr name="PRB9" type="UINT16#4" extend=""/>
+        <attr name="PRB10" type="UINT16#4" extend=""/>
+        <attr name="PRB11" type="UINT16#4" extend=""/>
+        <attr name="PRB12" type="UINT16#4" extend=""/>
+        <attr name="PRB13" type="UINT16#4" extend=""/>
+        <attr name="PRB14" type="UINT16#4" extend=""/>
+        <attr name="PRB15" type="UINT16#4" extend=""/>
+        <attr name="PRB16" type="UINT16#4" extend=""/>
+        <attr name="PRB17" type="UINT16#4" extend=""/>
+        <attr name="PRB18" type="UINT16#4" extend=""/>
+        <attr name="PRB19" type="UINT16#4" extend=""/>
+        <attr name="PRB20" type="UINT16#4" extend=""/>
+        <attr name="PRB21" type="UINT16#4" extend=""/>
+        <attr name="PRB22" type="UINT16#4" extend=""/>
+        <attr name="PRB23" type="UINT16#4" extend=""/>
+        <attr name="PRB24" type="UINT16#4" extend=""/>
+        <attr name="PRB25" type="UINT16#4" extend=""/>
+        <attr name="PRB26" type="UINT16#4" extend=""/>
+        <attr name="PRB27" type="UINT16#4" extend=""/>
+        <attr name="PRB28" type="UINT16#4" extend=""/>
+        <attr name="PRB29" type="UINT16#4" extend=""/>
+        <attr name="PRB30" type="UINT16#4" extend=""/>
+        <attr name="PRB31" type="UINT16#4" extend=""/>
+        <attr name="PRB32" type="UINT16#4" extend=""/>
+        <attr name="PRB33" type="UINT16#4" extend=""/>
+        <attr name="PRB34" type="UINT16#4" extend=""/>
+        <attr name="PRB35" type="UINT16#4" extend=""/>
+        <attr name="PRB36" type="UINT16#4" extend=""/>
+        <attr name="PRB37" type="UINT16#4" extend=""/>
+        <attr name="PRB38" type="UINT16#4" extend=""/>
+        <attr name="PRB39" type="UINT16#4" extend=""/>
+        <attr name="PRB40" type="UINT16#4" extend=""/>
+        <attr name="PRB41" type="UINT16#4" extend=""/>
+        <attr name="PRB42" type="UINT16#4" extend=""/>
+        <attr name="PRB43" type="UINT16#4" extend=""/>
+        <attr name="PRB44" type="UINT16#4" extend=""/>
+        <attr name="PRB45" type="UINT16#4" extend=""/>
+        <attr name="PRB46" type="UINT16#4" extend=""/>
+        <attr name="PRB47" type="UINT16#4" extend=""/>
+        <attr name="PRB48" type="UINT16#4" extend=""/>
+        <attr name="PRB49" type="UINT16#4" extend=""/>
+        <attr name="PRB50" type="UINT16#4" extend=""/>
+        <attr name="PRB51" type="UINT16#4" extend=""/>
+        <attr name="PRB52" type="UINT16#4" extend=""/>
+        <attr name="PRB53" type="UINT16#4" extend=""/>
+        <attr name="PRB54" type="UINT16#4" extend=""/>
+        <attr name="PRB55" type="UINT16#4" extend=""/>
+        <attr name="PRB56" type="UINT16#4" extend=""/>
+        <attr name="PRB57" type="UINT16#4" extend=""/>
+        <attr name="PRB58" type="UINT16#4" extend=""/>
+        <attr name="PRB59" type="UINT16#4" extend=""/>
+        <attr name="PRB60" type="UINT16#4" extend=""/>
+        <attr name="PRB61" type="UINT16#4" extend=""/>
+        <attr name="PRB62" type="UINT16#4" extend=""/>
+        <attr name="PRB63" type="UINT16#4" extend=""/>
+        <attr name="PRB64" type="UINT16#4" extend=""/>
+        <attr name="PRB65" type="UINT16#4" extend=""/>
+        <attr name="PRB66" type="UINT16#4" extend=""/>
+        <attr name="PRB67" type="UINT16#4" extend=""/>
+        <attr name="PRB68" type="UINT16#4" extend=""/>
+        <attr name="PRB69" type="UINT16#4" extend=""/>
+        <attr name="PRB70" type="UINT16#4" extend=""/>
+        <attr name="PRB71" type="UINT16#4" extend=""/>
+        <attr name="PRB72" type="UINT16#4" extend=""/>
+        <attr name="PRB73" type="UINT16#4" extend=""/>
+        <attr name="PRB74" type="UINT16#4" extend=""/>
+        <attr name="PRB75" type="UINT16#4" extend=""/>
+        <attr name="PRB76" type="UINT16#4" extend=""/>
+        <attr name="PRB77" type="UINT16#4" extend=""/>
+        <attr name="PRB78" type="UINT16#4" extend=""/>
+        <attr name="PRB79" type="UINT16#4" extend=""/>
+        <attr name="PRB80" type="UINT16#4" extend=""/>
+        <attr name="PRB81" type="UINT16#4" extend=""/>
+        <attr name="PRB82" type="UINT16#4" extend=""/>
+        <attr name="PRB83" type="UINT16#4" extend=""/>
+        <attr name="PRB84" type="UINT16#4" extend=""/>
+        <attr name="PRB85" type="UINT16#4" extend=""/>
+        <attr name="PRB86" type="UINT16#4" extend=""/>
+        <attr name="PRB87" type="UINT16#4" extend=""/>
+        <attr name="PRB88" type="UINT16#4" extend=""/>
+        <attr name="PRB89" type="UINT16#4" extend=""/>
+        <attr name="PRB90" type="UINT16#4" extend=""/>
+        <attr name="PRB91" type="UINT16#4" extend=""/>
+        <attr name="PRB92" type="UINT16#4" extend=""/>
+        <attr name="PRB93" type="UINT16#4" extend=""/>
+        <attr name="PRB94" type="UINT16#4" extend=""/>
+        <attr name="PRB95" type="UINT16#4" extend=""/>
+        <attr name="PRB96" type="UINT16#4" extend=""/>
+        <attr name="PRB97" type="UINT16#4" extend=""/>
+        <attr name="PRB98" type="UINT16#4" extend=""/>
+        <attr name="PRB99" type="UINT16#4" extend=""/>
+        <attr name="PRB100" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="VRB_Num_Static_st">
+        <attr name="VRB1" type="UINT16#4" extend=""/>
+        <attr name="VRB2" type="UINT16#4" extend=""/>
+        <attr name="VRB3" type="UINT16#4" extend=""/>
+        <attr name="VRB4" type="UINT16#4" extend=""/>
+        <attr name="VRB5" type="UINT16#4" extend=""/>
+        <attr name="VRB6" type="UINT16#4" extend=""/>
+        <attr name="VRB7" type="UINT16#4" extend=""/>
+        <attr name="VRB8" type="UINT16#4" extend=""/>
+        <attr name="VRB9" type="UINT16#4" extend=""/>
+        <attr name="VRB10" type="UINT16#4" extend=""/>
+        <attr name="VRB11" type="UINT16#4" extend=""/>
+        <attr name="VRB12" type="UINT16#4" extend=""/>
+        <attr name="VRB13" type="UINT16#4" extend=""/>
+        <attr name="VRB14" type="UINT16#4" extend=""/>
+        <attr name="VRB15" type="UINT16#4" extend=""/>
+        <attr name="VRB16" type="UINT16#4" extend=""/>
+        <attr name="VRB17" type="UINT16#4" extend=""/>
+        <attr name="VRB18" type="UINT16#4" extend=""/>
+        <attr name="VRB19" type="UINT16#4" extend=""/>
+        <attr name="VRB20" type="UINT16#4" extend=""/>
+        <attr name="VRB21" type="UINT16#4" extend=""/>
+        <attr name="VRB22" type="UINT16#4" extend=""/>
+        <attr name="VRB23" type="UINT16#4" extend=""/>
+        <attr name="VRB24" type="UINT16#4" extend=""/>
+        <attr name="VRB25" type="UINT16#4" extend=""/>
+        <attr name="VRB26" type="UINT16#4" extend=""/>
+        <attr name="VRB27" type="UINT16#4" extend=""/>
+        <attr name="VRB28" type="UINT16#4" extend=""/>
+        <attr name="VRB29" type="UINT16#4" extend=""/>
+        <attr name="VRB30" type="UINT16#4" extend=""/>
+        <attr name="VRB31" type="UINT16#4" extend=""/>
+        <attr name="VRB32" type="UINT16#4" extend=""/>
+        <attr name="VRB33" type="UINT16#4" extend=""/>
+        <attr name="VRB34" type="UINT16#4" extend=""/>
+        <attr name="VRB35" type="UINT16#4" extend=""/>
+        <attr name="VRB36" type="UINT16#4" extend=""/>
+        <attr name="VRB37" type="UINT16#4" extend=""/>
+        <attr name="VRB38" type="UINT16#4" extend=""/>
+        <attr name="VRB39" type="UINT16#4" extend=""/>
+        <attr name="VRB40" type="UINT16#4" extend=""/>
+        <attr name="VRB41" type="UINT16#4" extend=""/>
+        <attr name="VRB42" type="UINT16#4" extend=""/>
+        <attr name="VRB43" type="UINT16#4" extend=""/>
+        <attr name="VRB44" type="UINT16#4" extend=""/>
+        <attr name="VRB45" type="UINT16#4" extend=""/>
+        <attr name="VRB46" type="UINT16#4" extend=""/>
+        <attr name="VRB47" type="UINT16#4" extend=""/>
+        <attr name="VRB48" type="UINT16#4" extend=""/>
+        <attr name="VRB49" type="UINT16#4" extend=""/>
+        <attr name="VRB50" type="UINT16#4" extend=""/>
+        <attr name="VRB51" type="UINT16#4" extend=""/>
+        <attr name="VRB52" type="UINT16#4" extend=""/>
+        <attr name="VRB53" type="UINT16#4" extend=""/>
+        <attr name="VRB54" type="UINT16#4" extend=""/>
+        <attr name="VRB55" type="UINT16#4" extend=""/>
+        <attr name="VRB56" type="UINT16#4" extend=""/>
+        <attr name="VRB57" type="UINT16#4" extend=""/>
+        <attr name="VRB58" type="UINT16#4" extend=""/>
+        <attr name="VRB59" type="UINT16#4" extend=""/>
+        <attr name="VRB60" type="UINT16#4" extend=""/>
+        <attr name="VRB61" type="UINT16#4" extend=""/>
+        <attr name="VRB62" type="UINT16#4" extend=""/>
+        <attr name="VRB63" type="UINT16#4" extend=""/>
+        <attr name="VRB64" type="UINT16#4" extend=""/>
+        <attr name="VRB65" type="UINT16#4" extend=""/>
+        <attr name="VRB66" type="UINT16#4" extend=""/>
+        <attr name="VRB67" type="UINT16#4" extend=""/>
+        <attr name="VRB68" type="UINT16#4" extend=""/>
+        <attr name="VRB69" type="UINT16#4" extend=""/>
+        <attr name="VRB70" type="UINT16#4" extend=""/>
+        <attr name="VRB71" type="UINT16#4" extend=""/>
+        <attr name="VRB72" type="UINT16#4" extend=""/>
+        <attr name="VRB73" type="UINT16#4" extend=""/>
+        <attr name="VRB74" type="UINT16#4" extend=""/>
+        <attr name="VRB75" type="UINT16#4" extend=""/>
+        <attr name="VRB76" type="UINT16#4" extend=""/>
+        <attr name="VRB77" type="UINT16#4" extend=""/>
+        <attr name="VRB78" type="UINT16#4" extend=""/>
+        <attr name="VRB79" type="UINT16#4" extend=""/>
+        <attr name="VRB80" type="UINT16#4" extend=""/>
+        <attr name="VRB81" type="UINT16#4" extend=""/>
+        <attr name="VRB82" type="UINT16#4" extend=""/>
+        <attr name="VRB83" type="UINT16#4" extend=""/>
+        <attr name="VRB84" type="UINT16#4" extend=""/>
+        <attr name="VRB85" type="UINT16#4" extend=""/>
+        <attr name="VRB86" type="UINT16#4" extend=""/>
+        <attr name="VRB87" type="UINT16#4" extend=""/>
+        <attr name="VRB88" type="UINT16#4" extend=""/>
+        <attr name="VRB89" type="UINT16#4" extend=""/>
+        <attr name="VRB90" type="UINT16#4" extend=""/>
+        <attr name="VRB91" type="UINT16#4" extend=""/>
+        <attr name="VRB92" type="UINT16#4" extend=""/>
+        <attr name="VRB93" type="UINT16#4" extend=""/>
+        <attr name="VRB94" type="UINT16#4" extend=""/>
+        <attr name="VRB95" type="UINT16#4" extend=""/>
+        <attr name="VRB96" type="UINT16#4" extend=""/>
+        <attr name="VRB97" type="UINT16#4" extend=""/>
+        <attr name="VRB98" type="UINT16#4" extend=""/>
+        <attr name="VRB99" type="UINT16#4" extend=""/>
+        <attr name="VRB100" type="UINT16#4" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x310" msgname="DL_Schedul_Static_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="DL_Schedul_Static_Info">
+        <attr name="Code0_MCS_Count" type="STRUCT#11" extend=""/>
+        <attr name="Code0_Mod_Count" type="STRUCT#11" extend=""/>
+        <attr name="Code1_MCS_Count" type="STRUCT#11" extend=""/>
+        <attr name="Code1_Mod_Count" type="STRUCT#11" extend=""/>
+        <attr name="Slot0_PRB_Num_Static" type="STRUCT#11" extend=""/>
+        <attr name="Slot1_PRB_Num_Static" type="STRUCT#11" extend=""/>
+        <attr name="VRB_Num_Static" type="STRUCT#11" extend=""/>
+      </struct>
+      <struct name="Code0_MCS_Count_st">
+        <attr name="MCS0" type="UINT16#4" extend=""/>
+        <attr name="MCS1" type="UINT16#4" extend=""/>
+        <attr name="MCS2" type="UINT16#4" extend=""/>
+        <attr name="MCS3" type="UINT16#4" extend=""/>
+        <attr name="MCS4" type="UINT16#4" extend=""/>
+        <attr name="MCS5" type="UINT16#4" extend=""/>
+        <attr name="MCS6" type="UINT16#4" extend=""/>
+        <attr name="MCS7" type="UINT16#4" extend=""/>
+        <attr name="MCS8" type="UINT16#4" extend=""/>
+        <attr name="MCS9" type="UINT16#4" extend=""/>
+        <attr name="MCS10" type="UINT16#4" extend=""/>
+        <attr name="MCS11" type="UINT16#4" extend=""/>
+        <attr name="MCS12" type="UINT16#4" extend=""/>
+        <attr name="MCS13" type="UINT16#4" extend=""/>
+        <attr name="MCS14" type="UINT16#4" extend=""/>
+        <attr name="MCS15" type="UINT16#4" extend=""/>
+        <attr name="MCS16" type="UINT16#4" extend=""/>
+        <attr name="MCS17" type="UINT16#4" extend=""/>
+        <attr name="MCS18" type="UINT16#4" extend=""/>
+        <attr name="MCS19" type="UINT16#4" extend=""/>
+        <attr name="MCS20" type="UINT16#4" extend=""/>
+        <attr name="MCS21" type="UINT16#4" extend=""/>
+        <attr name="MCS22" type="UINT16#4" extend=""/>
+        <attr name="MCS23" type="UINT16#4" extend=""/>
+        <attr name="MCS24" type="UINT16#4" extend=""/>
+        <attr name="MCS25" type="UINT16#4" extend=""/>
+        <attr name="MCS26" type="UINT16#4" extend=""/>
+        <attr name="MCS27" type="UINT16#4" extend=""/>
+        <attr name="MCS28" type="UINT16#4" extend=""/>
+        <attr name="MCS29" type="UINT16#4" extend=""/>
+        <attr name="MCS30" type="UINT16#4" extend=""/>
+        <attr name="MCS31" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="Code0_Mod_Count_st">
+        <attr name="QPSK" type="UINT16#4" extend=""/>
+        <attr name="16QAM" type="UINT16#4" extend=""/>
+        <attr name="64QAM" type="UINT16#4" extend=""/>
+        <attr name="usRsd0" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="Code1_MCS_Count_st">
+        <attr name="MCS0" type="UINT16#4" extend=""/>
+        <attr name="MCS1" type="UINT16#4" extend=""/>
+        <attr name="MCS2" type="UINT16#4" extend=""/>
+        <attr name="MCS3" type="UINT16#4" extend=""/>
+        <attr name="MCS4" type="UINT16#4" extend=""/>
+        <attr name="MCS5" type="UINT16#4" extend=""/>
+        <attr name="MCS6" type="UINT16#4" extend=""/>
+        <attr name="MCS7" type="UINT16#4" extend=""/>
+        <attr name="MCS8" type="UINT16#4" extend=""/>
+        <attr name="MCS9" type="UINT16#4" extend=""/>
+        <attr name="MCS10" type="UINT16#4" extend=""/>
+        <attr name="MCS11" type="UINT16#4" extend=""/>
+        <attr name="MCS12" type="UINT16#4" extend=""/>
+        <attr name="MCS13" type="UINT16#4" extend=""/>
+        <attr name="MCS14" type="UINT16#4" extend=""/>
+        <attr name="MCS15" type="UINT16#4" extend=""/>
+        <attr name="MCS16" type="UINT16#4" extend=""/>
+        <attr name="MCS17" type="UINT16#4" extend=""/>
+        <attr name="MCS18" type="UINT16#4" extend=""/>
+        <attr name="MCS19" type="UINT16#4" extend=""/>
+        <attr name="MCS20" type="UINT16#4" extend=""/>
+        <attr name="MCS21" type="UINT16#4" extend=""/>
+        <attr name="MCS22" type="UINT16#4" extend=""/>
+        <attr name="MCS23" type="UINT16#4" extend=""/>
+        <attr name="MCS24" type="UINT16#4" extend=""/>
+        <attr name="MCS25" type="UINT16#4" extend=""/>
+        <attr name="MCS26" type="UINT16#4" extend=""/>
+        <attr name="MCS27" type="UINT16#4" extend=""/>
+        <attr name="MCS28" type="UINT16#4" extend=""/>
+        <attr name="MCS29" type="UINT16#4" extend=""/>
+        <attr name="MCS30" type="UINT16#4" extend=""/>
+        <attr name="MCS31" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="Code1_Mod_Count_st">
+        <attr name="QPSK" type="UINT16#4" extend=""/>
+        <attr name="16QAM" type="UINT16#4" extend=""/>
+        <attr name="64QAM" type="UINT16#4" extend=""/>
+        <attr name="usRsd1" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="Slot0_PRB_Num_Static_st">
+        <attr name="PRB1" type="UINT16#4" extend=""/>
+        <attr name="PRB2" type="UINT16#4" extend=""/>
+        <attr name="PRB3" type="UINT16#4" extend=""/>
+        <attr name="PRB4" type="UINT16#4" extend=""/>
+        <attr name="PRB5" type="UINT16#4" extend=""/>
+        <attr name="PRB6" type="UINT16#4" extend=""/>
+        <attr name="PRB7" type="UINT16#4" extend=""/>
+        <attr name="PRB8" type="UINT16#4" extend=""/>
+        <attr name="PRB9" type="UINT16#4" extend=""/>
+        <attr name="PRB10" type="UINT16#4" extend=""/>
+        <attr name="PRB11" type="UINT16#4" extend=""/>
+        <attr name="PRB12" type="UINT16#4" extend=""/>
+        <attr name="PRB13" type="UINT16#4" extend=""/>
+        <attr name="PRB14" type="UINT16#4" extend=""/>
+        <attr name="PRB15" type="UINT16#4" extend=""/>
+        <attr name="PRB16" type="UINT16#4" extend=""/>
+        <attr name="PRB17" type="UINT16#4" extend=""/>
+        <attr name="PRB18" type="UINT16#4" extend=""/>
+        <attr name="PRB19" type="UINT16#4" extend=""/>
+        <attr name="PRB20" type="UINT16#4" extend=""/>
+        <attr name="PRB21" type="UINT16#4" extend=""/>
+        <attr name="PRB22" type="UINT16#4" extend=""/>
+        <attr name="PRB23" type="UINT16#4" extend=""/>
+        <attr name="PRB24" type="UINT16#4" extend=""/>
+        <attr name="PRB25" type="UINT16#4" extend=""/>
+        <attr name="PRB26" type="UINT16#4" extend=""/>
+        <attr name="PRB27" type="UINT16#4" extend=""/>
+        <attr name="PRB28" type="UINT16#4" extend=""/>
+        <attr name="PRB29" type="UINT16#4" extend=""/>
+        <attr name="PRB30" type="UINT16#4" extend=""/>
+        <attr name="PRB31" type="UINT16#4" extend=""/>
+        <attr name="PRB32" type="UINT16#4" extend=""/>
+        <attr name="PRB33" type="UINT16#4" extend=""/>
+        <attr name="PRB34" type="UINT16#4" extend=""/>
+        <attr name="PRB35" type="UINT16#4" extend=""/>
+        <attr name="PRB36" type="UINT16#4" extend=""/>
+        <attr name="PRB37" type="UINT16#4" extend=""/>
+        <attr name="PRB38" type="UINT16#4" extend=""/>
+        <attr name="PRB39" type="UINT16#4" extend=""/>
+        <attr name="PRB40" type="UINT16#4" extend=""/>
+        <attr name="PRB41" type="UINT16#4" extend=""/>
+        <attr name="PRB42" type="UINT16#4" extend=""/>
+        <attr name="PRB43" type="UINT16#4" extend=""/>
+        <attr name="PRB44" type="UINT16#4" extend=""/>
+        <attr name="PRB45" type="UINT16#4" extend=""/>
+        <attr name="PRB46" type="UINT16#4" extend=""/>
+        <attr name="PRB47" type="UINT16#4" extend=""/>
+        <attr name="PRB48" type="UINT16#4" extend=""/>
+        <attr name="PRB49" type="UINT16#4" extend=""/>
+        <attr name="PRB50" type="UINT16#4" extend=""/>
+        <attr name="PRB51" type="UINT16#4" extend=""/>
+        <attr name="PRB52" type="UINT16#4" extend=""/>
+        <attr name="PRB53" type="UINT16#4" extend=""/>
+        <attr name="PRB54" type="UINT16#4" extend=""/>
+        <attr name="PRB55" type="UINT16#4" extend=""/>
+        <attr name="PRB56" type="UINT16#4" extend=""/>
+        <attr name="PRB57" type="UINT16#4" extend=""/>
+        <attr name="PRB58" type="UINT16#4" extend=""/>
+        <attr name="PRB59" type="UINT16#4" extend=""/>
+        <attr name="PRB60" type="UINT16#4" extend=""/>
+        <attr name="PRB61" type="UINT16#4" extend=""/>
+        <attr name="PRB62" type="UINT16#4" extend=""/>
+        <attr name="PRB63" type="UINT16#4" extend=""/>
+        <attr name="PRB64" type="UINT16#4" extend=""/>
+        <attr name="PRB65" type="UINT16#4" extend=""/>
+        <attr name="PRB66" type="UINT16#4" extend=""/>
+        <attr name="PRB67" type="UINT16#4" extend=""/>
+        <attr name="PRB68" type="UINT16#4" extend=""/>
+        <attr name="PRB69" type="UINT16#4" extend=""/>
+        <attr name="PRB70" type="UINT16#4" extend=""/>
+        <attr name="PRB71" type="UINT16#4" extend=""/>
+        <attr name="PRB72" type="UINT16#4" extend=""/>
+        <attr name="PRB73" type="UINT16#4" extend=""/>
+        <attr name="PRB74" type="UINT16#4" extend=""/>
+        <attr name="PRB75" type="UINT16#4" extend=""/>
+        <attr name="PRB76" type="UINT16#4" extend=""/>
+        <attr name="PRB77" type="UINT16#4" extend=""/>
+        <attr name="PRB78" type="UINT16#4" extend=""/>
+        <attr name="PRB79" type="UINT16#4" extend=""/>
+        <attr name="PRB80" type="UINT16#4" extend=""/>
+        <attr name="PRB81" type="UINT16#4" extend=""/>
+        <attr name="PRB82" type="UINT16#4" extend=""/>
+        <attr name="PRB83" type="UINT16#4" extend=""/>
+        <attr name="PRB84" type="UINT16#4" extend=""/>
+        <attr name="PRB85" type="UINT16#4" extend=""/>
+        <attr name="PRB86" type="UINT16#4" extend=""/>
+        <attr name="PRB87" type="UINT16#4" extend=""/>
+        <attr name="PRB88" type="UINT16#4" extend=""/>
+        <attr name="PRB89" type="UINT16#4" extend=""/>
+        <attr name="PRB90" type="UINT16#4" extend=""/>
+        <attr name="PRB91" type="UINT16#4" extend=""/>
+        <attr name="PRB92" type="UINT16#4" extend=""/>
+        <attr name="PRB93" type="UINT16#4" extend=""/>
+        <attr name="PRB94" type="UINT16#4" extend=""/>
+        <attr name="PRB95" type="UINT16#4" extend=""/>
+        <attr name="PRB96" type="UINT16#4" extend=""/>
+        <attr name="PRB97" type="UINT16#4" extend=""/>
+        <attr name="PRB98" type="UINT16#4" extend=""/>
+        <attr name="PRB99" type="UINT16#4" extend=""/>
+        <attr name="PRB100" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="Slot1_PRB_Num_Static_st">
+        <attr name="PRB1" type="UINT16#4" extend=""/>
+        <attr name="PRB2" type="UINT16#4" extend=""/>
+        <attr name="PRB3" type="UINT16#4" extend=""/>
+        <attr name="PRB4" type="UINT16#4" extend=""/>
+        <attr name="PRB5" type="UINT16#4" extend=""/>
+        <attr name="PRB6" type="UINT16#4" extend=""/>
+        <attr name="PRB7" type="UINT16#4" extend=""/>
+        <attr name="PRB8" type="UINT16#4" extend=""/>
+        <attr name="PRB9" type="UINT16#4" extend=""/>
+        <attr name="PRB10" type="UINT16#4" extend=""/>
+        <attr name="PRB11" type="UINT16#4" extend=""/>
+        <attr name="PRB12" type="UINT16#4" extend=""/>
+        <attr name="PRB13" type="UINT16#4" extend=""/>
+        <attr name="PRB14" type="UINT16#4" extend=""/>
+        <attr name="PRB15" type="UINT16#4" extend=""/>
+        <attr name="PRB16" type="UINT16#4" extend=""/>
+        <attr name="PRB17" type="UINT16#4" extend=""/>
+        <attr name="PRB18" type="UINT16#4" extend=""/>
+        <attr name="PRB19" type="UINT16#4" extend=""/>
+        <attr name="PRB20" type="UINT16#4" extend=""/>
+        <attr name="PRB21" type="UINT16#4" extend=""/>
+        <attr name="PRB22" type="UINT16#4" extend=""/>
+        <attr name="PRB23" type="UINT16#4" extend=""/>
+        <attr name="PRB24" type="UINT16#4" extend=""/>
+        <attr name="PRB25" type="UINT16#4" extend=""/>
+        <attr name="PRB26" type="UINT16#4" extend=""/>
+        <attr name="PRB27" type="UINT16#4" extend=""/>
+        <attr name="PRB28" type="UINT16#4" extend=""/>
+        <attr name="PRB29" type="UINT16#4" extend=""/>
+        <attr name="PRB30" type="UINT16#4" extend=""/>
+        <attr name="PRB31" type="UINT16#4" extend=""/>
+        <attr name="PRB32" type="UINT16#4" extend=""/>
+        <attr name="PRB33" type="UINT16#4" extend=""/>
+        <attr name="PRB34" type="UINT16#4" extend=""/>
+        <attr name="PRB35" type="UINT16#4" extend=""/>
+        <attr name="PRB36" type="UINT16#4" extend=""/>
+        <attr name="PRB37" type="UINT16#4" extend=""/>
+        <attr name="PRB38" type="UINT16#4" extend=""/>
+        <attr name="PRB39" type="UINT16#4" extend=""/>
+        <attr name="PRB40" type="UINT16#4" extend=""/>
+        <attr name="PRB41" type="UINT16#4" extend=""/>
+        <attr name="PRB42" type="UINT16#4" extend=""/>
+        <attr name="PRB43" type="UINT16#4" extend=""/>
+        <attr name="PRB44" type="UINT16#4" extend=""/>
+        <attr name="PRB45" type="UINT16#4" extend=""/>
+        <attr name="PRB46" type="UINT16#4" extend=""/>
+        <attr name="PRB47" type="UINT16#4" extend=""/>
+        <attr name="PRB48" type="UINT16#4" extend=""/>
+        <attr name="PRB49" type="UINT16#4" extend=""/>
+        <attr name="PRB50" type="UINT16#4" extend=""/>
+        <attr name="PRB51" type="UINT16#4" extend=""/>
+        <attr name="PRB52" type="UINT16#4" extend=""/>
+        <attr name="PRB53" type="UINT16#4" extend=""/>
+        <attr name="PRB54" type="UINT16#4" extend=""/>
+        <attr name="PRB55" type="UINT16#4" extend=""/>
+        <attr name="PRB56" type="UINT16#4" extend=""/>
+        <attr name="PRB57" type="UINT16#4" extend=""/>
+        <attr name="PRB58" type="UINT16#4" extend=""/>
+        <attr name="PRB59" type="UINT16#4" extend=""/>
+        <attr name="PRB60" type="UINT16#4" extend=""/>
+        <attr name="PRB61" type="UINT16#4" extend=""/>
+        <attr name="PRB62" type="UINT16#4" extend=""/>
+        <attr name="PRB63" type="UINT16#4" extend=""/>
+        <attr name="PRB64" type="UINT16#4" extend=""/>
+        <attr name="PRB65" type="UINT16#4" extend=""/>
+        <attr name="PRB66" type="UINT16#4" extend=""/>
+        <attr name="PRB67" type="UINT16#4" extend=""/>
+        <attr name="PRB68" type="UINT16#4" extend=""/>
+        <attr name="PRB69" type="UINT16#4" extend=""/>
+        <attr name="PRB70" type="UINT16#4" extend=""/>
+        <attr name="PRB71" type="UINT16#4" extend=""/>
+        <attr name="PRB72" type="UINT16#4" extend=""/>
+        <attr name="PRB73" type="UINT16#4" extend=""/>
+        <attr name="PRB74" type="UINT16#4" extend=""/>
+        <attr name="PRB75" type="UINT16#4" extend=""/>
+        <attr name="PRB76" type="UINT16#4" extend=""/>
+        <attr name="PRB77" type="UINT16#4" extend=""/>
+        <attr name="PRB78" type="UINT16#4" extend=""/>
+        <attr name="PRB79" type="UINT16#4" extend=""/>
+        <attr name="PRB80" type="UINT16#4" extend=""/>
+        <attr name="PRB81" type="UINT16#4" extend=""/>
+        <attr name="PRB82" type="UINT16#4" extend=""/>
+        <attr name="PRB83" type="UINT16#4" extend=""/>
+        <attr name="PRB84" type="UINT16#4" extend=""/>
+        <attr name="PRB85" type="UINT16#4" extend=""/>
+        <attr name="PRB86" type="UINT16#4" extend=""/>
+        <attr name="PRB87" type="UINT16#4" extend=""/>
+        <attr name="PRB88" type="UINT16#4" extend=""/>
+        <attr name="PRB89" type="UINT16#4" extend=""/>
+        <attr name="PRB90" type="UINT16#4" extend=""/>
+        <attr name="PRB91" type="UINT16#4" extend=""/>
+        <attr name="PRB92" type="UINT16#4" extend=""/>
+        <attr name="PRB93" type="UINT16#4" extend=""/>
+        <attr name="PRB94" type="UINT16#4" extend=""/>
+        <attr name="PRB95" type="UINT16#4" extend=""/>
+        <attr name="PRB96" type="UINT16#4" extend=""/>
+        <attr name="PRB97" type="UINT16#4" extend=""/>
+        <attr name="PRB98" type="UINT16#4" extend=""/>
+        <attr name="PRB99" type="UINT16#4" extend=""/>
+        <attr name="PRB100" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="VRB_Num_Static_st">
+        <attr name="VRB1" type="UINT16#4" extend=""/>
+        <attr name="VRB2" type="UINT16#4" extend=""/>
+        <attr name="VRB3" type="UINT16#4" extend=""/>
+        <attr name="VRB4" type="UINT16#4" extend=""/>
+        <attr name="VRB5" type="UINT16#4" extend=""/>
+        <attr name="VRB6" type="UINT16#4" extend=""/>
+        <attr name="VRB7" type="UINT16#4" extend=""/>
+        <attr name="VRB8" type="UINT16#4" extend=""/>
+        <attr name="VRB9" type="UINT16#4" extend=""/>
+        <attr name="VRB10" type="UINT16#4" extend=""/>
+        <attr name="VRB11" type="UINT16#4" extend=""/>
+        <attr name="VRB12" type="UINT16#4" extend=""/>
+        <attr name="VRB13" type="UINT16#4" extend=""/>
+        <attr name="VRB14" type="UINT16#4" extend=""/>
+        <attr name="VRB15" type="UINT16#4" extend=""/>
+        <attr name="VRB16" type="UINT16#4" extend=""/>
+        <attr name="VRB17" type="UINT16#4" extend=""/>
+        <attr name="VRB18" type="UINT16#4" extend=""/>
+        <attr name="VRB19" type="UINT16#4" extend=""/>
+        <attr name="VRB20" type="UINT16#4" extend=""/>
+        <attr name="VRB21" type="UINT16#4" extend=""/>
+        <attr name="VRB22" type="UINT16#4" extend=""/>
+        <attr name="VRB23" type="UINT16#4" extend=""/>
+        <attr name="VRB24" type="UINT16#4" extend=""/>
+        <attr name="VRB25" type="UINT16#4" extend=""/>
+        <attr name="VRB26" type="UINT16#4" extend=""/>
+        <attr name="VRB27" type="UINT16#4" extend=""/>
+        <attr name="VRB28" type="UINT16#4" extend=""/>
+        <attr name="VRB29" type="UINT16#4" extend=""/>
+        <attr name="VRB30" type="UINT16#4" extend=""/>
+        <attr name="VRB31" type="UINT16#4" extend=""/>
+        <attr name="VRB32" type="UINT16#4" extend=""/>
+        <attr name="VRB33" type="UINT16#4" extend=""/>
+        <attr name="VRB34" type="UINT16#4" extend=""/>
+        <attr name="VRB35" type="UINT16#4" extend=""/>
+        <attr name="VRB36" type="UINT16#4" extend=""/>
+        <attr name="VRB37" type="UINT16#4" extend=""/>
+        <attr name="VRB38" type="UINT16#4" extend=""/>
+        <attr name="VRB39" type="UINT16#4" extend=""/>
+        <attr name="VRB40" type="UINT16#4" extend=""/>
+        <attr name="VRB41" type="UINT16#4" extend=""/>
+        <attr name="VRB42" type="UINT16#4" extend=""/>
+        <attr name="VRB43" type="UINT16#4" extend=""/>
+        <attr name="VRB44" type="UINT16#4" extend=""/>
+        <attr name="VRB45" type="UINT16#4" extend=""/>
+        <attr name="VRB46" type="UINT16#4" extend=""/>
+        <attr name="VRB47" type="UINT16#4" extend=""/>
+        <attr name="VRB48" type="UINT16#4" extend=""/>
+        <attr name="VRB49" type="UINT16#4" extend=""/>
+        <attr name="VRB50" type="UINT16#4" extend=""/>
+        <attr name="VRB51" type="UINT16#4" extend=""/>
+        <attr name="VRB52" type="UINT16#4" extend=""/>
+        <attr name="VRB53" type="UINT16#4" extend=""/>
+        <attr name="VRB54" type="UINT16#4" extend=""/>
+        <attr name="VRB55" type="UINT16#4" extend=""/>
+        <attr name="VRB56" type="UINT16#4" extend=""/>
+        <attr name="VRB57" type="UINT16#4" extend=""/>
+        <attr name="VRB58" type="UINT16#4" extend=""/>
+        <attr name="VRB59" type="UINT16#4" extend=""/>
+        <attr name="VRB60" type="UINT16#4" extend=""/>
+        <attr name="VRB61" type="UINT16#4" extend=""/>
+        <attr name="VRB62" type="UINT16#4" extend=""/>
+        <attr name="VRB63" type="UINT16#4" extend=""/>
+        <attr name="VRB64" type="UINT16#4" extend=""/>
+        <attr name="VRB65" type="UINT16#4" extend=""/>
+        <attr name="VRB66" type="UINT16#4" extend=""/>
+        <attr name="VRB67" type="UINT16#4" extend=""/>
+        <attr name="VRB68" type="UINT16#4" extend=""/>
+        <attr name="VRB69" type="UINT16#4" extend=""/>
+        <attr name="VRB70" type="UINT16#4" extend=""/>
+        <attr name="VRB71" type="UINT16#4" extend=""/>
+        <attr name="VRB72" type="UINT16#4" extend=""/>
+        <attr name="VRB73" type="UINT16#4" extend=""/>
+        <attr name="VRB74" type="UINT16#4" extend=""/>
+        <attr name="VRB75" type="UINT16#4" extend=""/>
+        <attr name="VRB76" type="UINT16#4" extend=""/>
+        <attr name="VRB77" type="UINT16#4" extend=""/>
+        <attr name="VRB78" type="UINT16#4" extend=""/>
+        <attr name="VRB79" type="UINT16#4" extend=""/>
+        <attr name="VRB80" type="UINT16#4" extend=""/>
+        <attr name="VRB81" type="UINT16#4" extend=""/>
+        <attr name="VRB82" type="UINT16#4" extend=""/>
+        <attr name="VRB83" type="UINT16#4" extend=""/>
+        <attr name="VRB84" type="UINT16#4" extend=""/>
+        <attr name="VRB85" type="UINT16#4" extend=""/>
+        <attr name="VRB86" type="UINT16#4" extend=""/>
+        <attr name="VRB87" type="UINT16#4" extend=""/>
+        <attr name="VRB88" type="UINT16#4" extend=""/>
+        <attr name="VRB89" type="UINT16#4" extend=""/>
+        <attr name="VRB90" type="UINT16#4" extend=""/>
+        <attr name="VRB91" type="UINT16#4" extend=""/>
+        <attr name="VRB92" type="UINT16#4" extend=""/>
+        <attr name="VRB93" type="UINT16#4" extend=""/>
+        <attr name="VRB94" type="UINT16#4" extend=""/>
+        <attr name="VRB95" type="UINT16#4" extend=""/>
+        <attr name="VRB96" type="UINT16#4" extend=""/>
+        <attr name="VRB97" type="UINT16#4" extend=""/>
+        <attr name="VRB98" type="UINT16#4" extend=""/>
+        <attr name="VRB99" type="UINT16#4" extend=""/>
+        <attr name="VRB100" type="UINT16#4" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x313" msgname="PHICH_Static_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PHICH_Static_Info">
+        <attr name="SFN" type="UINT16#4" extend=""/>
+        <attr name="SBFN" type="UINT8#1" extend=""/>
+        <attr name="usRsd" type="UINT8#1" extend=""/>
+        <attr name="AckCount" type="UINT16#4" extend=""/>
+        <attr name="NackCount" type="UINT16#4" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x314" msgname="Trans_scheme_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="Trans_scheme_Info">
+        <attr name="SFN" type="UINT16#4" extend="[0,1023]"/>
+        <attr name="SBFN" type="UINT8#1" extend="[0,9]"/>
+        <attr name="ucRsd" type="UINT8#1" extend=""/>
+        <attr name="Single_antenna_port_scheme" type="UINT16#4" extend="[0,65536]"/>
+        <attr name="Transmit_diversity_scheme" type="UINT16#4" extend="[0,65536]"/>
+        <attr name="Large_delay_CDD_scheme" type="UINT16#4" extend="[0,65536]"/>
+        <attr name="Closed_loop_spatial_multiplexing_scheme" type="UINT16#4" extend="[0,65536]"/>
+        <attr name="Multi_user_MIMO_scheme" type="UINT16#4" extend="[0,65536]"/>
+        <attr name="Single_antenna_port" type="UINT16#4" extend="[0,65536]"/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x31a" msgname="DL_Harq_Retransmission_Statistic_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="DL_Harq_Retransmission_Statistic_Info">
+        <attr name="CodeWord0" type="STRUCT#11" extend=""/>
+        <attr name="CodeWord1" type="STRUCT#11" extend=""/>
+      </struct>
+      <struct name="CodeWord0_st">
+        <attr name="FirstTransfer" type="UINT16#4" extend=""/>
+        <attr name="1stReTx" type="UINT16#4" extend=""/>
+        <attr name="2ndReTx" type="UINT16#4" extend=""/>
+        <attr name="3rdReTx" type="UINT16#4" extend=""/>
+        <attr name="4thReTx" type="UINT16#4" extend=""/>
+        <attr name="usRsd" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="CodeWord1_st">
+        <attr name="FirstTransfer" type="UINT16#4" extend=""/>
+        <attr name="1stReTx" type="UINT16#4" extend=""/>
+        <attr name="2ndReTx" type="UINT16#4" extend=""/>
+        <attr name="3rdReTx" type="UINT16#4" extend=""/>
+        <attr name="4thReTx" type="UINT16#4" extend=""/>
+        <attr name="usRsd" type="UINT16#4" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x31b" msgname="UL_Harq_Retransmission_Statistic_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UL_Harq_Retransmission_Statistic_Info">
+        <attr name="FirstTransfer" type="UINT16#4" extend=""/>
+        <attr name="1stReTx" type="UINT16#4" extend=""/>
+        <attr name="2ndReTx" type="UINT16#4" extend=""/>
+        <attr name="3rdReTx" type="UINT16#4" extend=""/>
+        <attr name="4thReTx" type="UINT16#4" extend=""/>
+        <attr name="usRsd" type="UINT16#4" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x31c" msgname="RNTI_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="RNTI_Info">
+        <attr name="Ra_RNTI" type="UINT16#4" extend=""/>
+        <attr name="C_RNTI" type="UINT16#4" extend=""/>
+        <attr name="T_CRNTI" type="UINT16#4" extend=""/>
+        <attr name="SPS_CRNTI" type="UINT16#4" extend=""/>
+        <attr name="TPC_PUSCH_RNTI" type="UINT16#4" extend=""/>
+        <attr name="TPC_PUCCH_RNTI" type="UINT16#4" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x31d" msgname="PDSCH_Demod_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PDSCH_Demod_Info">
+        <attr name="RecordNum" type="UINT16#4" extend="[0,10]"/>
+        <attr name="Rsd" type="UINT16#4" extend=""/>
+        <attr name="PDSCH_Demod_array_Info" type="ARRAY#12" extend=""/>
+      </struct>
+      <struct name="PDSCH_Demod_Info_st">
+        <attr name="SFN" type="UINT16#4" extend=""/>
+        <attr name="SBFN" type="UINT8#1" extend=""/>
+        <attr name="usRsd1" type="UINT8#1" extend=""/>
+        <attr name="Slot0Bitmap0" type="UINT32#8" extend=""/>
+        <attr name="Slot0Bitmap1" type="UINT32#8" extend=""/>
+        <attr name="Slot0Bitmap2" type="UINT32#8" extend=""/>
+        <attr name="Slot0Bitmap3" type="UINT32#8" extend=""/>
+        <attr name="Slot1Bitmap0" type="UINT32#8" extend=""/>
+        <attr name="Slot1Bitmap1" type="UINT32#8" extend=""/>
+        <attr name="Slot1Bitmap2" type="UINT32#8" extend=""/>
+        <attr name="Slot1Bitmap3" type="UINT32#8" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x107d" msgname="L2_Throughput">
+    <msgbody skip_length="" msg_length="">
+      <struct name="L2_Throughput">
+        <attr name="Time_stamp" type="UINT32#8" extend=""/>
+        <attr name="Radio_frame_No" type="UINT16#4" extend=""/>
+        <attr name="Subframe" type="UINT16#4" extend=""/>
+        <attr name="Report_period" type="UINT32#8" extend=""/>
+        <attr name="Application_ul_throughput" type="UINT32#8" extend=""/>
+        <attr name="Application_dl_throughput" type="UINT32#8" extend=""/>
+        <attr name="PDCP_ul_throughput" type="UINT32#8" extend=""/>
+        <attr name="PDCP_dl_throughput" type="UINT32#8" extend=""/>
+        <attr name="RLC_ul_throughput" type="UINT32#8" extend=""/>
+        <attr name="RLC_dl_throughput" type="UINT32#8" extend=""/>
+        <attr name="MAC_ul_throughput" type="UINT32#8" extend=""/>
+        <attr name="MAC_dl_throughput" type="UINT32#8" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x1082" msgname="HO_Latency">
+    <msgbody skip_length="" msg_length="">
+      <struct name="HO_Latency">
+        <attr name="MACRxL3RaIndTime" type="UINT32#8" extend=""/>
+        <attr name="MACTxPreambleTime" type="UINT32#8" extend=""/>
+        <attr name="MACRaCmpIndTime" type="UINT32#8" extend=""/>
+        <attr name="MacDataStopTime" type="UINT32#8" extend=""/>
+        <attr name="MacDataContTime" type="UINT32#8" extend=""/>
+        <attr name="Before_Ho_MacRxLastUlGrantTime" type="UINT32#8" extend=""/>
+        <attr name="After_Ho_MACRxFirstULGrantTime" type="UINT32#8" extend=""/>
+        <attr name="MacHoInterruptTime" type="UINT32#8" extend=""/>
+        <attr name="RlcDataStopTime" type="UINT32#8" extend=""/>
+        <attr name="RlcDataContTime" type="UINT32#8" extend=""/>
+        <attr name="RlcHoInterruptTime" type="UINT32#8" extend=""/>
+        <attr name="PdcpDataStopTime" type="UINT32#8" extend=""/>
+        <attr name="PdcpDataContTime" type="UINT32#8" extend=""/>
+        <attr name="PdcpHoInterruptTime" type="UINT32#8" extend=""/>
+        <attr name="MacHoInfo" type="STRUCT#11" extend=""/>
+        <attr name="RlcHoInfo" type="STRUCT#11" extend=""/>
+        <attr name="PdcpHoInfo" type="STRUCT#11" extend=""/>
+      </struct>
+      <struct name="MacHoInfo_st">
+        <attr name="UlLastPktTime" type="UINT32#8" extend=""/>
+        <attr name="UlFirstPktTime" type="UINT32#8" extend=""/>
+        <attr name="UlHoIntTime" type="UINT32#8" extend=""/>
+        <attr name="DlLastPktTime" type="UINT32#8" extend=""/>
+        <attr name="DlFirstPktTime" type="UINT32#8" extend=""/>
+        <attr name="DlHoIntTime" type="UINT32#8" extend=""/>
+      </struct>
+      <struct name="RlcHoInfo_st">
+        <attr name="UlLastPktTime" type="UINT32#8" extend=""/>
+        <attr name="UlFirstPktTime" type="UINT32#8" extend=""/>
+        <attr name="UlHoIntTime" type="UINT32#8" extend=""/>
+        <attr name="DlLastPktTime" type="UINT32#8" extend=""/>
+        <attr name="DlFirstPktTime" type="UINT32#8" extend=""/>
+        <attr name="DlHoIntTime" type="UINT32#8" extend=""/>
+      </struct>
+      <struct name="PdcpHoInfo_st">
+        <attr name="UlLastPktTime" type="UINT32#8" extend=""/>
+        <attr name="UlFirstPktTime" type="UINT32#8" extend=""/>
+        <attr name="UlHoIntTime" type="UINT32#8" extend=""/>
+        <attr name="DlLastPktTime" type="UINT32#8" extend=""/>
+        <attr name="DlFirstPktTime" type="UINT32#8" extend=""/>
+        <attr name="DlHoIntTime" type="UINT32#8" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x1080" msgname="MAC_PUSCH_Data_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="MAC_PUSCH_Data_Info">
+        <attr name="SendPUSCHSuccessNumber" type="UINT32#8" extend=""/>
+        <attr name="PUSCHDynamicNumber" type="UINT32#8" extend=""/>
+        <attr name="PUSCHSemiStaticNumber" type="UINT32#8" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x1151" msgname="RB_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="RB_Info">
+        <attr name="res1" type="UINT16#4" extend=""/>
+        <attr name="res2" type="UINT8#1" extend=""/>
+        <attr name="RBnum" type="UINT8#1" extend=""/>
+        <attr name="RbList" type="ARRAY#12" extend=""/>
+      </struct>
+      <struct name="RbList_st">
+        <attr name="RB_ID" type="UINT8#1" extend=""/>
+        <attr name="TYPE" type="UINT8#1" extend=""/>
+        <attr name="RLC_mode" type="UINT8#1" extend=""/>
+        <attr name="Status" type="UINT8#1" extend=""/>
+        <attr name="LchId" type="UINT8#1" extend=""/>
+        <attr name="LchGrp" type="UINT8#1" extend=""/>
+        <attr name="LchPrio" type="UINT8#1" extend=""/>
+        <attr name="LchType" type="UINT8#1" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x1150" msgname="Camp_Cell_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="Camp_Cell_Info">
+        <attr name="Reserved" type="UINT8#1" extend=""/>
+        <attr name="BandInd" type="UINT8#1" extend=""/>
+        <attr name="WorkMode" type="UINT8#1" extend=""/>
+        <attr name="eNB_TX_antenna_num" type="UINT8#1" extend=""/>
+        <attr name="EARFCN_DL" type="UINT16#4" extend=""/>
+        <attr name="Frequency_DL" type="UINT16#4" extend=""/>
+        <attr name="PhyCellId" type="UINT16#4" extend=""/>
+        <attr name="Reserved" type="UINT16#4" extend=""/>
+        <attr name="DL_Bandwidth" type="UINT8#1" extend=""/>
+        <attr name="UL_Bandwidth" type="UINT8#1" extend=""/>
+        <attr name="SA" type="UINT8#1" extend=""/>
+        <attr name="SSP" type="UINT8#1" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x5622" msgname="UE_IMSI">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_IMSI">
+        <attr name="IMSI" type="STRING#10" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x20" msgname="UE_Version">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_Version">
+        <attr name="VVerNo" type="UINT16#4" extend=""/>
+        <attr name="RVerNo" type="UINT16#4" extend=""/>
+        <attr name="CVerNo" type="UINT16#4" extend=""/>
+        <attr name="BVerNo" type="UINT16#4" extend=""/>
+        <attr name="SpcNo" type="UINT16#4" extend=""/>
+        <attr name="HardwareVerNo" type="UINT16#4" extend=""/>
+        <attr name="ProductNo" type="UINT32#8" extend=""/>
+        <attr name="MajorVersion" type="UINT32#8" extend=""/>
+        <attr name="MinorVersion" type="UINT32#8" extend=""/>
+        <attr name="RevisionVersion" type="UINT32#8" extend=""/>
+        <attr name="BuildVersion" type="UINT32#8" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0xd10" msgname="UE_Radio_Capability_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_Radio_Capability_Info">
+        <attr name="UE_Access_Stratum_Release" type="UINT8#1" extend=""/>
+        <attr name="UE_category" type="UINT8#1" extend=""/>
+        <attr name="res" type="UINT16#4" extend=""/>
+        <attr name="featureGroupIndicators" type="UINT32#8" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x1152" msgname="UE_RRC_Status">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_RRC_Status">
+        <attr name="RRC_protocol_state" type="UINT32#8" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0xb5d" msgname="UE_NAS_Status">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_NAS_Status">
+        <attr name="Roaming_Status" type="UINT32#8" extend=""/>
+        <attr name="Service_domain" type="UINT32#8" extend=""/>
+        <attr name="Access_Mode" type="UINT32#8" extend=""/>
+        <attr name="PlmnId" type="STRUCT#11" extend=""/>
+        <attr name="Track_area_code" type="STRUCT#11" extend=""/>
+      </struct>
+      <struct name="PlmnId_st">
+        <attr name="PlmnId0" type="UINT8#1" extend=""/>
+        <attr name="PlmnId1" type="UINT8#1" extend=""/>
+        <attr name="PlmnId2" type="UINT8#1" extend=""/>
+        <attr name="res" type="UINT8#1" extend=""/>
+      </struct>
+      <struct name="Track_area_code_st">
+        <attr name="Tac" type="UINT8#1" extend=""/>
+        <attr name="TacCount" type="UINT8#1" extend=""/>
+        <attr name="res" type="UINT16#4" extend=""/>
+        <attr name="CellIdentity" type="UINT32#8" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x1403" msgname="UE_NAS_GUTI">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_NAS_GUTI">
+        <attr name="GutiHead" type="UINT32#8" extend=""/>
+        <attr name="GutiInfo" type="STRUCT#11" extend=""/>
+      </struct>
+      <struct name="GutiInfo_st">
+        <attr name="PlmnId0" type="UINT8#1" extend=""/>
+        <attr name="PlmnId1" type="UINT8#1" extend=""/>
+        <attr name="PlmnId2" type="UINT8#1" extend=""/>
+        <attr name="res1" type="UINT8#1" extend=""/>
+        <attr name="GroupId" type="UINT8#1" extend=""/>
+        <attr name="GroupIdCnt" type="UINT8#1" extend=""/>
+        <attr name="res2" type="UINT16#4" extend=""/>
+        <attr name="MmeCode" type="UINT8#1" extend=""/>
+        <attr name="res3" type="UINT8#1" extend=""/>
+        <attr name="res4" type="UINT16#4" extend=""/>
+        <attr name="MTmsi" type="UINT8#1" extend=""/>
+        <attr name="MTmsiCnt1" type="UINT8#1" extend=""/>
+        <attr name="MTmsiCnt2" type="UINT8#1" extend=""/>
+        <attr name="MTmsiCnt3" type="UINT8#1" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x1404" msgname="UE_Forbidden_PLMN_List">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_Forbidden_PLMN_List">
+        <attr name="FPlmnNum" type="UINT32#8" extend="[0,64]"/>
+        <attr name="PlmnList_st" type="ARRAY#12" extend=""/>
+      </struct>
+      <struct name="PlmnList_st">
+        <attr name="PlmnId0" type="UINT8#1" extend=""/>
+        <attr name="PlmnId1" type="UINT8#1" extend=""/>
+        <attr name="PlmnId2" type="UINT8#1" extend=""/>
+        <attr name="res" type="UINT8#1" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x988" msgname="Cell_Meas_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="Cell_Meas_Info">
+        <attr name="Report_type" type="UINT16#4" extend=""/>
+        <attr name="Meas_mode" type="UINT8#1" extend=""/>
+        <attr name="res1" type="UINT8#1" extend=""/>
+        <attr name="IntraFreqResult" type="STRUCT#11" extend=""/>
+        <attr name="InterFreqResult" type="STRUCT#11" extend=""/>
+      </struct>
+      <struct name="IntraFreqResult_st">
+        <attr name="Frequency" type="UINT16#4" extend=""/>
+        <attr name="IntraFreqCellNum" type="UINT16#4" extend=""/>
+        <attr name="DetectedCellNum" type="UINT16#4" extend=""/>
+        <attr name="res2" type="UINT16#4" extend=""/>
+        <attr name="IntraMeasResult" type="ARRAY#12" extend=""/>
+      </struct>
+      <struct name="IntraMeasResult_st">
+        <attr name="CellId" type="UINT16#4" extend=""/>
+        <attr name="Rsrp" type="INT16#2" extend=""/>
+        <attr name="Rsrq" type="INT16#2" extend=""/>
+        <attr name="Rssi" type="INT16#2" extend=""/>
+      </struct>
+      <struct name="InterFreqResult_st">
+        <attr name="InterFreqNum" type="UINT16#4" extend=""/>
+        <attr name="res3" type="UINT16#4" extend=""/>
+        <attr name="InterFreqResultList" type="ARRAY#12" extend=""/>
+      </struct>
+      <struct name="InterFreqResultList_st">
+        <attr name="Frequency" type="UINT16#4" extend=""/>
+        <attr name="InterFreqCellNum" type="UINT16#4" extend=""/>
+        <attr name="DetectedCellNum" type="UINT16#4" extend=""/>
+        <attr name="res4" type="UINT16#4" extend=""/>
+        <attr name="InterMeasResult" type="ARRAY#12" extend=""/>
+      </struct>
+      <struct name="InterMeasResult_st">
+        <attr name="CellId" type="UINT16#4" extend=""/>
+        <attr name="Rsrp" type="INT16#2" extend=""/>
+        <attr name="Rsrq" type="INT16#2" extend=""/>
+        <attr name="Rssi" type="INT16#2" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x1084" msgname="RLC_PARA_INFO">
+    <msgbody skip_length="" msg_length="">
+      <struct name="RLC_PARA_INFO">
+        <attr name="DlRbValidNum" type="UINT8#1" extend=""/>
+        <attr name="UlRbValidNum" type="UINT8#1" extend=""/>
+        <attr name="res1" type="UINT16#4" extend=""/>
+        <attr name="RlcDlInfo" type="ARRAY#12" extend=""/>
+        <attr name="RlcUlInfo" type="ARRAY#12" extend=""/>
+        <attr name="RlcAckNackInfo" type="ARRAY#12" extend=""/>
+      </struct>
+      <struct name="RlcDlInfo_st">
+        <attr name="LchId" type="UINT8#1" extend=""/>
+        <attr name="RlcMode" type="UINT8#1" extend=""/>
+        <attr name="RlcState" type="UINT8#1" extend=""/>
+        <attr name="res2" type="UINT8#1" extend=""/>
+        <attr name="RxMacPduNum" type="UINT32#8" extend=""/>
+        <attr name="TxPdcpSduNum" type="UINT32#8" extend=""/>
+        <attr name="VR_UR" type="UINT16#4" extend=""/>
+        <attr name="VR_UX" type="UINT16#4" extend=""/>
+        <attr name="VR_UH" type="UINT16#4" extend=""/>
+        <attr name="VR_R" type="UINT16#4" extend=""/>
+        <attr name="VR_MR" type="UINT16#4" extend=""/>
+        <attr name="VR_X" type="UINT16#4" extend=""/>
+        <attr name="VR_H" type="UINT16#4" extend=""/>
+        <attr name="VR_MS" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="RlcUlInfo_st">
+        <attr name="LchId" type="UINT8#1" extend=""/>
+        <attr name="RlcMode" type="UINT8#1" extend=""/>
+        <attr name="RlcState" type="UINT8#1" extend=""/>
+        <attr name="Reserved" type="UINT8#1" extend=""/>
+        <attr name="RxPdcpSduNum" type="UINT32#8" extend=""/>
+        <attr name="RxMacSchNum" type="UINT32#8" extend=""/>
+        <attr name="TxMacPduNum" type="UINT32#8" extend=""/>
+        <attr name="VT_US" type="UINT32#8" extend=""/>
+        <attr name="VT_A" type="UINT16#4" extend=""/>
+        <attr name="VT_MS" type="UINT16#4" extend=""/>
+        <attr name="VT_S" type="UINT16#4" extend=""/>
+        <attr name="res3" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="RlcAckNackInfo_st">
+        <attr name="UlAckNum" type="UINT32#8" extend=""/>
+        <attr name="DlAckNum" type="UINT32#8" extend=""/>
+        <attr name="UlNackNum" type="UINT32#8" extend=""/>
+        <attr name="DlNackNum" type="UINT32#8" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0xb08" msgname="LOCK_PLMN_LIST">
+    <msgbody skip_length="" msg_length="">
+      <struct name="LOCK_PLMN_LIST">
+        <attr name="PlmnNum" type="UINT32#8" extend=""/>
+        <attr name="PlmnList" type="ARRAY#12" extend=""/>
+      </struct>
+      <struct name="PlmnList_st">
+        <attr name="PlmnId0" type="UINT8#1" extend=""/>
+        <attr name="PlmnId1" type="UINT8#1" extend=""/>
+        <attr name="PlmnId2" type="UINT8#1" extend=""/>
+        <attr name="res" type="UINT8#1" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>
+  <msg id="0x1153" msgname="RRC_Timer">
+    <msgbody skip_length="" msg_length="">
+      <struct name="RRC_Timer">
+        <attr name="RRC_timer_id" type="UINT32#8" extend=""/>
+      </struct>
+    </msgbody>
+  </msg>

@@ -1,0 +1,14 @@
+# encoding: utf-8
+# require 'spreadsheet'
+require 'parseexcel'
+require "parseexcel/parser"
+require 'builder' 
+# require "span_check/ie_exp_convert"
+
+module SpanCheck
+  autoload :AttrParse, "./span_check/attr_parse"
+  autoload :IeExpConvert, "./span_check/ie_exp_convert"
+end
+
+ieconvert = SpanCheck::IeExpConvert.new("../doc/HISI_LTE_IE.xls")
+ieconvert.parse

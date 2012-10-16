@@ -1,0 +1,982 @@
+<?xml version="1.0" encoding="utf-8"?>
+<criticaleventconfig>
+  <conditionlist>
+    <condition name="TL1" type="config" expectedsignal="CounterCheck">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL2" type="config" expectedsignal="CounterCheckResponse">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL3" type="config" expectedsignal="CSFBParametersRequestCDMA2000">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL4" type="config" expectedsignal="CSFBParametersResponseCDMA2000">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL5" type="config" expectedsignal="DLInformationTransfer">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL6" type="config" expectedsignal="HandoverFromEUTRAPreparationRequest (CDMA2000)">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL7" type="config" expectedsignal="MasterInformationBlock">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL8" type="config" expectedsignal="MBSFNAreaConfiguration">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL9" type="config" expectedsignal="MeasurementReport">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL10" type="config" expectedsignal="MobilityFromEUTRACommand">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL11" type="config" expectedsignal="Paging">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL12" type="config" expectedsignal="ProximityIndication">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL13" type="config" expectedsignal="RRCConnectionReconfiguration">
+      <match key="handoverType" value="intraLTE"/>
+      <match key="carrierFreq" value="!TDDLTE_Scell_Radio_Parameters_Frequency_DL"/>
+    </condition>
+    <condition name="TL14" type="config" expectedsignal="RRCConnectionReconfigurationComplete">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL15" type="config" expectedsignal="RRCConnectionReestablishment">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL16" type="config" expectedsignal="RRCConnectionReestablishmentComplete">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL17" type="config" expectedsignal="RRCConnectionReestablishmentReject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL18" type="config" expectedsignal="RRCConnectionReestablishmentRequest">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL19" type="config" expectedsignal="RRCConnectionReject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL20" type="config" expectedsignal="RRCConnectionRelease">
+      <match key="releaseCause" value="other"/>
+    </condition>
+    <condition name="TL21" type="config" expectedsignal="RRCConnectionRequest">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL22" type="config" expectedsignal="RRCConnectionSetup">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL23" type="config" expectedsignal="RRCConnectionSetupComplete">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL24" type="config" expectedsignal="SystemInformation">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL25" type="config" expectedsignal="SystemInformationBlockType1">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL26" type="config" expectedsignal="UECapabilityEnquiry">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL27" type="config" expectedsignal="UECapabilityInformation">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL28" type="config" expectedsignal="UEInformationRequest">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL29" type="config" expectedsignal="UEInformationResponse">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL30" type="config" expectedsignal="ULHandoverPreparationTransfer (CDMA2000)">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL31" type="config" expectedsignal="ULInformationTransfer">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL32" type="config" expectedsignal="Attach accept">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL33" type="config" expectedsignal="Attach complete">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL34" type="config" expectedsignal="Attach reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL35" type="config" expectedsignal="Attach request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL36" type="config" expectedsignal="Authentication failure">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL37" type="config" expectedsignal="Authentication reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL38" type="config" expectedsignal="Authentication request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL39" type="config" expectedsignal="Authentication response">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL40" type="config" expectedsignal="CS service notification">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL41" type="config" expectedsignal="Detach accept">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL42" type="config" expectedsignal="Detach request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL43" type="config" expectedsignal="Downlink NAS Transport">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL44" type="config" expectedsignal="EMM information">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL45" type="config" expectedsignal="EMM status">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL46" type="config" expectedsignal="Extended service request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL47" type="config" expectedsignal="GUTI reallocation command">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL48" type="config" expectedsignal="GUTI reallocation complete">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL49" type="config" expectedsignal="Identity request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL50" type="config" expectedsignal="Identity response">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL51" type="config" expectedsignal="Security mode command">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL52" type="config" expectedsignal="Security mode complete">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL53" type="config" expectedsignal="Security mode reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL54" type="config" expectedsignal="Security protected NAS message">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL55" type="config" expectedsignal="Service reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL56" type="config" expectedsignal="Service request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL57" type="config" expectedsignal="Tracking area update accept">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL58" type="config" expectedsignal="Tracking area update complete">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL59" type="config" expectedsignal="Tracking area update reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL60" type="config" expectedsignal="Tracking area update request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL61" type="config" expectedsignal="Uplink NAS Transport">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL62" type="config" expectedsignal="Downlink generic NAS transport">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL63" type="config" expectedsignal="Activate dedicated EPS bearer context accept">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL64" type="config" expectedsignal="Activate dedicated EPS bearer context reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL65" type="config" expectedsignal="Activate dedicated EPS bearer context request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL66" type="config" expectedsignal="Activate default EPS bearer context accept">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL67" type="config" expectedsignal="Activate default EPS bearer context reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL68" type="config" expectedsignal="Activate default EPS bearer context request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL69" type="config" expectedsignal="Bearer resource allocation reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL70" type="config" expectedsignal="Bearer resource allocation request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL71" type="config" expectedsignal="Bearer resource modification reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL72" type="config" expectedsignal="Bearer resource modification request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL73" type="config" expectedsignal="Deactivate EPS bearer context accept">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL74" type="config" expectedsignal="Deactivate EPS bearer context request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL75" type="config" expectedsignal="ESM information request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL76" type="config" expectedsignal="ESM information response">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL77" type="config" expectedsignal="ESM status">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL78" type="config" expectedsignal="Modify EPS bearer context accept">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL79" type="config" expectedsignal="Modify EPS bearer context reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL80" type="config" expectedsignal="Modify EPS bearer context request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL81" type="config" expectedsignal="PDN connectivity reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL82" type="config" expectedsignal="PDN connectivity request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL83" type="config" expectedsignal="PDN disconnect reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL84" type="config" expectedsignal="PDN disconnect request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL85" type="config" expectedsignal="RRCConnectionRelease">
+      <match key="releaseCause" value="loadBalancingTAUrequired"/>
+    </condition>
+    <condition name="TL86" type="config" expectedsignal="RRCConnectionSetupComplete">
+      <match key="message name" value="Attach request"/>
+    </condition>
+    <condition name="TL87" type="config" expectedsignal="RRCConnectionReconfiguration">
+      <match key="handoverType" value="intraLTE"/>
+      <match key="mobilityControlInfo.carrierFreq.dl-CarrierFreq" value="!TDDLTE_Scell_Radio_Parameters_Frequency_DL"/>
+    </condition>
+    <condition name="TL88" type="config" expectedsignal="RRCConnectionSetupComplete">
+      <match key="Tracking area update accept" value=""/>
+    </condition>
+    <condition name="TL89" type="config" expectedsignal="Attach accept">
+      <match key="Activate default EPS bearer context request" value=""/>
+    </condition>
+    <condition name="TL90" type="config" expectedsignal="Attach complete">
+      <match key="Activate default EPS bearer context accept" value=""/>
+    </condition>
+    <condition name="TL91" type="config" expectedsignal="Attach reject">
+      <match key="Activate default EPS bearer context reject" value=""/>
+    </condition>
+    <condition name="TL601" type="config" expectedsignal="12065_0x2000">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL602" type="config" expectedsignal="12065_0x2001">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL603" type="config" expectedsignal="12065_0x2002">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL604" type="config" expectedsignal="12065_0x2003">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL605" type="config" expectedsignal="12065_0x2004">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL606" type="config" expectedsignal="12065_0x2005">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL607" type="config" expectedsignal="12065_0x2006">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL608" type="config" expectedsignal="12065_0x2007">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL609" type="config" expectedsignal="12065_0x2008">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL610" type="config" expectedsignal="12065_0x2009">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL611" type="config" expectedsignal="12065_0x2030">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL612" type="config" expectedsignal="12065_0x2040">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL613" type="config" expectedsignal="12065_0x2041">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL614" type="config" expectedsignal="12065_0x2042">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL615" type="config" expectedsignal="12065_0x2043">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL616" type="config" expectedsignal="12065_0x2044">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL617" type="config" expectedsignal="12065_0x2045">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL618" type="config" expectedsignal="12065_0x2050">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL619" type="config" expectedsignal="12065_0x2051">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL620" type="config" expectedsignal="12065_0x2052">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL621" type="config" expectedsignal="12065_0x2053">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL622" type="config" expectedsignal="12065_0x2054">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL623" type="config" expectedsignal="12065_0x2055">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL624" type="config" expectedsignal="12065_0x2056">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL625" type="config" expectedsignal="12065_0x2057">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL626" type="config" expectedsignal="12065_0x2058">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL627" type="config" expectedsignal="12065_0x2059">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL628" type="config" expectedsignal="12065_0x205a">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL629" type="config" expectedsignal="12065_0x205b">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL630" type="config" expectedsignal="12065_0x205c">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL631" type="config" expectedsignal="12065_0x205d">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL632" type="config" expectedsignal="12065_0x205e">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL633" type="config" expectedsignal="12065_0x205f">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL634" type="config" expectedsignal="12065_0x2060">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL635" type="config" expectedsignal="12065_0x2061">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL636" type="config" expectedsignal="12065_0x2062">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL637" type="config" expectedsignal="12065_0x2080">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL638" type="config" expectedsignal="12065_0x2081">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL639" type="config" expectedsignal="12065_0x2082">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL640" type="config" expectedsignal="12065_0x2083">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL641" type="config" expectedsignal="12065_0x2084">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL642" type="config" expectedsignal="12065_0x2085">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL643" type="config" expectedsignal="12065_0x2086">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL644" type="config" expectedsignal="12065_0x2087">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL645" type="config" expectedsignal="12065_0x2088">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL646" type="config" expectedsignal="12065_0x2089">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL647" type="config" expectedsignal="12065_0x208a">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL648" type="config" expectedsignal="12065_0x208b">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL649" type="config" expectedsignal="12065_0x208c">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL650" type="config" expectedsignal="12065_0x208d">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL651" type="config" expectedsignal="12065_0x208e">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL652" type="config" expectedsignal="12065_0x208f">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL653" type="config" expectedsignal="12065_0x2090">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL654" type="config" expectedsignal="12065_0x2091">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL655" type="config" expectedsignal="12065_0x2092">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL656" type="config" expectedsignal="12065_0x2093">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL657" type="config" expectedsignal="12065_0x2094">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL658" type="config" expectedsignal="12065_0x2095">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL659" type="config" expectedsignal="12065_0x2096">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL660" type="config" expectedsignal="12065_0x2097">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL661" type="config" expectedsignal="12065_0x2098">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL662" type="config" expectedsignal="12065_0x2099">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL663" type="config" expectedsignal="12065_0x209a">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL664" type="config" expectedsignal="12065_0x68">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL665" type="config" expectedsignal="12065_0x0051">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL666" type="config" expectedsignal="12065_0x0052">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL667" type="config" expectedsignal="12065_0x200a">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL668" type="config" expectedsignal="12065_0x200b">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL669" type="config" expectedsignal="12065_0x200c">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL670" type="config" expectedsignal="12065_0x200d">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL671" type="config" expectedsignal="12065_0x200e">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL672" type="config" expectedsignal="12065_0x200f">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL673" type="config" expectedsignal="12065_0x2120">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL674" type="config" expectedsignal="12065_0x2121">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL675" type="config" expectedsignal="12065_0x2122">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL676" type="config" expectedsignal="12065_0x2123">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL677" type="config" expectedsignal="12065_0x2124">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL678" type="config" expectedsignal="12065_0x2125">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL679" type="config" expectedsignal="12065_0x2126">
+      <match key="" value=""/>
+    </condition>
+    <condition name="TL680" type="config" expectedsignal="12065_0x2127">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T1" type="config" expectedsignal="RRC Connection Request">
+      <match key="EstablishmentCause" value="originatingConversationalCall"/>
+    </condition>
+    <condition name="T2" type="config" expectedsignal="CM Service Request">
+      <match key="CM Service Type" value="Mobile originating call establishment or packet mode connection establishment"/>
+    </condition>
+    <condition name="T3" type="config" expectedsignal="CM Service Request">
+      <match key="CM Service Type" value="Emergency call establishment"/>
+    </condition>
+    <condition name="T4" type="config" expectedsignal="RRC Connection Reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T5" type="config" expectedsignal="12065.0x1000">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T6" type="config" expectedsignal="Master Information Block">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T7" type="config" expectedsignal="System Information Type 1">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T8" type="config" expectedsignal="System Information Type 4">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T9" type="config" expectedsignal="RRC Connection Release">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T10" type="config" expectedsignal="12065.0x1002">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T11" type="config" expectedsignal="12065.0x1003">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T12" type="config" expectedsignal="12065.0x1004">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T13" type="config" expectedsignal="Disconnect">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T14" type="config" expectedsignal="Release">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T15" type="config" expectedsignal="Release Complete">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T16" type="config" expectedsignal="12065.0x1001">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T17" type="config" expectedsignal="Connect">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T18" type="config" expectedsignal="Connect Acknowledge">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T19" type="config" expectedsignal="Handover Complete(GSM RR)">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T20" type="config" expectedsignal="System Information Type 1(GSM RR)">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T21" type="config" expectedsignal="System Information Type 4(GSM RR)">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T22" type="config" expectedsignal="Channel Release(GSM RR)">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T23" type="config" expectedsignal="RRC Connection Request">
+      <match key="EstablishmentCause" value="terminatingConversationalCall"/>
+    </condition>
+    <condition name="T24" type="config" expectedsignal="Set Up">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T25" type="config" expectedsignal="Location Updating Request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T26" type="config" expectedsignal="Location Updating Reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T27" type="config" expectedsignal="Location Updating Accept">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T28" type="config" expectedsignal="Routing Area Update Request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T29" type="config" expectedsignal="Routing Area Update Reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T30" type="config" expectedsignal="Routing Area Update Accept">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T31" type="config" expectedsignal="Cell Update Confirm">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T32" type="config" expectedsignal="Physical Channel Reconfiguration Complete">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T33" type="config" expectedsignal="Radio Berer Reconfiguration Complete">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T34" type="config" expectedsignal="Transport Channel Reconfiguration Complete">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T35" type="config" expectedsignal="Utran Mobility Information Complete">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T36" type="config" expectedsignal="Physical Channel Reconfiguration">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T37" type="config" expectedsignal="Radio Bearer Reconfiguration">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T38" type="config" expectedsignal="Transport Channel Reconfiguration">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T39" type="config" expectedsignal="Physical Channel Reconfiguration Failure">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T40" type="config" expectedsignal="Radio Berer Reconfiguration Failure">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T41" type="config" expectedsignal="Transport Channel Reconfiguration Failure">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T42" type="config" expectedsignal="URA Update">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T43" type="config" expectedsignal="URA Update Confirm">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T44" type="config" expectedsignal="Radio Bearer Setup">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T45" type="config" expectedsignal="Radio Bearer Setup Failure">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T46" type="config" expectedsignal="Radio Bearer Setup Complete">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T47" type="config" expectedsignal="Handover From UTRAN Command">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T48" type="config" expectedsignal="Handover from UTRAN Failure">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T49" type="config" expectedsignal="12065.0x6E">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T50" type="config" expectedsignal="Handover Complete(GSM RR)">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T51" type="config" expectedsignal="12065.0x6D">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T52" type="config" expectedsignal="Activate PDP Context Request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T53" type="config" expectedsignal="Activate PDP Context Reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T54" type="config" expectedsignal="Activate PDP Context Accept">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T55" type="config" expectedsignal="Deactivate PDP Context Request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T56" type="config" expectedsignal="Deactivate PDP Context Accept">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T57" type="config" expectedsignal="Attach Request">
+      <match key="Attach type" value="GPRS Attach"/>
+    </condition>
+    <condition name="T58" type="config" expectedsignal="Attach Reject">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T59" type="config" expectedsignal="Attach Accept">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T60" type="config" expectedsignal="Detach Request">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T61" type="config" expectedsignal="Detach Accept">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T62" type="config" expectedsignal="12065.0x6B">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T63" type="config" expectedsignal="12065.0x67">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T64" type="config" expectedsignal="12065.0x73">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T65" type="config" expectedsignal="12065.0x6F">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T66" type="config" expectedsignal="12065.0x71">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T67" type="config" expectedsignal="12065.0x72">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T68" type="config" expectedsignal="Cell Change Order From UTRAN">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T69" type="config" expectedsignal="Cell Change Order From UTRAN Failure">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T70" type="config" expectedsignal="RRC Connection Setup Complete">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T71" type="config" expectedsignal="RRC Connection Request">
+      <match key="EstablishmentCause" value="Registration"/>
+    </condition>
+    <condition name="T72" type="config" expectedsignal="Physical Channel Reconfiguration">
+      <match key="synchronizationParametersPresent" value="0"/>
+    </condition>
+    <condition name="T73" type="config" expectedsignal="Radio Bearer Reconfiguration">
+      <match key="synchronizationParametersPresent" value="0"/>
+    </condition>
+    <condition name="T74" type="config" expectedsignal="Transport Channel Reconfiguration">
+      <match key="synchronizationParametersPresent" value="0"/>
+    </condition>
+    <condition name="T75" type="config" expectedsignal="Physical Channel Reconfiguration">
+      <match key="synchronizationParametersPresent" value="1"/>
+    </condition>
+    <condition name="T76" type="config" expectedsignal="Radio Bearer Reconfiguration">
+      <match key="synchronizationParametersPresent" value="1"/>
+    </condition>
+    <condition name="T77" type="config" expectedsignal="Transport Channel Reconfiguration">
+      <match key="synchronizationParametersPresent" value="1"/>
+    </condition>
+    <condition name="T78" type="config" expectedsignal="12065.0x2010">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T79" type="config" expectedsignal="12065.0x2011">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T80" type="config" expectedsignal="12065.0x2012">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T81" type="config" expectedsignal="12065.0x2013">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T82" type="config" expectedsignal="12065.0x2014">
+      <match key="" value=""/>
+    </condition>
+    <condition name="T83" type="config" expectedsignal="12065.0x2015">
+      <match key="" value=""/>
+    </condition>
+  </conditionlist>
+  <state name="LTE_RRC_Begin" isbegin="yes" isend="no" servicetype="LTE_RRC">
+    <change condition="TL21" nextstate="LTE_RRC_RRC Connect Request" eventname="RRC Connection Request" eventextrainfo=""/>
+  </state>
+  <state name="LTE_RRC_RRC Connect Request" isbegin="no" isend="no" servicetype="LTE_RRC">
+    <change condition="TL23" nextstate="LTE_RRC_RRC Connect Success" eventname="RRC Connection Success" eventextrainfo=""/>
+    <change condition="Or(TL19,TL24,TL25,TL7)" nextstate="" eventname="RRC Connection Failure" eventextrainfo=""/>
+  </state>
+  <state name="LTE_RRC_RRC Connect Success" isbegin="no" isend="yes" servicetype="LTE_RRC">
+    <change condition="TL20" nextstate="" eventname="RRC Connection Normal Release" eventextrainfo=""/>
+    <change condition="Or(TL85,TL24,TL25,TL7)" nextstate="" eventname="RRC Connection Abnormal Release" eventextrainfo=""/>
+  </state>
+  <state name="LTE_PS_Begin" isbegin="yes" isend="no" servicetype="LTE_PS">
+    <change condition="TL86" nextstate="LTE_PS_EPS Attach Request" eventname="EPS Attach Request" eventextrainfo=""/>
+    <change condition="TL42" nextstate="LTE_PS_Detach request" eventname="EPS Detach request" eventextrainfo=""/>
+  </state>
+  <state name="LTE_PS_EPS Attach Request" isbegin="no" isend="no" servicetype="LTE_PS">
+    <change condition="TL33" nextstate="LTE_PS_EPS Attach Success" eventname="EPS Attach Success" eventextrainfo=""/>
+    <change condition="Or(TL34,TL20)" nextstate="LTE_PS_EPS Attach Failure" eventname="EPS Attach Failure" eventextrainfo=""/>
+  </state>
+  <state name="LTE_PS_Detach request" isbegin="no" isend="yes" servicetype="LTE_PS">
+    <change condition="TL41" nextstate="" eventname="EPS Detach Success" eventextrainfo=""/>
+  </state>
+  <state name="LTE_HO_Begin" isbegin="yes" isend="no" servicetype="LTE_HO">
+    <change condition="TL13" nextstate="LTE_HO_Intrafreq Handover Start" eventname="Intrafreq Handover Start" eventextrainfo=""/>
+    <change condition="TL86" nextstate="LTE_HO_Interfreq Handover Start" eventname="Interfreq Handover Start" eventextrainfo=""/>
+  </state>
+  <state name="LTE_HO_Intrafreq Handover Start" isbegin="no" isend="yes" servicetype="LTE_HO">
+    <change condition="TL14" nextstate="" eventname="Intrafreq Handover Success" eventextrainfo=""/>
+    <change condition="TL609" nextstate="" eventname="Intrafreq Handover Failure" eventextrainfo=""/>
+  </state>
+  <state name="LTE_HO_Interfreq Handover Start" isbegin="no" isend="yes" servicetype="LTE_HO">
+    <change condition="TL14" nextstate="" eventname="Interfreq Handover Success" eventextrainfo=""/>
+    <change condition="TL609" nextstate="" eventname="Interfreq Handover Failure" eventextrainfo=""/>
+  </state>
+  <state name="LTE_TAU_Begin" isbegin="yes" isend="no" servicetype="LTE_TAU">
+    <change condition="Or(TL60,TL88)" nextstate="LTE_TAU_TAU  Request" eventname="TAU Request" eventextrainfo=""/>
+  </state>
+  <state name="LTE_TAU_TAU  Request" isbegin="no" isend="yes" servicetype="LTE_TAU">
+    <change condition="TL58" nextstate="" eventname="TAU Success" eventextrainfo=""/>
+    <change condition="TL59" nextstate="" eventname="TAU Failure" eventextrainfo=""/>
+  </state>
+  <state name="LTE_RB_D_Begin" isbegin="yes" isend="no" servicetype="LTE_RB_D">
+    <change condition="TL65" nextstate="LTE_RB_D_Activate dedicated EPS bearer context Request" eventname="Activate dedicated EPS bearer context Request" eventextrainfo=""/>
+  </state>
+  <state name="LTE_RB_D_Activate dedicated EPS bearer context Request" isbegin="no" isend="yes" servicetype="LTE_RB_D">
+    <change condition="TL63" nextstate="" eventname="Activate dedicated EPS bearer context Success" eventextrainfo=""/>
+    <change condition="TL64" nextstate="" eventname="Activate dedicated EPS bearer context Failure" eventextrainfo=""/>
+  </state>
+  <state name="LTE_RB_Begin" isbegin="yes" isend="no" servicetype="LTE_RB">
+    <change condition="Or(TL68,TL89)" nextstate="LTE_RB_Activate default EPS bearer context Request" eventname="Activate default EPS bearer context Request" eventextrainfo=""/>
+  </state>
+  <state name="LTE_RB_Activate default EPS bearer context Request" isbegin="no" isend="yes" servicetype="LTE_RB">
+    <change condition="Or(TL66,TL90)" nextstate="" eventname="Activate default EPS bearer context Success" eventextrainfo=""/>
+    <change condition="Or(TL67,TL91)" nextstate="" eventname="Activate default EPS bearer context Failure" eventextrainfo=""/>
+  </state>
+  <state name="LTE_RB_M_Begin" isbegin="yes" isend="no" servicetype="LTE_RB_M">
+    <change condition="TL80" nextstate="LTE_RB_M_Modify EPS bearer context request" eventname="Modify EPS bearer context request" eventextrainfo=""/>
+  </state>
+  <state name="LTE_RB_M_Modify EPS bearer context request" isbegin="no" isend="yes" servicetype="LTE_RB_M">
+    <change condition="TL78" nextstate="" eventname="Modify EPS bearer context accept" eventextrainfo=""/>
+    <change condition="TL79" nextstate="" eventname="Modify EPS bearer context Failure" eventextrainfo=""/>
+  </state>
+  <state name="TD_CS_Begin" isbegin="yes" isend="no" servicetype="TD_CS">
+    <change condition="Or(T1,T2,T3)" nextstate="TD_CS_Outgoing Call Attempt" eventname="Outgoing Call Attempt" eventextrainfo=""/>
+    <change condition="Or(T23,T24)" nextstate="TD_CS_Incoming Call Attempt" eventname="Incoming Call Attempt" eventextrainfo=""/>
+  </state>
+  <state name="TD_CS_Outgoing Call Attempt" isbegin="no" isend="yes" servicetype="TD_CS">
+    <change condition="Or(T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15,T16)" nextstate="" eventname="Outgoing Call Block" eventextrainfo=""/>
+    <change condition="Or(T17,T18)" nextstate="TD_CS_Outgoing Call Connect" eventname="Outgoing Call Connect" eventextrainfo=""/>
+    <change condition="Or(T1,T2)" nextstate="TD_CS_Outgoing Call Attempt" eventname="" eventextrainfo=""/>
+  </state>
+  <state name="TD_CS_Outgoing Call Connect" isbegin="no" isend="yes" servicetype="TD_CS">
+    <change condition="Or(T6,T7,T8,T9)" nextstate="" eventname="Outgoing Call Drop" eventextrainfo=""/>
+    <change condition="Or(T13,T14,T15)" nextstate="" eventname="Outgoing Call End" eventextrainfo=""/>
+    <change condition="T19" nextstate="TD_CS_Handover to GSM Success" eventname="" eventextrainfo=""/>
+  </state>
+  <state name="TD_CS_Handover to GSM Success" isbegin="no" isend="yes" servicetype="GSM_CS">
+    <change condition="Or(T20,T21)" nextstate="" eventname="Outgoing Call Drop" eventextrainfo=""/>
+    <change condition="Or(T13,T22)" nextstate="" eventname="Outgoing Call End" eventextrainfo=""/>
+    <change condition="Or(T20,T21)" nextstate="" eventname="Incoming Call Drop" eventextrainfo=""/>
+    <change condition="Or(T13,T22)" nextstate="" eventname="Incoming Call End" eventextrainfo=""/>
+  </state>
+  <state name="TD_CS_Incoming Call Attempt" isbegin="no" isend="yes" servicetype="TD_CS">
+    <change condition="Or(T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15,T16)" nextstate="" eventname="Incoming Call Block" eventextrainfo=""/>
+    <change condition="Or(T17,T18)" nextstate="TD_CS_Incoming Call Connect" eventname="Incoming Call Connect" eventextrainfo=""/>
+  </state>
+  <state name="TD_CS_Incoming Call Connect" isbegin="no" isend="yes" servicetype="TD_CS">
+    <change condition="Or(T6,T7,T8,T9)" nextstate="" eventname="Incoming Call Drop" eventextrainfo=""/>
+    <change condition="Or(T13,T14,T15)" nextstate="" eventname="Incoming Call End" eventextrainfo=""/>
+    <change condition="T19" nextstate="TD_CS_Handover to GSM Success" eventname="" eventextrainfo=""/>
+  </state>
+  <state name="TD_LAU_Begin" isbegin="yes" isend="no" servicetype="TD_LAU">
+    <change condition="T25" nextstate="TD_LAU_Location Area Update Request" eventname="Location Area Update Request" eventextrainfo=""/>
+  </state>
+  <state name="TD_LAU_Location Area Update Request" isbegin="no" isend="yes" servicetype="TD_LAU">
+    <change condition="Or(T25,T26)" nextstate="" eventname="Location Area Update Failure" eventextrainfo=""/>
+    <change condition="T27" nextstate="" eventname="Location Area Update Success" eventextrainfo=""/>
+  </state>
+  <state name="TD_RAU_Begin" isbegin="yes" isend="no" servicetype="TD_RAU">
+    <change condition="T28" nextstate="TD_RAU_Route Area Update Request" eventname="Route Area Update Request" eventextrainfo=""/>
+  </state>
+  <state name="TD_RAU_Route Area Update Request" isbegin="no" isend="yes" servicetype="TD_RAU">
+    <change condition="Or(T28,T29)" nextstate="" eventname="Route Area Update Failure" eventextrainfo=""/>
+    <change condition="T30" nextstate="" eventname="Route Area Update Success" eventextrainfo=""/>
+  </state>
+  <state name="TD_CU_Begin" isbegin="yes" isend="no" servicetype="TD_CU">
+    <change condition="T31" nextstate="TD_CU_Cell Update Start" eventname="Cell Update Start" eventextrainfo=""/>
+  </state>
+  <state name="TD_CU_Cell Update Start" isbegin="no" isend="yes" servicetype="TD_CU">
+    <change condition="Or(T6,T7,T8,T9)" nextstate="" eventname="Cell Update Failure" eventextrainfo=""/>
+    <change condition="Or(T32,T33,T34,T35)" nextstate="" eventname="Cell Update Success" eventextrainfo=""/>
+  </state>
+  <state name="TD_HO_Begin" isbegin="yes" isend="no" servicetype="TD_HO">
+    <change condition="Or(T36,T37,T38)" nextstate="TD_HO_Handover Start" eventname="Handover Start" eventextrainfo=""/>
+  </state>
+  <state name="TD_HO_Handover Start" isbegin="no" isend="yes" servicetype="TD_HO">
+    <change condition="Or(T39,T40,T41)" nextstate="" eventname="Handover Failure" eventextrainfo=""/>
+    <change condition="Or(T32,T33,T34)" nextstate="" eventname="Handover Success" eventextrainfo=""/>
+  </state>
+  <state name="TD_URA_Begin" isbegin="yes" isend="no" servicetype="TD_URA">
+    <change condition="T42" nextstate="TD_URA_URA Update Start" eventname="URA Update Start" eventextrainfo=""/>
+  </state>
+  <state name="TD_URA_URA Update Start" isbegin="no" isend="yes" servicetype="TD_URA">
+    <change condition="Or(T6,T7,T8,T9)" nextstate="" eventname="URA Update Failure" eventextrainfo=""/>
+    <change condition="T43" nextstate="" eventname="URA Update Success" eventextrainfo=""/>
+  </state>
+  <state name="TD_RB_Begin" isbegin="yes" isend="no" servicetype="TD_RB">
+    <change condition="T44" nextstate="TD_RB_RB Setup Request" eventname="RB Setup Request" eventextrainfo=""/>
+  </state>
+  <state name="TD_RB_RB Setup Request" isbegin="no" isend="yes" servicetype="TD_RB">
+    <change condition="T45" nextstate="" eventname="RB Setup Failure" eventextrainfo=""/>
+    <change condition="T46" nextstate="" eventname="RB Setup Complete" eventextrainfo=""/>
+  </state>
+  <state name="T2G_HO_Begin" isbegin="yes" isend="no" servicetype="T2G_HO">
+    <change condition="T47" nextstate="T2G_HO_Handvoer to GSM Start" eventname="Handvoer to GSM Start" eventextrainfo=""/>
+  </state>
+  <state name="T2G_HO_Handvoer to GSM Start" isbegin="no" isend="yes" servicetype="T2G_HO">
+    <change condition="Or(T48,T49)" nextstate="" eventname="Handover to GSM Failure" eventextrainfo=""/>
+    <change condition="Or(T50,T51)" nextstate="" eventname="Handover to GSM Success" eventextrainfo=""/>
+  </state>
+  <state name="TD_PDP_Begin" isbegin="yes" isend="no" servicetype="TD_PDP">
+    <change condition="T52" nextstate="TD_PDP_PDP Context Activation Request" eventname="PDP Context Activation Request" eventextrainfo=""/>
+    <change condition="T55" nextstate="TD_PDP_PDP Context Deactivation Request" eventname="PDP Context Deactivation Request" eventextrainfo=""/>
+  </state>
+  <state name="TD_PDP_PDP Context Activation Request" isbegin="no" isend="yes" servicetype="TD_PDP">
+    <change condition="Or(T6,T7,T8,T9,T52,T53)" nextstate="" eventname="PDP Context Activation Failure" eventextrainfo=""/>
+    <change condition="T54" nextstate="" eventname="PDP Context Activation Success" eventextrainfo=""/>
+  </state>
+  <state name="TD_PDP_PDP Context Deactivation Request" isbegin="no" isend="yes" servicetype="TD_PDP">
+    <change condition="T56" nextstate="" eventname="PDP Context Deactivation Success" eventextrainfo=""/>
+  </state>
+  <state name="TD_GPRS_Begin" isbegin="yes" isend="no" servicetype="TD_GPRS">
+    <change condition="T57" nextstate="TD_GPRS_GPRS Attach Request" eventname="GPRS Attach Request" eventextrainfo=""/>
+    <change condition="T60" nextstate="TD_GPRS_GPRS Detach Request" eventname="GPRS Detach Request" eventextrainfo=""/>
+  </state>
+  <state name="TD_GPRS_GPRS Attach Request" isbegin="no" isend="yes" servicetype="TD_GPRS">
+    <change condition="Or(T6,T7,T8,T9,T58)" nextstate="" eventname="GPRS Attach Failure" eventextrainfo=""/>
+    <change condition="T59" nextstate="" eventname="GPRS Attach Success" eventextrainfo=""/>
+  </state>
+  <state name="TD_GPRS_GPRS Detach Request" isbegin="no" isend="yes" servicetype="TD_GPRS">
+    <change condition="T61" nextstate="" eventname="GPRS Detach Success" eventextrainfo=""/>
+  </state>
+  <state name="TD_CR_Begin" isbegin="yes" isend="no" servicetype="TD_CR">
+    <change condition="T62" nextstate="TD_CR_Cell reselection start" eventname="Cell reselection start" eventextrainfo=""/>
+  </state>
+  <state name="TD_CR_Cell reselection start" isbegin="no" isend="yes" servicetype="TD_CR">
+    <change condition="T63" nextstate="" eventname="Cell reselection Failure" eventextrainfo=""/>
+    <change condition="T64" nextstate="" eventname="Cell reselection Success" eventextrainfo=""/>
+  </state>
+  <state name="T2G_CR_Begin" isbegin="yes" isend="no" servicetype="T2G_CR">
+    <change condition="T65" nextstate="T2G_CR_Cell Reselection to GSM Start" eventname="Cell Reselection to GSM Start" eventextrainfo=""/>
+  </state>
+  <state name="T2G_CR_Cell Reselection to GSM Start" isbegin="no" isend="yes" servicetype="T2G_CR">
+    <change condition="T66" nextstate="" eventname="Cell Reselection to GSM Failure" eventextrainfo=""/>
+    <change condition="T67" nextstate="" eventname="Cell Reselection From UTRAN Success" eventextrainfo=""/>
+  </state>
+  <state name="T2G_PS_Begin" isbegin="yes" isend="no" servicetype="T2G_PS">
+    <change condition="T68" nextstate="T2G_PS_PS Cell Reselection to GSM Start" eventname="PS Cell Reselection to GSM Start" eventextrainfo=""/>
+  </state>
+  <state name="T2G_PS_PS Cell Reselection to GSM Start" isbegin="no" isend="yes" servicetype="T2G_PS">
+    <change condition="Or(T66,T69)" nextstate="" eventname="PS Cell Reselection to GSM Failure" eventextrainfo=""/>
+    <change condition="T67" nextstate="" eventname="PS Cell Reselection From UTRAN Success" eventextrainfo=""/>
+  </state>
+  <state name="TD_CS_RRC_Begin" isbegin="yes" isend="no" servicetype="TD_CS_RRC">
+    <change condition="Or(T1,T23)" nextstate="TD_CS_RRC_RRC Connection Request for Voice Call" eventname="RRC Connection Request for Voice Call" eventextrainfo=""/>
+  </state>
+  <state name="TD_CS_RRC_RRC Connection Request for Voice Call" isbegin="no" isend="no" servicetype="TD_CS_RRC">
+    <change condition="Or(T1,T23)" nextstate="TD_CS_RRC_RRC Connection Request for Voice Call" eventname="" eventextrainfo=""/>
+    <change condition="Or(T4,T5,T6,T7,T8,T16)" nextstate="" eventname="RRC Connection Failue for Voice Call" eventextrainfo=""/>
+    <change condition="T70" nextstate="" eventname="RRC Connection Success for Voice Call" eventextrainfo=""/>
+  </state>
+  <state name="TD_LU_RRC_Begin" isbegin="yes" isend="no" servicetype="TD_LU_RRC">
+    <change condition="T71" nextstate="TD_LU_RRC_RRC Connection Request for Loction Update" eventname="RRC Connection Request for Loction Update" eventextrainfo=""/>
+  </state>
+  <state name="TD_LU_RRC_RRC Connection Request for Loction Update" isbegin="no" isend="no" servicetype="TD_LU_RRC">
+    <change condition="T71" nextstate="TD_LU_RRC_RRC Connection Request for Loction Update" eventname="" eventextrainfo=""/>
+    <change condition="Or(T4,T5,T6,T7,T8,T16)" nextstate="" eventname="RRC Connection Failue for Loction Update" eventextrainfo=""/>
+    <change condition="T70" nextstate="" eventname="RRC Connection Success for Loction Update" eventextrainfo=""/>
+  </state>
+  <state name="TD_HO_Baton_Begin" isbegin="yes" isend="no" servicetype="TD_HO_Baton">
+    <change condition="Or(T72,T73,T74)" nextstate="TD_HO_Baton_Baton Handover Start" eventname="Baton Handover Start" eventextrainfo=""/>
+  </state>
+  <state name="TD_HO_Baton_Baton Handover Start" isbegin="no" isend="yes" servicetype="TD_HO_Baton">
+    <change condition="Or(T39,T40,T41)" nextstate="" eventname="Baton Handover Failure" eventextrainfo=""/>
+    <change condition="Or(T32,T33,T34)" nextstate="" eventname="Baton Handover Success" eventextrainfo=""/>
+  </state>
+  <state name="TD_HO_Hard_Begin" isbegin="yes" isend="no" servicetype="TD_HO_Hard">
+    <change condition="Or(T75,T76,T77)" nextstate="TD_HO_Hard_Hard Handover Start" eventname="Hard Handover Start" eventextrainfo=""/>
+  </state>
+  <state name="TD_HO_Baton_Hard Handover Start" isbegin="no" isend="yes" servicetype="TD_HO_Baton">
+    <change condition="Or(T39,T40,T41)" nextstate="" eventname="Hard Handover Failure" eventextrainfo=""/>
+    <change condition="Or(T32,T33,T34)" nextstate="" eventname="Hard Handover Success" eventextrainfo=""/>
+  </state>
+</criticaleventconfig>
