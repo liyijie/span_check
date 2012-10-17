@@ -27,7 +27,11 @@ module SpanCheck
     end
 
     def get_shortname(longname)
-      @longname_map[longname]["Id"]
+      if (@longname_map.has_key? longname)
+        @longname_map[longname]["Id"]
+      else
+        nil
+      end
     end
 
     def get_longname(shortname)

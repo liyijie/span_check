@@ -5,13 +5,13 @@ module SpanCheck
         @ie_rule = row[1] || ""
         @insidepara = row[2] || ""
         @outsidepara = row[3] || ""
-        replace_long_ie
+        replace_long_ie unless @ie_rule.empty?
       end
 
       def replace_long_ie
-        ielist = IelistParse.new("../sample/IEList.xml")
+        ieconfig = SpanCheck::IeconfigParse.instance
         longie = @ie_rule.split(/\=|\[/)[0]  
-        shortie = ielist.get_shortname(longie)
+        shortie = ieconfig.get_shortname(longie)
         if shortie
           @ie_rule = @ie_rule.sub(longie, shortie)
         else

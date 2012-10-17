@@ -58,61 +58,68 @@ module SpanCheck
     end
 
     IEMAP_KEY = "IEMap"
-    def initialize(xml_file)
-      @xml_file = xml_file
+    def initialize(xml_files)
+      @xml_files = xml_files
     end
 
     def parse
       # Spreadsheet.client_encoding = "UTF-8"
-      xml_string = ""
-      e = Builder::XmlMarkup.new(:target => xml_string, :indent => 2)
+      tempstring = ""
+      e = Builder::XmlMarkup.new(:target => tempstring, :indent => 2)
       e.instruct! :xml,:version =>'1.0',:encoding => 'utf-8'
-
-      workbook = Spreadsheet::ParseExcel.parse(@xml_file)
-      sheet_count = workbook.sheet_count
       e.all do
-        (0..sheet_count-1).each do |count|
-          worksheet = workbook.worksheet count
-          skip = 1
-          struct_name = ""
-          step = 1;
+        @xml_files.each do |xml_file|
+          workbook = Spreadsheet::ParseExcel.parse(xml_file)
+          sheet_count = workbook.sheet_count
+          (0..sheet_count-2).each do |count|
+            worksheet = workbook.worksheet count
+            skip = 1
+            struct_name = ""
+            step = 1;
 
-          worksheet.each(skip) do |raw_row|
-            next if raw_row.nil?
-            row = SpanCheck::row_format raw_row
-            keyname = row[0]
-            if keyname == IEMAP_KEY
-              step = 2
-            elsif !keyname.empty?
-              struct_name = keyname
-              if (struct_name =~ /\(/)
-                @msgparse = MsgParse.new(struct_name)
-                struct_parse = StructParse.new(@msgparse.msgname)
+            worksheet.each(skip) do |raw_row|
+              next if raw_row.nil?
+              row = SpanCheck::row_format raw_row
+              keyname = row[0]
+              if keyname == IEMAP_KEY
+                step = 2
+              elsif !keyname.empty?
+                struct_name = keyname
+                if (struct_name =~ /\(/)
+                  @msgparse = MsgParse.new(struct_name)
+                  struct_parse = StructParse.new(@msgparse.msgname)
+                else
+                  struct_parse = StructParse.new(struct_name)
+                end
+                @recent_struct = struct_parse
+                @msgparse.add_struct struct_parse unless @msgparse.nil?
               else
-                struct_parse = StructParse.new(struct_name)
+                #strcut
+                if step == 1
+                  next if row[2].nil?
+                  attr_parse = AttrParse.create(row)
+                  @recent_struct << attr_parse
+                #IEMap
+                elsif step == 2
+                  ie_rule = IemapParse.new(row)
+                  @msgparse.add_ie_rule ie_rule unless @msgparse.nil?
+                end
               end
-              @recent_struct = struct_parse
-              @msgparse.add_struct struct_parse unless @msgparse.nil?
-            else
-              #strcut
-              if step == 1
-                next if row[2].nil?
-                attr_parse = AttrParse.create(row)
-                @recent_struct << attr_parse
-              #IEMap
-              elsif step == 2
-                ie_rule = IemapParse.new(row)
-                @msgparse.add_ie_rule ie_rule unless @msgparse.nil?
-              end
-            end
-          end
+            end 
             @msgparse.write_xml_element e
-          end
-
-          File.open("IE.xml", "w") do |f|
-            f.puts xml_string
           end
         end
       end
+      filename = ""
+      @xml_files.each do |file|
+        file = file.split('/')[-1].sub('.xls','')
+        if filename.empty?
+          filename = file
+        else
+          filename = "#{filename}&#{file}"
+        end
+      end
+      SpanCheck::IeconfigParse.instance.write_file tempstring, "#{filename}.xml"
     end
   end
+end
