@@ -62,15 +62,6 @@ module SpanCheck
       @xml_file = xml_file
     end
 
-    def row_format row
-      rlt = []
-      row.each do |cell|
-        content = cell.nil? ? "" : cell.to_s('utf-8')
-        rlt << content
-      end
-      rlt
-    end
-
     def parse
       # Spreadsheet.client_encoding = "UTF-8"
       xml_string = ""
@@ -88,7 +79,7 @@ module SpanCheck
 
           worksheet.each(skip) do |raw_row|
             next if raw_row.nil?
-            row = row_format raw_row
+            row = SpanCheck::row_format raw_row
             keyname = row[0]
             if keyname == IEMAP_KEY
               step = 2
