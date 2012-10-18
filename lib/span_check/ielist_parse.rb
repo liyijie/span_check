@@ -44,6 +44,7 @@ module SpanCheck
       contentmap["Id"] = shortname
       @longname_map[longname] = contentmap
       @shortname_map[shortname] = longname
+      shortname
     end
 
     def update(ieinfo_map)

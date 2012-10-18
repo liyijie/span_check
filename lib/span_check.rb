@@ -14,6 +14,7 @@ module SpanCheck
   autoload :IelistParse, "./span_check/ielist_parse"
   autoload :IeconfigParse, "./span_check/ieconfig_parse"
   autoload :LogParse, "./span_check/log_parse"
+  autoload :Logger, "./span_check/logger"
 
   def self.row_format row
     rlt = []
@@ -49,6 +50,8 @@ iemap_files = SpanCheck::list_files("../doc/iemap", "xls")
 puts "processing #{iemap_files} ......"
 ieconvert = SpanCheck::IeExpConvert.new(iemap_files)
 ieconvert.parse
+
+SpanCheck::Logger.instance.flush
 
 # logparse = SpanCheck::LogParse.new("../sample/LogFormat_100.xml")
 # logparse.load_old_log

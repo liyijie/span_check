@@ -6,7 +6,7 @@ module SpanCheck
       @logline_map = {}
       @logitem_map = {}
       @recentindex = 0;
-      @recentindex_count = 0;
+      @recentindex_count = 10;
       @maxindex = 0
     end
 
@@ -35,7 +35,10 @@ module SpanCheck
         else
           if @recentindex_count > 9
             @maxindex += 1
+            @recentindex_count = 1
             @recentindex = @maxindex
+          else
+            @recentindex_count += 1
           end
           logline_index = @recentindex
         end

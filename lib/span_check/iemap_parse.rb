@@ -13,12 +13,12 @@ module SpanCheck
         longie = @ie_rule.split(/\=|\[|\{/)[0]  
         shortie = ieconfig.get_shortname(longie)
         unless (longie =~ /^GSM/i || longie =~ /^TDSCDMA/i || longie =~ /^TDDLTE/i)
-          logger.error "error 1: \"#{longie}\" must start with GSM, TDSCDMA, TDDLTE"
+          Logger.instance.log "error 1: \"#{longie}\" must start with GSM, TDSCDMA, TDDLTE"
         end
         if shortie
           @ie_rule = @ie_rule.sub(longie, shortie)
         else
-          puts "error 2: \"#{longie}\" can not found in ieconfig"
+          Logger.instance.log "error 2: \"#{longie}\" can not found in ieconfig"
         end
       end
 

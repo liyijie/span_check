@@ -46,12 +46,12 @@
       <ierule equalrule="i235=Delicated_Phych_parameter.Dl_repetition_period" insidepara="" outsidepara=""/>
       <ierule equalrule="i237=Delicated_Phych_parameter.Dl_repetition_length" insidepara="" outsidepara=""/>
       <ierule equalrule="i233=Delicated_Phych_parameter.Work_frequency" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDSCDMA_CHN_Information_CCTrCH_Information_PhyCH_Parameter_Phych_id[Delicated_Phych_parameter.Phych_num]=Delicated_Phych_parameter.Phych_info[x].Phych_id" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDSCDMA_CHN_Information_CCTrCH_Information_PhyCH_Parameter_Phych_direction[Delicated_Phych_parameter.Phych_num]=Delicated_Phych_parameter.Phych_info[x].Phych_direction" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDSCDMA_CHN_Information_CCTrCH_Information_PhyCH_Parameter_MA_Config[Delicated_Phych_parameter.Phych_num]=Delicated_Phych_parameter.Phych_info[x].midamble_configuration" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDSCDMA_CHN_Information_CCTrCH_Information_PhyCH_Parameter_MA_Shift[Delicated_Phych_parameter.Phych_num]=Delicated_Phych_parameter.Phych_info[x].midamble_shift" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDSCDMA_CHN_Information_CCTrCH_Information_PhyCH_Parameter_TimeSlotNo[Delicated_Phych_parameter.Phych_num]=Delicated_Phych_parameter.Phych_info[x].Timeslot" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDSCDMA_CHN_Information_CCTrCH_Information_PhyCH_Parameter_Channelization_Code[Delicated_Phych_parameter.Phych_num]=Delicated_Phych_parameter.Phych_info[x].Channel_code" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1119[Delicated_Phych_parameter.Phych_num]=Delicated_Phych_parameter.Phych_info[x].Phych_id" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1120[Delicated_Phych_parameter.Phych_num]=Delicated_Phych_parameter.Phych_info[x].Phych_direction" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1122[Delicated_Phych_parameter.Phych_num]=Delicated_Phych_parameter.Phych_info[x].midamble_configuration" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1123[Delicated_Phych_parameter.Phych_num]=Delicated_Phych_parameter.Phych_info[x].midamble_shift" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1118[Delicated_Phych_parameter.Phych_num]=Delicated_Phych_parameter.Phych_info[x].Timeslot" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1126[Delicated_Phych_parameter.Phych_num]=Delicated_Phych_parameter.Phych_info[x].Channel_code" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
   <msg id="12126_0x10" msgname="MAC_parameter">
@@ -578,6 +578,7 @@
         <attr name="Sub_sfn" type="UINT16#4" extend=""/>
       </struct>
       <struct name="&#10;">
+        <attr name="MAC_ES_Num" type="UINT8#1" extend="[0,16]"/>
         <attr name="DDI0_SI_Indicator" type="UINT8#1" extend="{1,2}"/>
         <attr name="Mac_es_head_info" type="ARRAY#12">
           <arraydesc is_length_fix="NO" arraylength="" arraytype="STRUCT#11"/>
@@ -2573,10 +2574,10 @@
       </struct>
     </msgbody>
     <iemap>
-      <ierule equalrule="TDSCDMA_L1_Measurement_TD_LTE_Neighbour_Measurement_Carrier_freq[TD_LTE_Neighbor_cell_parameter_list.Ncell_num_eutra_tdd ]=TD_LTE_Neighbor_cell_parameter_list.Ncell_eutra_tdd_para[x].Carrier_freq" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDSCDMA_L1_Measurement_TD_LTE_Neighbour_Measurement_physical_cell_identity[TD_LTE_Neighbor_cell_parameter_list.Ncell_num_eutra_tdd ]=TD_LTE_Neighbor_cell_parameter_list.Ncell_eutra_tdd_para[x].physical_cell_identity" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDSCDMA_L1_Measurement_TD_LTE_Neighbour_Measurement_Rsrp[TD_LTE_Neighbor_cell_parameter_list.Ncell_num_eutra_tdd ]=TD_LTE_Neighbor_cell_parameter_list.Ncell_eutra_tdd_para[x].Rsrp-141" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDSCDMA_L1_Measurement_TD_LTE_Neighbour_Measurement_Rsrq[TD_LTE_Neighbor_cell_parameter_list.Ncell_num_eutra_tdd ]=TD_LTE_Neighbor_cell_parameter_list.Ncell_eutra_tdd_para[x].Rsrq/2-20" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1107[TD_LTE_Neighbor_cell_parameter_list.Ncell_num_eutra_tdd ]=TD_LTE_Neighbor_cell_parameter_list.Ncell_eutra_tdd_para[x].Carrier_freq" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1108[TD_LTE_Neighbor_cell_parameter_list.Ncell_num_eutra_tdd ]=TD_LTE_Neighbor_cell_parameter_list.Ncell_eutra_tdd_para[x].physical_cell_identity" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1109[TD_LTE_Neighbor_cell_parameter_list.Ncell_num_eutra_tdd ]=TD_LTE_Neighbor_cell_parameter_list.Ncell_eutra_tdd_para[x].Rsrp-141" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1110[TD_LTE_Neighbor_cell_parameter_list.Ncell_num_eutra_tdd ]=TD_LTE_Neighbor_cell_parameter_list.Ncell_eutra_tdd_para[x].Rsrq/2-20" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
   <msg id="12125_0x5F" msgname="TD_LTE_FreqAndPri_configure_parameter">
@@ -2606,13 +2607,13 @@
       </struct>
     </msgbody>
     <iemap>
-      <ierule equalrule="TDSCDMA_L1_Measurement_TD_LTE_FreqAndPri_earfcn[TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_num]=TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_st[x].earfcn" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDSCDMA_L1_Measurement_TD_LTE_FreqAndPri_priority[TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_num]=TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_st[x].priority" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDSCDMA_L1_Measurement_TD_LTE_FreqAndPri_qRxLevMinEUTRA[TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_num]=TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_st[x].qRxLevMinEUTRA" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDSCDMA_L1_Measurement_TD_LTE_FreqAndPri_threshXhigh[TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_num]=TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_st[x].threshXhigh " insidepara="" outsidepara=""/>
-      <ierule equalrule="TDSCDMA_L1_Measurement_TD_LTE_FreqAndPri_tbreshXlow[TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_num]=TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_st[x].tbreshXlow" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDSCDMA_L1_Measurement_TD_LTE_FreqAndPri_measurementBandwidth[TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_num]=TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_st[x].measurementBandwidth " insidepara="" outsidepara=""/>
-      <ierule equalrule="TDSCDMA_L1_Measurement_TD_LTE_FreqAndPri_InterScalingFactor[TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_num]=TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_st[x].InterScalingFactor *0.25" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1111[TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_num]=TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_st[x].earfcn" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1112[TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_num]=TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_st[x].priority" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1113[TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_num]=TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_st[x].qRxLevMinEUTRA" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1114[TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_num]=TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_st[x].threshXhigh " insidepara="" outsidepara=""/>
+      <ierule equalrule="i1115[TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_num]=TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_st[x].tbreshXlow" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1116[TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_num]=TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_st[x].measurementBandwidth " insidepara="" outsidepara=""/>
+      <ierule equalrule="i1117[TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_num]=TD_LTE_FreqAndPri_configure_parameter.Eutra_FreqAndPri_st[x].InterScalingFactor *0.25" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
   <msg id="70040_0XF700" msgname="Scell_id_info">
@@ -2671,11 +2672,10 @@
       <ierule equalrule="i700=Scell_sib_info.ltetdd_p_max" insidepara="" outsidepara=""/>
       <ierule equalrule="i702=Scell_id_info.Phy_cell_id" insidepara="" outsidepara=""/>
       <ierule equalrule="i782=Scell_sib_info.cell_bar" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_Cell_Selection_Reselection_cell_Selection_Pcompensation=Max(Scell_sib_info.ltetdd_p_max-Max_UE_Power.ltetdd_ue_power_class,0)" insidepara="Scell_sib_info.ltetdd_p_max" outsidepara="Max_UE_Power.ltetdd_ue_power_class"/>
-      <ierule equalrule="TDDLTE_Scell_Radio_Parameters_Plmn_id=Scell_sib_info(70040_0XF701).Plmn_identity[plmn_id0+plmn_id1+plmn_id2]" insidepara="unit8" outsidepara="3.0"/>
-      <ierule equalrule="TDDLTE_Scell_Radio_Parameters_cell_bar=Scell_sib_info(70040_0XF701).cell_bar" insidepara="unit8" outsidepara="1.0"/>
-      <ierule equalrule="TDDLTE_Scell_Radio_Parameters_CP=Scell_sib_info(70040_0XF701).ltetdd_ul_cp_type" insidepara="unit8" outsidepara="1.0"/>
-      <ierule equalrule="TDDLTE_Scell_Radio_Parameters_p_max=Scell_sib_info(70040_0XF701).ltetdd_p_max" insidepara="Sint8" outsidepara="1.0"/>
+      <ierule equalrule="i1003=Max(Scell_sib_info.ltetdd_p_max-Max_UE_Power.ltetdd_ue_power_class,0)" insidepara="Scell_sib_info.ltetdd_p_max" outsidepara="Max_UE_Power.ltetdd_ue_power_class"/>
+      <ierule equalrule="i994=Scell_sib_info(70040_0XF701).Plmn_identity[plmn_id0+plmn_id1+plmn_id2]" insidepara="unit8" outsidepara="3.0"/>
+      <ierule equalrule="i997=Scell_sib_info(70040_0XF701).ltetdd_ul_cp_type" insidepara="" outsidepara=""/>
+      <ierule equalrule="i996=Scell_sib_info(70040_0XF701).ltetdd_p_max" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
   <msg id="70040_0XF702" msgname="UE_category">
@@ -2701,7 +2701,7 @@
       </struct>
     </msgbody>
     <iemap>
-      <ierule equalrule="TDDLTE_cell_Selection_PPowerClass=Max_UE_Power.ltetdd_ue_power_class" insidepara="" outsidepara=""/>
+      <ierule equalrule="i701=Max_UE_Power.ltetdd_ue_power_class" insidepara="" outsidepara=""/>
       <ierule equalrule="i932=Max_UE_power.ltetdd_ue_power_class" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
@@ -2814,7 +2814,7 @@
       <ierule equalrule="i712=Intra_frequency_measurement_parameter.intraFreqReselection" insidepara="" outsidepara=""/>
       <ierule equalrule="i706=Intra_frequency_measurement_parameter.s_intrasearchP" insidepara="" outsidepara=""/>
       <ierule equalrule="i707=Intra_frequency_measurement_parameter(0XF7_07).s_intrasearchQ" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_Cell_Selection_Reselection_Scell_Reselection_Info_Treselection=Intra_frequency_measurement_parameter.t_resel_eutran" insidepara="" outsidepara=""/>
+      <ierule equalrule="i634=Intra_frequency_measurement_parameter.t_resel_eutran" insidepara="" outsidepara=""/>
       <ierule equalrule="i722[Intra_frequency_measurement_parameter.Neigh_cell_num]=Intra_frequency_measurement_parameter.Neigh_cell_ast[Intra_frequency_measurement_parameter.Neigh_cell_num].phy_cell_id" insidepara="" outsidepara=""/>
       <ierule equalrule="i725[Intra_frequency_measurement_parameter.Neigh_cell_num]=Intra_frequency_measurement_parameter.q_rxlevmin" insidepara="" outsidepara=""/>
       <ierule equalrule="i726[Intra_frequency_measurement_parameter.Neigh_cell_num]=Intra_frequency_measurement_parameter.P_emax" insidepara="" outsidepara=""/>
@@ -2857,6 +2857,8 @@
         <attr name="dedicate_cell_resel_priority" type="UINT8#1" extend="[0,7]"/>
         <attr name="inter_neigh_cell_cfg" type="UINT16#4" extend=""/>
         <attr name="q_offset_freq" type="INT16#2" extend="{-24,-22,-20,-18,&#10;-16,-14,-12,-10,&#10;-8,-6,-5,-4,-3,-2,-1,0,1,2,3,4,&#10;5,6,8,10,12,14,&#10;16,18,20,22,24}"/>
+      </struct>
+      <struct name="位置变动。">
         <attr name="filler" type="ARRAY#12">
           <arraydesc is_length_fix="YES" arraylength="2.0" arraytype="UINT8#1"/>
         </attr>
@@ -2887,11 +2889,11 @@
       <ierule equalrule="i743[Inter_frequency_measurement_parameter.Inter_freq_info_ast[Inter_frequency_measurement_parameter.Inter_freq_num].inter_freq_neigh_cell_num]=Inter_frequency_measurement_parameter.Inter_freq_info_ast[x].P_emax" insidepara="" outsidepara=""/>
       <ierule equalrule="i744[Inter_frequency_measurement_parameter.Inter_freq_info_ast[Inter_frequency_measurement_parameter.Inter_freq_num].inter_freq_neigh_cell_num]=Max（Inter_frequency_measurement_parameter.Inter_freq_info_ast[x].P_emax-Max_UE_Power.ltetdd_ue_power_class_0）" insidepara="Inter_frequency_measurement_parameter.Inter_freq_info_ast[x].P_emax" outsidepara="Max_UE_Power.ltetdd_ue_power_class"/>
       <ierule equalrule="i745[Inter_frequency_measurement_parameter.Inter_freq_info_ast[Inter_frequency_measurement_parameter.Inter_freq_num].inter_freq_neigh_cell_num]=Inter_frequency_measurement_parameter.Inter_freq_info_ast[x].inter_freq_neigh_cell_info_list_as&#10;t[y].q_offset" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_Cell_Selection_Reselection_Ncell_Reselection_Info_Qoffsets Freq2[Inter_frequency_measurement_parameter.Inter_freq_info_ast[Inter_frequency_measurement_parameter.Inter_freq_num].inter_freq_neigh_cell_num]=Inter_frequency_measurement_parameter.Inter_freq_info_ast[x].q_offset_freq" insidepara="" outsidepara=""/>
+      <ierule equalrule="i746[Inter_frequency_measurement_parameter.Inter_freq_info_ast[Inter_frequency_measurement_parameter.Inter_freq_num].inter_freq_neigh_cell_num]=Inter_frequency_measurement_parameter.Inter_freq_info_ast[x].q_offset_freq" insidepara="" outsidepara=""/>
       <ierule equalrule="i747[Inter_frequency_measurement_parameter.Inter_freq_info_ast[Inter_frequency_measurement_parameter.Inter_freq_num].inter_freq_neigh_cell_num]=Inter_frequency_measurement_parameter.Inter_freq_info_ast[x].cell_resel_priority" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_Cell_Selection_Reselection_Ncell_Reselection_Info_Threshx,high_P2[Inter_frequency_measurement_parameter.Inter_freq_info_ast[Inter_frequency_measurement_parameter.Inter_freq_num].inter_freq_neigh_cell_num]=Inter_frequency_measurement_parameter.Inter_freq_info_ast[x].Thresh_x_high" insidepara="" outsidepara=""/>
+      <ierule equalrule="i748[Inter_frequency_measurement_parameter.Inter_freq_info_ast[Inter_frequency_measurement_parameter.Inter_freq_num].inter_freq_neigh_cell_num]=Inter_frequency_measurement_parameter.Inter_freq_info_ast[x].Thresh_x_high" insidepara="" outsidepara=""/>
       <ierule equalrule="i749[Inter_frequency_measurement_parameter.Inter_freq_info_ast[Inter_frequency_measurement_parameter.Inter_freq_num].inter_freq_neigh_cell_num]=Inter_frequency_measurement_parameter.Inter_freq_info_ast[x].Thresh_x_highQ" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_Cell_Selection_Reselection_Ncell_Reselection_Info_Threshx,low_P2[Inter_frequency_measurement_parameter.Inter_freq_info_ast[Inter_frequency_measurement_parameter.Inter_freq_num].inter_freq_neigh_cell_num]=Inter_frequency_measurement_parameter.Inter_freq_info_ast[x].Thresh_x_low" insidepara="" outsidepara=""/>
+      <ierule equalrule="i750[Inter_frequency_measurement_parameter.Inter_freq_info_ast[Inter_frequency_measurement_parameter.Inter_freq_num].inter_freq_neigh_cell_num]=Inter_frequency_measurement_parameter.Inter_freq_info_ast[x].Thresh_x_low" insidepara="" outsidepara=""/>
       <ierule equalrule="i751[Inter_frequency_measurement_parameter.Inter_freq_info_ast[Inter_frequency_measurement_parameter.Inter_freq_num].inter_freq_neigh_cell_num-1]=Inter_frequency_measurement_parameter.Inter_freq_info_ast[x].Thresh_x_lowQ" insidepara="" outsidepara=""/>
       <ierule equalrule="i752[Inter_frequency_measurement_parameter.Inter_freq_info_ast[Inter_frequency_measurement_parameter.Inter_freq_num].inter_freq_neigh_cell_num]=Inter_frequency_measurement_parameter.Inter_freq_info_ast[x].t_resel_eutran" insidepara="" outsidepara=""/>
       <ierule equalrule="i753[Inter_frequency_measurement_parameter.Inter_freq_info_ast[Inter_frequency_measurement_parameter.Inter_freq_num].inter_freq_neigh_cell_num]=Inter_frequency_measurement_parameter.Inter_freq_info_ast[x].Is_t_resel_eutran_sf_st_valid" insidepara="" outsidepara=""/>
@@ -2968,6 +2970,8 @@
         </attr>
       </struct>
       <struct name="tai_info">
+      </struct>
+      <struct name="无空格">
         <attr name="plmn_id0" type="UINT8#1" extend=""/>
         <attr name="plmn_id1" type="UINT8#1" extend=""/>
         <attr name="plmn_id2" type="UINT8#1" extend=""/>
@@ -3013,7 +3017,7 @@
     <iemap>
       <ierule equalrule="i617=Bitand(GUTI.guti_2,0x0f)×0xff＋GUTI.guti_1" insidepara="" outsidepara=""/>
       <ierule equalrule="i618=Bitand(GUTI.guti_2,0xf0)×0xff＋GUTI.guti_3" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_Scell_Radio_Parameters_GUTI_MME_Group_ID=GUTI.guti_4" insidepara="" outsidepara=""/>
+      <ierule equalrule="i619=GUTI.guti_4" insidepara="" outsidepara=""/>
       <ierule equalrule="i620=GUTI.guti_6" insidepara="" outsidepara=""/>
       <ierule equalrule="i621=GUTI.guti_7" insidepara="" outsidepara=""/>
     </iemap>
@@ -3029,7 +3033,11 @@
         <attr name="ac_barring_for_mo_data" type="STRUCT#11" strcutname="ac_barring config_st"/>
       </struct>
       <struct name="ac_barring config_st">
+      </struct>
+      <struct name="无空格">
         <attr name="ac_barring_factor" type="UINT8#1" extend="{0,5,10,15,20,25,30,40,50,60,70,80,85,90,95}"/>
+      </struct>
+      <struct name="无空格">
         <attr name="Ac_barring_for_specia l_ac" type="UINT8#1" extend=""/>
         <attr name="ac-barring_time" type="UINT16#4" extend="{4,8,16,32,64,128,256,512}"/>
       </struct>
@@ -3167,7 +3175,7 @@
       </struct>
       <struct name="ncell_st">
         <attr name="EARFCN" type="UINT16#4" extend="[37750,39649]"/>
-        <attr name="physical Cell identity" type="UINT16#4" extend="[0,503]"/>
+        <attr name="Physical_cell_id" type="UINT16#4" extend="[0,503]"/>
         <attr name="ncell_RSSI" type="INT16#2" extend="[-141,-44]"/>
         <attr name="ncell_RSRP" type="INT16#2" extend="[-141,-44]"/>
         <attr name="ncell_RSRQ" type="INT16#2" extend="[-196,-30]"/>
@@ -3175,7 +3183,7 @@
       </struct>
     </msgbody>
     <iemap>
-      <ierule equalrule="TDDLTE_L1 measurement Neighbour Cell Measurement_PCI[Intraf_ncell_info.Intraf_ncell_num]=Intraf_ncell_info.Intraf_ncell_ast[Intraf_ncell_num].physical Cell identity" insidepara="" outsidepara=""/>
+      <ierule equalrule="i670[Intraf_ncell_info.Intraf_ncell_num]=Intraf_ncell_info.Intraf_ncell_ast[Intraf_ncell_num].Physical_cell_id" insidepara="" outsidepara=""/>
       <ierule equalrule="i669[Intraf_ncell_info.Intraf_ncell_num]=Intraf_ncell_info.Intraf_ncell_ast[Intraf_ncell_num].EARFCN" insidepara="" outsidepara=""/>
       <ierule equalrule="i671[Intraf_ncell_info.Intraf_ncell_num]=Intraf_ncell_info.Intraf_ncell_ast[Intraf_ncell_num].ncell_RSRP" insidepara="" outsidepara=""/>
       <ierule equalrule="i672[Intraf_ncell_info.Intraf_ncell_num]=Intraf_ncell_info.Intraf_ncell_ast[Intraf_ncell_num].ncell_RSRQ/10" insidepara="" outsidepara=""/>
@@ -3194,7 +3202,7 @@
       </struct>
       <struct name="ncell_st">
         <attr name="EARFCN" type="UINT16#4" extend="[37750,39649]"/>
-        <attr name="physical Cell identity" type="UINT16#4" extend="[0,503]"/>
+        <attr name="Physical_cell_id" type="UINT16#4" extend="[0,503]"/>
         <attr name="ncell_RSSI" type="INT16#2" extend="[-141,-44]"/>
         <attr name="ncell_RSRP" type="INT16#2" extend="[-141,-44]"/>
         <attr name="ncell_RSRQ" type="INT16#2" extend="[-196,-30]"/>
@@ -3202,7 +3210,7 @@
       </struct>
     </msgbody>
     <iemap>
-      <ierule equalrule="TDDLTE_L1 measurement Neighbour Cell Measurement_PCI2[Interf_ncell_info.Interf_ncell_num]=Interf_ncell_info.Interf_ncell_ast[Interf_ncell_num].physical Cell identity" insidepara="" outsidepara=""/>
+      <ierule equalrule="i676[Interf_ncell_info.Interf_ncell_num]=Interf_ncell_info.Interf_ncell_ast[Interf_ncell_num].Physical_cell_id" insidepara="" outsidepara=""/>
       <ierule equalrule="i675[Interf_ncell_info.Interf_ncell_num]=Interf_ncell_info.Interf_ncell_ast[Interf_ncell_num].EARFCN" insidepara="" outsidepara=""/>
       <ierule equalrule="i678[Interf_ncell_info.Interf_ncell_num]=Interf_ncell_info.Interf_ncell_ast[Interf_ncell_num].ncell_RSRQ/10" insidepara="" outsidepara=""/>
       <ierule equalrule="i677[Interf_ncell_info.Interf_ncell_num]=Interf_ncell_info.Interf_ncell_ast[Interf_ncell_num].ncell_RSRP" insidepara="" outsidepara=""/>
@@ -3395,7 +3403,7 @@
       <ierule equalrule="i781=RA_parameters.ra_supervision_info_st.Preamble_trans_max" insidepara="" outsidepara=""/>
       <ierule equalrule="i780=RA_parameters.pow_ramp_step" insidepara="" outsidepara=""/>
       <ierule equalrule="i779=RA parameters.Preamble_initial_received_target_power" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_Random_Access_Parameters_Mac_cont_res_timer=RA parameters.ra_supervision_info_st.Mac_cont_res_timer" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1078=RA parameters.ra_supervision_info_st.Mac_cont_res_timer" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
   <msg id="70052_0XF757" msgname="RLC_througthput_info">
@@ -3429,6 +3437,8 @@
         <attr name="drx_inactivity_timer" type="UINT16#4" extend="{1,2,3,4,5,6,8,10,20,30,40,50,60,80,100,200，300,500,750,1280,1920,2560}"/>
         <attr name="drx_retrans_timer" type="UINT16#4" extend="{1,2,3,4,5,6,8,16,24,33}"/>
         <attr name="long_drx_cycle" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="无该项">
         <attr name="long_drx_cycle_start_offset_type" type="UINT16#4" extend=""/>
         <attr name="long_drx_cycle_start_offset" type="UINT16#4" extend=""/>
         <attr name="drx_short_cycle_timer" type="UINT16#4" extend="[1,16]"/>
@@ -3437,12 +3447,12 @@
       </struct>
     </msgbody>
     <iemap>
-      <ierule equalrule="TDDLTE_DRX_OndurationTimer=Drx_config.on_duration_timer" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_DRX_DrxInactivityTimer=Drx_config.drx_inactivity_timer" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_DRX_DrxRetxTimer=Drx_config.drx_retrans_timer" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_DRX_DrxShortCycleTimer=Drx_config.drx_short_cycle_timer" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_DRX_ShortDrxCycle=Drx_config.short_drx_cycle" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_DRX_LongDrxCycle=Drx_config.long_drx_cycle" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1069=Drx_config.on_duration_timer" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1070=Drx_config.drx_inactivity_timer" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1071=Drx_config.drx_retrans_timer" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1068=Drx_config.drx_short_cycle_timer" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1074=Drx_config.short_drx_cycle" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1073=Drx_config.long_drx_cycle" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
   <msg id="70052_0XF75A" msgname="MAC_RB_config_parameters">
@@ -3483,13 +3493,15 @@
       <ierule equalrule="i939[MAC_RB_config_parameters.Rb_num]=MAC_RB_config_parameters.rb_mac_cfg_st[MAC_RB_config_parameters.Rb_num].ul_logch_cfg_st.Logch_group" insidepara="" outsidepara=""/>
       <ierule equalrule="i941[MAC_RB_config_parameters.Rb_num]=MAC_RB_config_parameters.rb_mac_cfg_st[MAC_RB_config_parameters.Rb_num].Rlc_mode" insidepara="" outsidepara=""/>
       <ierule equalrule="i942[MAC_RB_config_parameters.Rb_num]=MAC_RB_config_parameters.rb_mac_cfg_st[MAC_RB_config_parameters.Rb_num].ul_logch_cfg_st.Priority" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_RB_Info_RB_ID=MAC_RB_config_parameters.rb_mac_cfg_st.Rb_id" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1064=MAC_RB_config_parameters.rb_mac_cfg_st.Rb_id" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
   <msg id="70052_0XF75B" msgname="MAC_UL-SCH_config_parameters">
     <msgbody skip_length="" msg_length="">
       <struct name="MAC_UL-SCH_config_parameters">
         <attr name="type" type="UINT8#1" extend=""/>
+        <attr name="maxHARQ_tx" type="UNIT8#0" extend=""/>
+        <attr name="TTI_bundling" type="UNIT8#0" extend=""/>
         <attr name="Filler" type="ARRAY#12">
           <arraydesc is_length_fix="YES" arraylength="3.0" arraytype="UINT8#1"/>
         </attr>
@@ -3634,6 +3646,8 @@
         <attr name="Filler" type="UINT8#1" extend=""/>
         <attr name="um_ul_st" type="STRUCT#11" strcutname="um_ul"/>
         <attr name="um_dl_st" type="STRUCT#11" strcutname="um_dl"/>
+      </struct>
+      <struct name="无该项">
         <attr name="field_ind" type="CHOICE#13" relateattr=""/>
       </struct>
       <struct name="am_ul">
@@ -3705,6 +3719,8 @@
     <msgbody skip_length="" msg_length="">
       <struct name="soundingRS_UL_config_dedicated_parameters">
         <attr name="type" type="UINT16#4" extend=""/>
+      </struct>
+      <struct name="Srs-bandwidth">
         <attr name="bandwidth" type="UINT16#4" extend="[0,3]"/>
         <attr name="Hopping_bandwidth" type="UINT16#4" extend="[0,3]"/>
         <attr name="freq_domain_pos" type="UINT16#4" extend="[0,23]"/>
@@ -3766,6 +3782,7 @@
         <attr name="cqi_pucch_res_index" type="UINT16#4" extend="[0,1185]"/>
         <attr name="Cqi_pmi_ConfigIndex" type="UINT16#4" extend="[0,1023]"/>
         <attr name="ri_cfg_index" type="UINT16#4" extend="[0,1023]"/>
+        <attr name="filler" type="UINT16#4" extend=""/>
         <attr name="cqi_format_ind_period_st" type="STRUCT#11" strcutname="cqi_format_ind_period" bitrelateattr="type" bitrelatedetailinfo="valid(type,value=1)"/>
       </struct>
       <struct name="cqi_format_ind_period">
@@ -3775,7 +3792,7 @@
     </msgbody>
     <iemap>
       <ierule equalrule="i865=CQI_report_config parameters.report_mode" insidepara="" outsidepara=""/>
-      <ierule equalrule="i866=" insidepara="" outsidepara=""/>
+      <ierule equalrule="i866=CQI_report_config_parameters." insidepara="" outsidepara=""/>
     </iemap>
   </msg>
   <msg id="70052_0XF768" msgname="Antenna_info_dedicated_config_parameters">
@@ -3817,6 +3834,9 @@
       <struct name="EPS_security_info">
         <attr name="ciphering algorithm" type="UINT8#1" extend=""/>
         <attr name="integrity_algorithm" type="UINT8#1" extend=""/>
+        <attr name="filler" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="2.0" arraytype="#"/>
+        </attr>
       </struct>
     </msgbody>
     <iemap>
@@ -3826,7 +3846,7 @@
     <msgbody skip_length="" msg_length="">
       <struct name="dci_info_st">
         <attr name="ssfn" type="UINT16#4" extend=""/>
-        <attr name="rntu_value" type="UINT16#4" extend=""/>
+        <attr name="rnti" type="UINT16#4" extend=""/>
         <attr name="rnti_type" type="UINT16#4" extend="[0,7]"/>
         <attr name="tpc_command" type="UINT16#4" extend=""/>
         <attr name="tpc_command_type" type="UINT16#4" extend=""/>
@@ -3837,8 +3857,8 @@
       <ierule equalrule="i822=DL_schedule_info.total_DL_schdule_num" insidepara="" outsidepara=""/>
       <ierule equalrule="i864=DL_schedule_info.dl_schedule_info_st[DL_schedule_info.total_DL_schdule_num].dci_info_st.pdsch_mimo_mode" insidepara="" outsidepara=""/>
       <ierule equalrule="i837=（DL_Schedule_Info.dl_schedule_info_st.dci_format=2.Mcs）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=3.Mcs）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=4.Mcs）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=5.Mcs）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=6.Mcs）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=7.Mcs）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=8.Mcs）" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_Schedul_Info_DL_RB_Start=（DL_Schedule_Info.dl_schedule_info_st.dci_format=3.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=4.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=5.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=6.pdsch_rb_start）" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_Schedul_Info_DL_RB_Num=（DL_Schedule_Info.dl_schedule_info_st.dci_format=2.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=3.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=4.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=5.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=6.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=7.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=8.pdsch_rb_start）" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1010=（DL_Schedule_Info.dl_schedule_info_st.dci_format=3.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=4.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=5.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=6.pdsch_rb_start）" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1009=（DL_Schedule_Info.dl_schedule_info_st.dci_format=2.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=3.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=4.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=5.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=6.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=7.pdsch_rb_start）或（DL_Schedule_Info.dl_schedule_info_st.dci_format=8.pdsch_rb_start）" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
   <msg id="70052_0XF031" msgname="UL_Schedule_Info">
@@ -3877,9 +3897,9 @@
       <ierule equalrule="i811=UL_schedule_info.total_UL_schdule_num" insidepara="" outsidepara=""/>
       <ierule equalrule="i822=UL_schedule_info.total_UL_schdule_num" insidepara="" outsidepara=""/>
       <ierule equalrule="i844=UL_Schedule_Info.ul_schedule_info_st.mcs" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_Schedul_Info_UL RB Num=UL_Schedule_Info.ul_schedule_info_st.rb_num" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_Schedul_Info_UL RB Start=UL_Schedule_Info.ul_schedule_info_st.rb_start" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_MCS_UL_MCS_Modulation=UL_Schedule_Info.q_m" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1007=UL_Schedule_Info.ul_schedule_info_st.rb_num" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1008=UL_Schedule_Info.ul_schedule_info_st.rb_start" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1015=UL_Schedule_Info.q_m" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
   <msg id="70052_0XF032" msgname="UCI_Info">
@@ -3910,6 +3930,7 @@
         <attr name="bler_info_st" type="ARRAY#12">
           <arraydesc is_length_fix="NO" arraylength="" arraytype="STRUCT#11"/>
         </attr>
+        <attr name="bler_info_ext_st" type="STRUCT#11" strcutname="bler_info_ext_st"/>
       </struct>
       <struct name="bler_info_st">
         <attr name="Transport channel ID" type="UINT16#4" extend="[1,4]"/>
@@ -3917,8 +3938,29 @@
         <attr name="Total_tb_num" type="UINT16#4" extend=""/>
         <attr name="Total_error_tb_num" type="UINT16#4" extend=""/>
       </struct>
+      <struct name="bler_info_ext_st">
+        <attr name="Transport channel ID" type="UINT16#4" extend=""/>
+        <attr name="filler" type="UINT16#4" extend=""/>
+        <attr name="Code0_total _tb_num" type="UINT16#4" extend=""/>
+        <attr name="Code1_total_tb_num" type="UINT16#4" extend=""/>
+        <attr name="Code0_total_error_tb_num" type="UINT16#4" extend=""/>
+        <attr name="Code1_total_error_tb_num" type="UINT16#4" extend=""/>
+        <attr name="Code0_init_total _tb_num" type="UINT16#4" extend=""/>
+        <attr name="Code1_inti_total_tb_num" type="UINT16#4" extend=""/>
+        <attr name="Code0_init_total_error_tb_num" type="UINT16#4" extend=""/>
+        <attr name="Code1_init_total_error_tb_num" type="UINT16#4" extend=""/>
+        <attr name="Code0_remain_total_error_tb_num" type="UINT16#4" extend=""/>
+        <attr name="Code1_remain_total_error_tb_num" type="UINT16#4" extend=""/>
+      </struct>
     </msgbody>
     <iemap>
+      <ierule equalrule="i882=BLER.bler_info_st.Total_error_tb_num/BLER.bler_info_st.Total_tb_num" insidepara="" outsidepara=""/>
+      <ierule equalrule="i887=BLER.bler_info_ext_st.Code0_init_total_error_tb_num/BLER.bler_info_ext_st.Code0_init_total _tb_num" insidepara="" outsidepara=""/>
+      <ierule equalrule="i888=BLER.bler_info_ext_st.Code0_total_error_tb_num/BLER.bler_info_ext_st.Code0_total _tb_num" insidepara="" outsidepara=""/>
+      <ierule equalrule="i889=BLER.bler_info_ext_st.Code0_remain_total_error_tb_num/BLER.bler_info_ext_st.Code0_total _tb_num" insidepara="" outsidepara=""/>
+      <ierule equalrule="i890=BLER.bler_info_ext_st.Code1_init_total_error_tb_num/BLER.bler_info_ext_st.Code1_init_total _tb_num" insidepara="" outsidepara=""/>
+      <ierule equalrule="i891=BLER.bler_info_ext_st.Code1_total_error_tb_num/BLER.bler_info_ext_st.Code1_total _tb_num" insidepara="" outsidepara=""/>
+      <ierule equalrule="i892=BLER.bler_info_ext_st.Code1_remain_total_error_tb_num/BLER.bler_info_ext_st.Code1_total _tb_num" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
   <msg id="70052_0XF034" msgname="L1_ThroughPut_info">
@@ -3929,15 +3971,27 @@
         <attr name="throughput_info_st" type="ARRAY#12">
           <arraydesc is_length_fix="NO" arraylength="" arraytype="STRUCT#11"/>
         </attr>
+        <attr name="throughput_info_ext_st" type="ARRAY#12">
+          <arraydesc is_length_fix="NO" arraylength="" arraytype="STRUCT#11"/>
+        </attr>
       </struct>
       <struct name="throughput_info_st">
         <attr name="ThroughPut type" type="UINT16#4" extend="[0,1]"/>
         <attr name="Filler" type="UINT16#4" extend=""/>
         <attr name="Total_tbs" type="UINT32#8" extend=""/>
       </struct>
+      <struct name="throughput_info_ext_st">
+        <attr name="ThroughPut type" type="UINT16#4" extend=""/>
+        <attr name="Filler" type="UINT16#4" extend=""/>
+        <attr name="Total_tbs" type="UINT32#8" extend=""/>
+        <attr name="Code0_total_tbs" type="UINT32#8" extend=""/>
+        <attr name="Code1_total_tbs" type="UINT32#8" extend=""/>
+      </struct>
     </msgbody>
     <iemap>
-      <ierule equalrule="i953=Bitand(L1_ThroughPut_info.throughput_info_st[x].ThroughPut type,1)*L1_ThroughPut_info.throughput_info_st[x].Total_tbs*25" insidepara="" outsidepara=""/>
+      <ierule equalrule="i953=Bitand(L1_ThroughPut_info.throughput_info_ext_st[x].ThroughPut type,1)*L1_ThroughPut_info.throughput_info_st[x].Total_tbs*25" insidepara="" outsidepara=""/>
+      <ierule equalrule="i954=Bitand(L1_ThroughPut_info.throughput_info_ext_st[x].ThroughPut type,1)*L1_ThroughPut_info.throughput_info_ext_st[x].Code0_total_tbs*25" insidepara="" outsidepara=""/>
+      <ierule equalrule="i955=Bitand(L1_ThroughPut_info.throughput_info_ext_st[x].ThroughPut type,1)*L1_ThroughPut_info.throughput_info_ext_st[x].Code1_total_tbs*26" insidepara="" outsidepara=""/>
       <ierule equalrule="i956=Not(L1_ThroughPut_info.throughput_info_st[x].ThroughPut type)*L1_ThroughPut_info.throughput_info_st[x].Total_tbs*25" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
@@ -3961,14 +4015,14 @@
       </struct>
     </msgbody>
     <iemap>
-      <ierule equalrule="TDDLTE_HARQ_DL_Ack_Count=ACK_NACK_info.ack_nack_info_st_dl[total_dl_ack_nack_number].(ack_nack_list[0]=1)+UE_EXT_OTHER2_RADIOPARAM_IND.ACK_NACK_info(0XF0_35).ack_nack_info_st_dl[total_dl_ack_nack_number].(ack_nack_list_1=1)" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_HARQ_DL_C0_ACK_Count=ACK_NACK_info.ack_nack_info_st_dl[total_dl_ack_nack_number].(ack_nack_list_0=1)" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_HARQ_DL_C0_NACK_Count=ACK_NACK_info.ack_nack_info_st_dl[total_dl_ack_nack_number].(ack_nack_list_0=0)" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_HARQ_DL_C1_ACK_Count=ACK_NACK_info.ack_nack_info_st_dl[total_dl_ack_nack_number].(ack_nack_list_1=1)" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_HARQ_DL_C1_NACK_Count=ACK_NACK_info.ack_nack_info_st_dl[total_dl_ack_nack_number].(ack_nack_list_1=0)" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_HARQ_DL_Nack_Count=ACK_NACK_info(0XF0_35).ack_nack_info_st_dl[total_dl_ack_nack_number].(ack_nack_list_0=0)+UE_EXT_OTHER2_RADIOPARAM_IND.ACK_NACK_info.ack_nack_info_st_dl[total_dl_ack_nack_number].(ack_nack_list_1=0)" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_HARQ_UL_Ack_Count=ACK_NACK_info.ack_nack_info_st_ul[total_ul_ack_nack_number].(ack_nack_list_0=1)" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_HARQ_UL_Nack_Count=ACK_NACK_info.ack_nack_info_st_ul[total_ul_ack_nack_number].(ack_nack_list_0=0)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1040=ACK_NACK_info.ack_nack_info_st_dl[total_dl_ack_nack_number].(ack_nack_list[0]=1)+UE_EXT_OTHER2_RADIOPARAM_IND.ACK_NACK_info(0XF0_35).ack_nack_info_st_dl[total_dl_ack_nack_number].(ack_nack_list_1=1)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1041=ACK_NACK_info.ack_nack_info_st_dl[total_dl_ack_nack_number].(ack_nack_list_0=1)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1042=ACK_NACK_info.ack_nack_info_st_dl[total_dl_ack_nack_number].(ack_nack_list_0=0)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1043=ACK_NACK_info.ack_nack_info_st_dl[total_dl_ack_nack_number].(ack_nack_list_1=1)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1044=ACK_NACK_info.ack_nack_info_st_dl[total_dl_ack_nack_number].(ack_nack_list_1=0)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1045=ACK_NACK_info(0XF0_35).ack_nack_info_st_dl[total_dl_ack_nack_number].(ack_nack_list_0=0)+UE_EXT_OTHER2_RADIOPARAM_IND.ACK_NACK_info.ack_nack_info_st_dl[total_dl_ack_nack_number].(ack_nack_list_1=0)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1053=ACK_NACK_info.ack_nack_info_st_ul[total_ul_ack_nack_number].(ack_nack_list_0=1)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1054=ACK_NACK_info.ack_nack_info_st_ul[total_ul_ack_nack_number].(ack_nack_list_0=0)" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
   <msg id="70052_0XF036" msgname="Fast_Ctrl_AGC_Info">
@@ -4021,7 +4075,7 @@
       <ierule equalrule="i662=Fast_Ctrl_APC_Info.apc_info_st.prach_tx_pwr" insidepara="" outsidepara=""/>
       <ierule equalrule="i666=Fast_Ctrl_APC_Info.apc_info_st.srs_tx_pwr" insidepara="" outsidepara=""/>
       <ierule equalrule="i656=Fast_Ctrl_APC_Info.apc_info_st.apc_pucch_info_st.gi" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_L0_measurement_Serving_Cell_Measurement_Fi=Fast_Ctrl_APC_Info.apc_info_st.apc_pusch_info_st.fi" insidepara="" outsidepara=""/>
+      <ierule equalrule="i998=Fast_Ctrl_APC_Info.apc_info_st.apc_pusch_info_st.fi" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
   <msg id="70052_0XF038" msgname="Fast_Ctrl_AFC_info">
@@ -4080,6 +4134,10 @@
         <attr name="prach_earfcn" type="UINT16#4" extend=""/>
         <attr name="preamble_received_target_pwr" type="INT16#2" extend=""/>
         <attr name="root_seq_index" type="UINT16#4" extend="[0,837]"/>
+        <attr name="Backoff time" type="UINT16#4" extend=""/>
+        <attr name="Ra_trigger_type" type="UINT16#4" extend=""/>
+        <attr name="ra_PreambleIndex" type="UINT16#4" extend=""/>
+        <attr name="FILLER" type="UINT16#4" extend=""/>
       </struct>
     </msgbody>
     <iemap>
@@ -4087,6 +4145,7 @@
       <ierule equalrule="i775=Rand_access_info.prach_cfg_index" insidepara="" outsidepara=""/>
       <ierule equalrule="i777=Rand_access_info.ra_rnti" insidepara="" outsidepara=""/>
       <ierule equalrule="i779=Rand_access_info.preamble_received_target_pwr" insidepara="" outsidepara=""/>
+      <ierule equalrule="i991=Rand_access_info.ra_PeambleIndex" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
   <msg id="70052_0XF03C" msgname="CellSearch_info">
@@ -4142,9 +4201,14 @@
     <iemap>
     </iemap>
   </msg>
-  <msg id="70052_0XF03D" msgname="BCCH meas_info">
+  <msg id="70052_0XF03D" msgname="BCCH_meas_info">
     <msgbody skip_length="" msg_length="">
-      <struct name="BCCH meas_info">
+      <struct name="BCCH_meas_info">
+        <attr name="earfcn" type="UINT16#4" extend="[37750,39649]"/>
+      </struct>
+      <struct name="Phy_cell_id">
+        <attr name="cell_id" type="UINT16#4" extend="[0,503]"/>
+        <attr name="Pathloss" type="UINT16#4" extend="[0,191]"/>
         <attr name="ant_port_num" type="UINT16#4" extend="{1,2,4}"/>
         <attr name="reserved" type="UINT16#4" extend=""/>
         <attr name="RSRP" type="INT16#2" extend="[-141，-44]"/>
@@ -4165,6 +4229,8 @@
         <attr name="DL_harq_process_num" type="UINT16#4" extend=""/>
         <attr name="st_pusch_tx_info" type="STRUCT#11" strcutname="pusch_tx_info"/>
         <attr name="st_pdsch_rx_info" type="STRUCT#11" strcutname="pdsch_rx_info"/>
+        <attr name="tx_cnt" type="UINT16#4" extend=""/>
+        <attr name="rx_cnt" type="UINT16#4" extend=""/>
       </struct>
       <struct name="pusch_tx_info">
         <attr name="first_tx_success_cnt" type="UINT16#4" extend=""/>
@@ -4178,12 +4244,12 @@
       </struct>
     </msgbody>
     <iemap>
-      <ierule equalrule="TDDLTE_HARQ_DL_Code0_1st_Tx_Succ_Num=Data_statistic_info.st_pdsch_rx_info.first_rx_success_cnt" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_HARQ_DL_mutil_ReTx_Succ_Num=Data_statistic_info.st_pdsch_rx_info.multi_retrans_success_cnt" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_HARQ_UL_1st_Tx_Succ_Num=Data_statistic_info.st_pusch_tx_info.first_tx_success_cnt" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_HARQ_UL_1st_ReTx_Succ_Num=Data_statistic_info.st_pusch_tx_info.first_retrans_success_cnt" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_HARQ_UL_2nd_ReTx_Succ_Num=Data_statistic_info.st_pusch_tx_info.second_retrans_success_cnt" insidepara="" outsidepara=""/>
-      <ierule equalrule="TDDLTE_HARQ_UL_mutil_ReTx_Succ_Num=Data_statistic_info.st_pusch_tx_info.multi_retrans_success_cnt" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1029=Data_statistic_info.st_pdsch_rx_info.first_rx_success_cnt" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1039=Data_statistic_info.st_pdsch_rx_info.multi_retrans_success_cnt" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1047=Data_statistic_info.st_pusch_tx_info.first_tx_success_cnt" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1048=Data_statistic_info.st_pusch_tx_info.first_retrans_success_cnt" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1049=Data_statistic_info.st_pusch_tx_info.second_retrans_success_cnt" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1052=Data_statistic_info.st_pusch_tx_info.multi_retrans_success_cnt" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
   <msg id="700520XF76F" msgname="RB status">
@@ -4212,7 +4278,12 @@
         <attr name="Filler" type="ARRAY#12">
           <arraydesc is_length_fix="YES" arraylength="3.0" arraytype="UINT8#1"/>
         </attr>
-        <attr name="Eps_bear_context" type="STRUCT#11" strcutname="eps_bear_ctx_st"/>
+        <attr name="Eps_bear_context" type="ARRAY#12">
+          <arraydesc is_length_fix="NO" arraylength="" arraytype="#"/>
+        </attr>
+        <attr name="Eps_bear_context_ext" type="ARRAY#12">
+          <arraydesc is_length_fix="NO" arraylength="" arraytype="#"/>
+        </attr>
       </struct>
       <struct name="eps_bear_ctx_st">
         <attr name="Eps_bear_id" type="UNIT8#0" extend="[1,32]"/>
@@ -4234,15 +4305,24 @@
           <arraydesc is_length_fix="YES" arraylength="3.0" arraytype="UINT8#1"/>
         </attr>
       </struct>
+      <struct name="Eps_bear_context_ext">
+        <attr name="Filter" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="2.0" arraytype="UINT8#1"/>
+        </attr>
+        <attr name="APN" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="100.0" arraytype="UINT8#1"/>
+        </attr>
+      </struct>
     </msgbody>
     <iemap>
       <ierule equalrule="i925=EPS bear information.Eps_bear_context.Pdn_address.Pdn_addr_ipv4[4]" insidepara="" outsidepara=""/>
       <ierule equalrule="i873=EPS bear information.Eps_bear_context.Eps_qos_info.Qci" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1062=EPS bear information.Eps_bear_context_ext.APN" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
-  <msg id="700520XF771" msgname="EPS bear information">
+  <msg id="700520XF771" msgname="Semi-persistent scheduling Conf">
     <msgbody skip_length="" msg_length="">
-      <struct name="EPS bear information">
+      <struct name="Semi-persistent scheduling Conf">
         <attr name="sps_cfgdl_st" type="STRUCT#11" strcutname="sps_cfgdl"/>
         <attr name="sps_cfgul_st" type="STRUCT#11" strcutname="sps_cfgul"/>
       </struct>
@@ -4253,6 +4333,12 @@
         <attr name="n1_pucch_an_persist_num" type="UNIT8#0" extend="[1,4]"/>
         <attr name="Filler" type="ARRAY#12">
           <arraydesc is_length_fix="YES" arraylength="3.0" arraytype="UINT8#1"/>
+        </attr>
+        <attr name="n1_pucch_an_persist_list[0]" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="4.0" arraytype="UINT8#1"/>
+        </attr>
+        <attr name="n1_pucch_an_persist_list[1]" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="4.0" arraytype="UINT8#1"/>
         </attr>
       </struct>
       <struct name="sps_cfgul">
@@ -4386,6 +4472,9 @@
         <attr name="subband_pos_len" type="UINT16#4" extend=""/>
         <attr name="filler" type="UINT16#4" extend=""/>
         <attr name="subband_set_pos_ind" type="UINT32#8" extend=""/>
+        <attr name="rank_sinr" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="2.0" arraytype="SINT16#"/>
+        </attr>
       </struct>
       <struct name="uci_info_periodic_st">
         <attr name="sub_fn_report" type="UINT16#4" extend=""/>
@@ -4394,9 +4483,14 @@
         <attr name="subband_cqi[2]" type="UINT16#4" extend=""/>
         <attr name="subband_pos_ind" type="UINT16#4" extend=""/>
         <attr name="subband_pos_len" type="UINT16#4" extend=""/>
+        <attr name="rank_sinr" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="2.0" arraytype="SINT16#"/>
+        </attr>
       </struct>
     </msgbody>
     <iemap>
+      <ierule equalrule="i1018=UCI Info ext.uci_info_ext_st.wideband_pmi" insidepara="" outsidepara=""/>
+      <ierule equalrule="i868=UCI Info ext.uci_info_ext_st.ri_result" insidepara="" outsidepara=""/>
     </iemap>
   </msg>
 </all>

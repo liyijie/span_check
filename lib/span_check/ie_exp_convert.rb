@@ -93,18 +93,17 @@ module SpanCheck
                 end
                 @recent_struct = struct_parse
                 @msgparse.add_struct struct_parse unless @msgparse.nil?
-              else
-                #strcut
-                if step == 1
-                  next if row[2].nil? || row[2].empty?
-                  attr_parse = AttrParse.create(row)
-                  @recent_struct << attr_parse
-                #IEMap
-                elsif step == 2
-                  next if row[1].nil? || row[1].empty?
-                  ie_rule = IemapParse.new(row)
-                  @msgparse.add_ie_rule ie_rule unless @msgparse.nil?
-                end
+              end
+              #strcut
+              if step == 1
+                next if row[2].nil? || row[2].empty?
+                attr_parse = AttrParse.create(row)
+                @recent_struct << attr_parse
+              #IEMap
+              elsif step == 2
+                next if row[1].nil? || row[1].empty?
+                ie_rule = IemapParse.new(row)
+                @msgparse.add_ie_rule ie_rule unless @msgparse.nil?
               end
             end 
             @msgparse.write_xml_element e
