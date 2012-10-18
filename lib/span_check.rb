@@ -3,6 +3,8 @@
 require 'parseexcel'
 require "parseexcel/parser"
 require 'builder' 
+require "nokogiri"
+
 # require "span_check/ie_exp_convert"
 
 module SpanCheck
@@ -11,6 +13,7 @@ module SpanCheck
   autoload :IemapParse, "./span_check/iemap_parse"
   autoload :IelistParse, "./span_check/ielist_parse"
   autoload :IeconfigParse, "./span_check/ieconfig_parse"
+  autoload :LogParse, "./span_check/log_parse"
 
   def self.row_format row
     rlt = []
@@ -18,6 +21,7 @@ module SpanCheck
       content = cell.nil? ? "" : cell.to_s('utf-8')
       rlt << content
     end
+    
     rlt
   end
 
@@ -46,6 +50,5 @@ puts "processing #{iemap_files} ......"
 ieconvert = SpanCheck::IeExpConvert.new(iemap_files)
 ieconvert.parse
 
-
-
-# ieconfig.parse
+# logparse = SpanCheck::LogParse.new("../sample/LogFormat_100.xml")
+# logparse.load_old_log

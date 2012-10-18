@@ -21,10 +21,10 @@
 </LogLine>
 
 <LogLine Name="TestdataBase" Index="104">
-<LogItem Name="RecordId" Type="double" />
-<LogItem Name="UEVersion" Type="double" />
-<LogItem Name="UEMode" Type="double" />
-<LogItem Name="RecType" Type="double" />
+<LogItem Name="RecordId1" Type="double" />
+<LogItem Name="UEVersion1" Type="double" />
+<LogItem Name="UEMode1" Type="double" />
+<LogItem Name="RecType1" Type="double" />
 </LogLine>
 
 <LogLine Name="IE_basic_info" Index="105">

@@ -389,10 +389,10 @@
   <IEs Count1="32" Count2="0" Id="i387" Name="TDSCDMA_HSDPA_HSDPA_Schedule_Information_HARQ_Process_ID"/>
   <IEs Count1="32" Count2="0" Id="i388" Name="TDSCDMA_HSDPA_HSDPA_Schedule_Information_IR_Version_Number"/>
   <IEs Count1="32" Count2="0" Id="i389" Name="TDSCDMA_HSDPA_HSDPA_Schedule_Information_New_Data_Indicator"/>
-  <IEs Count1="20" Count2="0" Id="i390" Name="TDSCDMA_HSDPA_HSDPA_HS_PDSCH_MAC_Information_sub_sfn"/>
-  <IEs Count1="20" Count2="0" Id="i391" Name="TDSCDMA_HSDPA_HSDPA_HS_PDSCH_MAC_Information_Queue_ID"/>
-  <IEs Count1="20" Count2="0" Id="i392" Name="TDSCDMA_HSDPA_HSDPA_HS_PDSCH_MAC_Information_TSN"/>
-  <IEs Count1="20" Count2="0" Id="i393" Name="TDSCDMA_HSDPA_HSDPA_HS_PDSCH_MAC_Information_MAC_hs_PDU_Size"/>
+  <IEs Count1="400" Count2="0" Id="i390" Name="TDSCDMA_HSDPA_HSDPA_HS_PDSCH_MAC_Information_sub_sfn"/>
+  <IEs Count1="400" Count2="0" Id="i391" Name="TDSCDMA_HSDPA_HSDPA_HS_PDSCH_MAC_Information_Queue_ID"/>
+  <IEs Count1="400" Count2="0" Id="i392" Name="TDSCDMA_HSDPA_HSDPA_HS_PDSCH_MAC_Information_TSN"/>
+  <IEs Count1="400" Count2="0" Id="i393" Name="TDSCDMA_HSDPA_HSDPA_HS_PDSCH_MAC_Information_MAC_hs_PDU_Size"/>
   <IEs Count1="32" Count2="0" Id="i394" Name="TDSCDMA_HSDPA_HSDPA_HS_SICH_Data_Information_sub_sfn"/>
   <IEs Count1="32" Count2="0" Id="i395" Name="TDSCDMA_HSDPA_HSDPA_HS_SICH_Data_Information_Ack_Indicator"/>
   <IEs Count1="32" Count2="0" Id="i396" Name="TDSCDMA_HSDPA_HSDPA_HS_SICH_Data_Information_CQI_Indicator"/>
@@ -848,10 +848,10 @@
   <IEs Count1="0" Count2="0" Id="i866" Name="TDDLTE_CQI_Report_Period"/>
   <IEs Count1="0" Count2="0" Id="i867" Name="TDDLTE_CQI_PMI"/>
   <IEs Count1="0" Count2="0" Id="i868" Name="TDDLTE_CQI_RI"/>
-  <IEs Count1="0" Count2="0" Id="i869" Name="TDDLTE_CQI_Subband_Code0_CQI"/>
-  <IEs Count1="0" Count2="0" Id="i870" Name="TDDLTE_CQI_Subband_Code1_CQI"/>
-  <IEs Count1="0" Count2="0" Id="i871" Name="TDDLTE_CQI_Wideband_Code0_CQI"/>
-  <IEs Count1="0" Count2="0" Id="i872" Name="TDDLTE_CQI_Wideband_Code1_CQI"/>
+  <IEs Count1="25" Count2="0" Id="i869" Name="TDDLTE_CQI_Subband_Code0_CQI"/>
+  <IEs Count1="25" Count2="0" Id="i870" Name="TDDLTE_CQI_Subband_Code1_CQI"/>
+  <IEs Count1="25" Count2="0" Id="i871" Name="TDDLTE_CQI_Wideband_Code0_CQI"/>
+  <IEs Count1="25" Count2="0" Id="i872" Name="TDDLTE_CQI_Wideband_Code1_CQI"/>
   <IEs Count1="0" Count2="0" Id="i873" Name="TDDLTE_CQI_QCI"/>
   <IEs Count1="0" Count2="0" Id="i874" Name="TDDLTE_CQI_ARP"/>
   <IEs Count1="0" Count2="0" Id="i875" Name="TDDLTE_CQI_Rank1_Sinr"/>
@@ -921,8 +921,8 @@
   <IEs Count1="32" Count2="0" Id="i939" Name="TDDLTE_RB_Info_RB_Logic_Group"/>
   <IEs Count1="0" Count2="0" Id="i940" Name="TDDLTE_RB_Info_RB_Status"/>
   <IEs Count1="32" Count2="0" Id="i941" Name="TDDLTE_RB_Info_RB_RLC_Mode"/>
-  <IEs Count1="0" Count2="0" Id="i942" Name="TDDLTE_RB_Info_Rb_Priority"/>
-  <IEs Count1="0" Count2="0" Id="i943" Name="TDDLTE_RB_Info_Rb_ID"/>
+  <IEs Count1="12" Count2="0" Id="i942" Name="TDDLTE_RB_Info_Rb_Priority"/>
+  <IEs Count1="12" Count2="0" Id="i943" Name="TDDLTE_RB_Info_Rb_ID"/>
   <IEs Count1="0" Count2="0" Id="i944" Name="TDDLTE_RB_Info_Rb_Number"/>
   <IEs Count1="0" Count2="0" Id="i945" Name="TDDLTE_Throughput_APP_Throughput_DL"/>
   <IEs Count1="0" Count2="0" Id="i946" Name="TDDLTE_Throughput_APP_Throughput_UL"/>
@@ -971,4 +971,136 @@
   <IEs Count1="0" Count2="0" Id="i991" Name="TDDLTE_Random_Access_Parameters_RA_PreambleIndex"/>
   <IEs Count1="0" Count2="0" Id="i992" Name="TDDLTE_CQI_CQI_Report_AperiodMode"/>
   <IEs Count1="0" Count2="0" Id="i993" Name="TDDLTE_CQI_CQI_Report_PeriodMode"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_Scell_Radio_Parameters_TimingAdvance" Id="i994"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_L0_measurement_Serving_Cell_Measurement_Fi" Id="i995"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_L2_measurement_Serving_Cell_Measurement_SRS_RB_Num" Id="i996"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_L1_measurement_Serving_Cell_Measurement_TPC_RNTI" Id="i997"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_L2_measurement_Serving_Cell_Measurement_Afc_Period" Id="i998"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_L3_measurement_Serving_Cell_Measurement_Afc_Freq_Adjust" Id="i999"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_Random_Access_Parameters_PRACH_Preamble_SFN" Id="i1000"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_Random_Access_Parameters_PRACH_Preamble_SBFN" Id="i1001"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_Random_Access_Parameters_Max_Preamble_Number" Id="i1002"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_Schedul_Info_UL_RB_Num" Id="i1003"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_Schedul_Info_UL_RB_Start" Id="i1004"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_Schedul_Info_DL_RB_Num" Id="i1005"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_Schedul_Info_DL_RB_Start" Id="i1006"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_MCS_Average_DL_Code0_MCS" Id="i1007"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_MCS_Average_DL_Code1_MCS" Id="i1008"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_MCS_DL_Code0_MCS_Modulation" Id="i1009"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_MCS_DL_Code1_MCS_Modulation" Id="i1010"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_MCS_UL_MCS_Modulation" Id="i1011"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_MIMO_Antenna_correlation" Id="i1012"/>
+  <IEs Count1="25" Count2="0" Name="TDDLTE_CQI_R1_Subband_PMI" Id="i1013"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_CQI_R1_Wideband_PMI" Id="i1014"/>
+  <IEs Count1="25" Count2="0" Name="TDDLTE_CQI_R2_Subband_PMI" Id="i1015"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_CQI_R2_Wideband_PMI" Id="i1016"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_CQI_Wideband_CQI" Id="i1017"/>
+  <IEs Count1="25" Count2="0" Name="TDDLTE_CQI_Subband_CQI" Id="i1018"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_CQI_R1_Wideband_SINR" Id="i1019"/>
+  <IEs Count1="25" Count2="0" Name="TDDLTE_CQI_R1_Subband_SINR" Id="i1020"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_CQI_Wideband_Code0_SINR" Id="i1021"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_CQI_Wideband_Code1_SINR" Id="i1022"/>
+  <IEs Count1="25" Count2="0" Name="TDDLTE_CQI_Subband_Code0_SINR" Id="i1023"/>
+  <IEs Count1="25" Count2="0" Name="TDDLTE_CQI_Subband_Code1_SINR" Id="i1024"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_Code0_1st_Tx_Succ_Num" Id="i1025"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_Code0_1st_ReTx_Succ_Num" Id="i1026"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_Code0_2nd_ReTx_Succ_Num" Id="i1027"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_Code0_3rd_ReTx_Succ_Num" Id="i1028"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_Code0_4th_ReTx_Succ_Num" Id="i1029"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_Code1_1st_Tx_Succ_Num" Id="i1030"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_Code1_1st_ReTx_Succ_Num" Id="i1031"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_Code1_2nd_ReTx_Succ_Num" Id="i1032"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_Code1_3rd_ReTx_Succ_Num" Id="i1033"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_Code1_4th_ReTx_Succ_Num" Id="i1034"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_mutil_ReTx_Succ_Num" Id="i1035"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_Ack_Count" Id="i1036"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_C0_ACK_Count" Id="i1037"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_C0_NACK_Count" Id="i1038"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_C1_ACK_Count" Id="i1039"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_C1_NACK_Count" Id="i1040"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_Nack_Count_" Id="i1041"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_DL_ReTx_Failed_Num" Id="i1042"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_UL_1st_Tx_Succ_Num" Id="i1043"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_UL_1st_ReTx_Succ_Num" Id="i1044"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_UL_2nd_ReTx_Succ_Num" Id="i1045"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_UL_3rd_ReTx_Succ_Num" Id="i1046"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_UL_4th_ReTx_Succ_Num" Id="i1047"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_UL_mutil_ReTx_Succ_Num" Id="i1048"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_UL_Ack_Count" Id="i1049"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_UL_Nack_Count" Id="i1050"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HARQ_UL_ReTx_Failed_Num" Id="i1051"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_UE_Info_EMM_State" Id="i1052"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_UE_Info_EMM_SubState" Id="i1053"/>
+  <IEs Count1="0" Count2="0" Name="" Id="i1054"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_UE_Info_RRC_State" Id="i1055"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_UE_Info_Protocol_State" Id="i1056"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_UE_Info_FGI" Id="i1057"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_UE_Info_APN" Id="i1058"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_RB_Info_RB_Priority" Id="i1059"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_RB_Info_RB_ID" Id="i1060"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_RB_Info_RB_Number" Id="i1061"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_DrxCfgInd" Id="i1062"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_AnrEnable" Id="i1063"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_DrxShortCycleTimer" Id="i1064"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_OndurationTimer" Id="i1065"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_DrxInactivityTimer" Id="i1066"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_DrxRetxTimer" Id="i1067"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_DrxStartOffset" Id="i1068"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_LongDrxCycle" Id="i1069"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_ShortDrxCycle" Id="i1070"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_DrxCycleType" Id="i1071"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_OndurationTimerState" Id="i1072"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_InactivityTimer" Id="i1073"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_ContentionTimer" Id="i1074"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_SrIsPending" Id="i1075"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_DrxStateBitmap" Id="i1076"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_DrxStartedFlag" Id="i1077"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_DrxSubState" Id="i1078"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_DRX_ShorDrxCycleFlg" Id="i1079"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_MACRxL3RaIndTime(us)" Id="i1080"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_MACTxPreambleTime(us)" Id="i1081"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_MACRaCmpIndTime(us)" Id="i1082"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_Before_Ho_MacRxLastPktTime(us)" Id="i1083"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_After_Ho_MacRxFirstPktTime(us)" Id="i1084"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_Before_Ho_MacTxLastPktTime(us)" Id="i1085"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_After_Ho_MacTxFirstPktTime(us)" Id="i1086"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_Before_Ho_MacRxLastUlGrantTime(us)" Id="i1087"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_After_Ho_MACRxFirstULGrantTime(us)" Id="i1088"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_MACHoULInteruptTime(us)" Id="i1089"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_MACHoDLInteruptTime(us)" Id="i1090"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_OriginalCellRLCRxLastPktTime(us)" Id="i1091"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_TargetCellRLCRxFirstPktTime(us)" Id="i1092"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_Before_Ho_RLCRxLastPktTime(us)" Id="i1093"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_After_Ho_RLCRxFirstPktTime(us)" Id="i1094"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_RLCHoDLInteruptTime(us)" Id="i1095"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_RLCHoULInteruptTime(us)" Id="i1096"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_PDCPHoULDtStopTime(us)" Id="i1097"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_PDCPHoULDtContTime(us)" Id="i1098"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_PDCPHoDLDtStopTime(us)" Id="i1099"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_PDCPHoDLDtContTime(us)" Id="i1100"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_PDCPHoDLDtDelayTime(us)" Id="i1101"/>
+  <IEs Count1="0" Count2="0" Name="TDDLTE_HO_Delay_PDCPHoULDtDelayTime(us)" Id="i1102"/>
+  <IEs Count1="32" Count2="0" Name="TDSCDMA_L1_Measurement_TD_LTE_Neighbour_Measurement_Carrier_freq" Id="i1103"/>
+  <IEs Count1="32" Count2="0" Name="TDSCDMA_L1_Measurement_TD_LTE_Neighbour_Measurement_physical_cell_identity" Id="i1104"/>
+  <IEs Count1="32" Count2="0" Name="TDSCDMA_L1_Measurement_TD_LTE_Neighbour_Measurement_Rsrp" Id="i1105"/>
+  <IEs Count1="32" Count2="0" Name="TDSCDMA_L1_Measurement_TD_LTE_Neighbour_Measurement_Rsrq" Id="i1106"/>
+  <IEs Count1="8" Count2="0" Name="TDSCDMA_L1_Measurement_TD_LTE_FreqAndPri_earfcn" Id="i1107"/>
+  <IEs Count1="8" Count2="0" Name="TDSCDMA_L1_Measurement_TD_LTE_FreqAndPri_priority" Id="i1108"/>
+  <IEs Count1="8" Count2="0" Name="TDSCDMA_L1_Measurement_TD_LTE_FreqAndPri_qRxLevMinEUTRA" Id="i1109"/>
+  <IEs Count1="8" Count2="0" Name="TDSCDMA_L1_Measurement_TD_LTE_FreqAndPri_threshXhigh" Id="i1110"/>
+  <IEs Count1="8" Count2="0" Name="TDSCDMA_L1_Measurement_TD_LTE_FreqAndPri_tbreshXlow" Id="i1111"/>
+  <IEs Count1="8" Count2="0" Name="TDSCDMA_L1_Measurement_TD_LTE_FreqAndPri_measurementBandwidth" Id="i1112"/>
+  <IEs Count1="8" Count2="0" Name="TDSCDMA_L1_Measurement_TD_LTE_FreqAndPri_InterScalingFactor" Id="i1113"/>
+  <IEs Count1="48" Count2="0" Name="TDSCDMA_CHN_Information_CCTrCH_Information_PhyCH_Parameter_TimeSlotNo" Id="i1114"/>
+  <IEs Count1="48" Count2="0" Name="TDSCDMA_CHN_Information_CCTrCH_Information_PhyCH_Parameter_Phych_id" Id="i1115"/>
+  <IEs Count1="48" Count2="0" Name="TDSCDMA_CHN_Information_CCTrCH_Information_PhyCH_Parameter_Phych_direction" Id="i1116"/>
+  <IEs Count1="48" Count2="0" Name="TDSCDMA_CHN_Information_CCTrCH_Information_PhyCH_Parameter_MA_Mode" Id="i1117"/>
+  <IEs Count1="48" Count2="0" Name="TDSCDMA_CHN_Information_CCTrCH_Information_PhyCH_Parameter_MA_Config" Id="i1118"/>
+  <IEs Count1="48" Count2="0" Name="TDSCDMA_CHN_Information_CCTrCH_Information_PhyCH_Parameter_MA_Shift" Id="i1119"/>
+  <IEs Count1="48" Count2="0" Name="TDSCDMA_CHN_Information_CCTrCH_Information_PhyCH_Parameter_SF" Id="i1120"/>
+  <IEs Count1="48" Count2="0" Name="TDSCDMA_CHN_Information_CCTrCH_Information_PhyCH_Parameter_Channel_Code_Count" Id="i1121"/>
+  <IEs Count1="48" Count2="0" Name="TDSCDMA_CHN_Information_CCTrCH_Information_PhyCH_Parameter_Channelization_Code" Id="i1122"/>
+  <IEs Count1="0" Count2="0" Name="TDSCDMA_HSDPA_HSDPA_QoS_Report_SCCH_CRC_Total" Id="i1123"/>
+  <IEs Count1="0" Count2="0" Name="TDSCDMA_HSDPA_HSDPA_QoS_Report_SCCH_CRC_Error" Id="i1124"/>
+  <IEs Count1="0" Count2="0" Name="TDSCDMA_HSDPA_HSDPA_QoS_Report_SCCH_BLER" Id="i1125"/>
 </IE_LIST>

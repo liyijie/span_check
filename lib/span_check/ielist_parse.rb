@@ -1,4 +1,3 @@
-require "nokogiri"
 
 module SpanCheck
   class IelistParse

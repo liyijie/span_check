@@ -96,11 +96,12 @@ module SpanCheck
               else
                 #strcut
                 if step == 1
-                  next if row[2].nil?
+                  next if row[2].nil? || row[2].empty?
                   attr_parse = AttrParse.create(row)
                   @recent_struct << attr_parse
                 #IEMap
                 elsif step == 2
+                  next if row[1].nil? || row[1].empty?
                   ie_rule = IemapParse.new(row)
                   @msgparse.add_ie_rule ie_rule unless @msgparse.nil?
                 end

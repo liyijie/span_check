@@ -10,12 +10,15 @@ module SpanCheck
 
       def replace_long_ie
         ieconfig = SpanCheck::IeconfigParse.instance
-        longie = @ie_rule.split(/\=|\[/)[0]  
+        longie = @ie_rule.split(/\=|\[|\{/)[0]  
         shortie = ieconfig.get_shortname(longie)
+        unless (longie =~ /^GSM/i || longie =~ /^TDSCDMA/i || longie =~ /^TDDLTE/i)
+          logger.error "error 1: \"#{longie}\" must start with GSM, TDSCDMA, TDDLTE"
+        end
         if shortie
           @ie_rule = @ie_rule.sub(longie, shortie)
         else
-          puts "error: short ie not found #{longie}"
+          puts "error 2: \"#{longie}\" can not found in ieconfig"
         end
       end
 

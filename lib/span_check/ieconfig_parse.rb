@@ -10,12 +10,17 @@ module SpanCheck
     def initialize()
       @head = ()
       @ieconfigs = {}
+      @ieconfigs_short = {}
       @filename = ""
     end
 
     def load(configfiles)
       @ielist = IelistParse.new("../sample/IEList.xml")
       load_old_ieconfig
+
+      @logparser = LogParse.new("../sample/LogFormat_100.xml")
+      @logparser.load_old_log
+
       configfiles.each do |configfile|
         workbook = Spreadsheet::ParseExcel.parse(configfile)
         worksheet = workbook.worksheet(1)
@@ -35,13 +40,23 @@ module SpanCheck
           contentmap["shortname"] = shortname
           @ieconfigs[contentmap["name"]] = contentmap
           @ielist.update(to_list_map(contentmap))
+
+          is_group = contentmap["paramcount1"].to_i > 0
+          @logparser.update_logitem shortname, is_group
         end
       end
     end
 
-    def parse  
+    def parse
+      @ieconfigs_short = {}
+      @ieconfigs.each do |longname, info|
+        shortname = info["shortname"]
+        @ieconfigs_short[shortname] = info
+      end
+
       write_file(to_config_xml, "IEConfig.xml")
       write_file(to_list_xml(@ielist), "IEList.xml")
+      write_file(to_log_xml, "LogFormat_100.xml")
     end
 
     def get_shortname longname
@@ -68,6 +83,7 @@ module SpanCheck
     end
 
     def to_list_map ieconfig
+
       ielistmap = {}
       ielistmap["Count1"] = ieconfig["paramcount1"].to_i
       ielistmap["Count2"] = ieconfig["paramcount2"].to_i
@@ -84,12 +100,14 @@ module SpanCheck
       e = Builder::XmlMarkup.new(:target => xml_string, :indent => 2)
       e.instruct! :xml,:version =>'1.0',:encoding => 'utf-8'
       e.List do
-        @ieconfigs.each do |key, value|
+        @ieconfigs.each do |key, content|
+          value = content.dup
           shortname = value["shortname"]
           longname = value["name"]
           value.delete("shortname")
           value["name"] = shortname
           value["alias"] = longname
+          content["alias"] = longname
           e.EUnit(value)
         end
       end
@@ -100,12 +118,7 @@ module SpanCheck
     end
 
     def to_log_xml
-      xml_string = ""
-      e = Builder::XmlMarkup.new(:target => xml_string, :indent => 2)
-      e.instruct! :xml,:version =>'1.0',:encoding => 'utf-8'
-      e.LogFormat("Version" => "10000") do
-        
-      end
+      @logparser.to_log_xml @ieconfigs_short
     end
 
     def write_file xml_string, filename
