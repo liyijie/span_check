@@ -1,0 +1,219 @@
+error 1: "RB_PARAM_RLC_Direction" must start with GSM, TDSCDMA, TDDLTE
+error 2: "RB_PARAM_RLC_Direction" can not found in ieconfig
+error 1: "PDCP_compress_algorithm_RAB_ID" must start with GSM, TDSCDMA, TDDLTE
+error 2: "PDCP_compress_algorithm_RAB_ID" can not found in ieconfig
+error 2: "TDSCDMA_HSDPA_HSDPA_Measurement_HS_PDSCH_Timeslot_Measurement_RSCP" can not found in ieconfig
+error 2: "TDSCDMA_HSDPA_HSDPA_Measurement_HS_PDSCH_Timeslot_Measurement_ISCP" can not found in ieconfig
+error 2: "TDSCDMA_HSDPA_HSDPA_Measurement_HS_PDSCH_Timeslot_Measurement_C_I" can not found in ieconfig
+error 1: "sub_sfn" must start with GSM, TDSCDMA, TDDLTE
+error 2: "sub_sfn" can not found in ieconfig
+error 1: "Ack_Indicator" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Ack_Indicator" can not found in ieconfig
+error 1: "CQI_Indicator" must start with GSM, TDSCDMA, TDDLTE
+error 2: "CQI_Indicator" can not found in ieconfig
+error 1: "RMS" must start with GSM, TDSCDMA, TDDLTE
+error 2: "RMS" can not found in ieconfig
+error 1: "RTBS" must start with GSM, TDSCDMA, TDDLTE
+error 2: "RTBS" can not found in ieconfig
+error 1: "hs_sich_number" must start with GSM, TDSCDMA, TDDLTE
+error 2: "hs_sich_number" can not found in ieconfig
+error 1: "HSUPA_category" must start with GSM, TDSCDMA, TDDLTE
+error 2: "HSUPA_category" can not found in ieconfig
+error 1: "E_RNTI" must start with GSM, TDSCDMA, TDDLTE
+error 2: "E_RNTI" can not found in ieconfig
+error 1: "SNPL" must start with GSM, TDSCDMA, TDDLTE
+error 2: "SNPL" can not found in ieconfig
+error 1: "UPH" must start with GSM, TDSCDMA, TDDLTE
+error 2: "UPH" can not found in ieconfig
+error 1: "TEBS" must start with GSM, TDSCDMA, TDDLTE
+error 2: "TEBS" can not found in ieconfig
+error 1: "HLBS" must start with GSM, TDSCDMA, TDDLTE
+error 2: "HLBS" can not found in ieconfig
+error 1: "HLID" must start with GSM, TDSCDMA, TDDLTE
+error 2: "HLID" can not found in ieconfig
+error 1: "接口文档" must start with GSM, TDSCDMA, TDDLTE
+error 2: "接口文档" can not found in ieconfig
+error 1: "Sub-sfn" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Sub-sfn" can not found in ieconfig
+error 1: "PRRI" must start with GSM, TDSCDMA, TDDLTE
+error 2: "PRRI" can not found in ieconfig
+error 1: "CRRI" must start with GSM, TDSCDMA, TDDLTE
+error 2: "CRRI" can not found in ieconfig
+error 1: "TRRI" must start with GSM, TDSCDMA, TDDLTE
+error 2: "TRRI" can not found in ieconfig
+error 1: "RDI" must start with GSM, TDSCDMA, TDDLTE
+error 2: "RDI" can not found in ieconfig
+error 1: "ENI" must start with GSM, TDSCDMA, TDDLTE
+error 2: "ENI" can not found in ieconfig
+error 1: "ECSN" must start with GSM, TDSCDMA, TDDLTE
+error 2: "ECSN" can not found in ieconfig
+error 1: "EI" must start with GSM, TDSCDMA, TDDLTE
+error 2: "EI" can not found in ieconfig
+error 1: "SF" must start with GSM, TDSCDMA, TDDLTE
+error 2: "SF" can not found in ieconfig
+error 1: "E_HICH_recv_subsfn" must start with GSM, TDSCDMA, TDDLTE
+error 2: "E_HICH_recv_subsfn" can not found in ieconfig
+error 1: "E_PUCH_send_subsfn" must start with GSM, TDSCDMA, TDDLTE
+error 2: "E_PUCH_send_subsfn" can not found in ieconfig
+error 1: "E_HICH_result" must start with GSM, TDSCDMA, TDDLTE
+error 2: "E_HICH_result" can not found in ieconfig
+error 1: "E_HICH_Sequence_Index" must start with GSM, TDSCDMA, TDDLTE
+error 2: "E_HICH_Sequence_Index" can not found in ieconfig
+error 1: "TPC/SS_Sequence_Index" must start with GSM, TDSCDMA, TDDLTE
+error 2: "TPC/SS_Sequence_Index" can not found in ieconfig
+error 1: "Sub_sfn" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Sub_sfn" can not found in ieconfig
+error 1: "EDCH_TB_size" must start with GSM, TDSCDMA, TDDLTE
+error 2: "EDCH_TB_size" can not found in ieconfig
+error 1: "Modulation_Type" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Modulation_Type" can not found in ieconfig
+error 1: "RSN" must start with GSM, TDSCDMA, TDDLTE
+error 2: "RSN" can not found in ieconfig
+error 1: "HARQ_id" must start with GSM, TDSCDMA, TDDLTE
+error 2: "HARQ_id" can not found in ieconfig
+error 1: "Sub_sfn" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Sub_sfn" can not found in ieconfig
+error 1: "MAC_ES_Num" must start with GSM, TDSCDMA, TDDLTE
+error 2: "MAC_ES_Num" can not found in ieconfig
+error 1: "DDI0" must start with GSM, TDSCDMA, TDDLTE
+error 2: "DDI0" can not found in ieconfig
+error 1: "SI_Indicator" must start with GSM, TDSCDMA, TDDLTE
+error 2: "SI_Indicator" can not found in ieconfig
+error 1: "DDI" must start with GSM, TDSCDMA, TDDLTE
+error 2: "DDI" can not found in ieconfig
+error 1: "N" must start with GSM, TDSCDMA, TDDLTE
+error 2: "N" can not found in ieconfig
+error 1: "TSN" must start with GSM, TDSCDMA, TDDLTE
+error 2: "TSN" can not found in ieconfig
+error 1: "N_E_HICH" must start with GSM, TDSCDMA, TDDLTE
+error 2: "N_E_HICH" can not found in ieconfig
+error 1: "EI" must start with GSM, TDSCDMA, TDDLTE
+error 2: "EI" can not found in ieconfig
+error 1: "ssgi" must start with GSM, TDSCDMA, TDDLTE
+error 2: "ssgi" can not found in ieconfig
+error 1: "Timeslot_number" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Timeslot_number" can not found in ieconfig
+error 1: "Channelisation_code" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Channelisation_code" can not found in ieconfig
+error 1: "Midamble_Allocation_mode" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Midamble_Allocation_mode" can not found in ieconfig
+error 1: "Midamble_configuration" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Midamble_configuration" can not found in ieconfig
+error 1: "Midamble_Shift" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Midamble_Shift" can not found in ieconfig
+error 1: "PRXdes_base" must start with GSM, TDSCDMA, TDDLTE
+error 2: "PRXdes_base" can not found in ieconfig
+error 1: "Beacon_PL_Est" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Beacon_PL_Est" can not found in ieconfig
+error 1: "TPC_step_size" must start with GSM, TDSCDMA, TDDLTE
+error 2: "TPC_step_size" can not found in ieconfig
+error 1: "Pebase_power_control_gap" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Pebase_power_control_gap" can not found in ieconfig
+error 1: "Uplink_synchronisation_step_size" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Uplink_synchronisation_step_size" can not found in ieconfig
+error 1: "Uplink_synchronisation_frequency" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Uplink_synchronisation_frequency" can not found in ieconfig
+error 1: "Minimum_allowed_code_rate" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Minimum_allowed_code_rate" can not found in ieconfig
+error 1: "Maximum_allowed_code_rate" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Maximum_allowed_code_rate" can not found in ieconfig
+error 1: "Maximum_number_of_retransmissions_for_Scheduling_Info" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Maximum_number_of_retransmissions_for_Scheduling_Info" can not found in ieconfig
+error 1: "Retransmission_Timer_for_Scheduling_Info" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Retransmission_Timer_for_Scheduling_Info" can not found in ieconfig
+error 1: "SNPL_Reporting_Type" must start with GSM, TDSCDMA, TDDLTE
+error 2: "SNPL_Reporting_Type" can not found in ieconfig
+error 1: "Power_Offset_for_Scheduling_Info" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Power_Offset_for_Scheduling_Info" can not found in ieconfig
+error 1: "Timeslot_number" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Timeslot_number" can not found in ieconfig
+error 1: "Midamble_Allocation_mode" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Midamble_Allocation_mode" can not found in ieconfig
+error 1: "Midamble_configuration" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Midamble_configuration" can not found in ieconfig
+error 1: "Midamble_Shift" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Midamble_Shift" can not found in ieconfig
+error 1: "n_e_ucch" must start with GSM, TDSCDMA, TDDLTE
+error 2: "n_e_ucch" can not found in ieconfig
+error 1: "timeslot_info" must start with GSM, TDSCDMA, TDDLTE
+error 2: "timeslot_info" can not found in ieconfig
+error 1: "prri" must start with GSM, TDSCDMA, TDDLTE
+error 2: "prri" can not found in ieconfig
+error 1: "active_time" must start with GSM, TDSCDMA, TDDLTE
+error 2: "active_time" can not found in ieconfig
+error 1: "subframe_amt" must start with GSM, TDSCDMA, TDDLTE
+error 2: "subframe_amt" can not found in ieconfig
+error 1: "rep_period" must start with GSM, TDSCDMA, TDDLTE
+error 2: "rep_period" can not found in ieconfig
+error 1: "rep_length" must start with GSM, TDSCDMA, TDDLTE
+error 2: "rep_length" can not found in ieconfig
+error 1: "channel_code" must start with GSM, TDSCDMA, TDDLTE
+error 2: "channel_code" can not found in ieconfig
+error 1: "n_e_hich" must start with GSM, TDSCDMA, TDDLTE
+error 2: "n_e_hich" can not found in ieconfig
+error 1: "E_AGCH RSCP" must start with GSM, TDSCDMA, TDDLTE
+error 2: "E_AGCH RSCP" can not found in ieconfig
+error 1: "E_AGCH_err_amt" must start with GSM, TDSCDMA, TDDLTE
+error 2: "E_AGCH_err_amt" can not found in ieconfig
+error 1: "E_AGCH_rec_amt" must start with GSM, TDSCDMA, TDDLTE
+error 2: "E_AGCH_rec_amt" can not found in ieconfig
+error 1: "E_PUCH_TxPower" must start with GSM, TDSCDMA, TDDLTE
+error 2: "E_PUCH_TxPower" can not found in ieconfig
+error 1: "E_HICH_RSCP" must start with GSM, TDSCDMA, TDDLTE
+error 2: "E_HICH_RSCP" can not found in ieconfig
+error 1: "E_RUCCH_TxPower" must start with GSM, TDSCDMA, TDDLTE
+error 2: "E_RUCCH_TxPower" can not found in ieconfig
+error 1: "edch_trans_rate" must start with GSM, TDSCDMA, TDDLTE
+error 2: "edch_trans_rate" can not found in ieconfig
+error 1: "first_trans_acked_rate" must start with GSM, TDSCDMA, TDDLTE
+error 2: "first_trans_acked_rate" can not found in ieconfig
+error 1: "second_trans_acked_rate" must start with GSM, TDSCDMA, TDDLTE
+error 2: "second_trans_acked_rate" can not found in ieconfig
+error 1: "more_trans_acked_rate" must start with GSM, TDSCDMA, TDDLTE
+error 2: "more_trans_acked_rate" can not found in ieconfig
+error 1: "transmitted_tbs_amt" must start with GSM, TDSCDMA, TDDLTE
+error 2: "transmitted_tbs_amt" can not found in ieconfig
+error 1: "first_trans_acked_tbs" must start with GSM, TDSCDMA, TDDLTE
+error 2: "first_trans_acked_tbs" can not found in ieconfig
+error 1: "second_trans_acked_tbs" must start with GSM, TDSCDMA, TDDLTE
+error 2: "second_trans_acked_tbs" can not found in ieconfig
+error 1: "more_trans_acked_tbs" must start with GSM, TDSCDMA, TDDLTE
+error 2: "more_trans_acked_tbs" can not found in ieconfig
+error 1: "failed_trans_tbs" must start with GSM, TDSCDMA, TDDLTE
+error 2: "failed_trans_tbs" can not found in ieconfig
+error 1: "grant_tti_percent" must start with GSM, TDSCDMA, TDDLTE
+error 2: "grant_tti_percent" can not found in ieconfig
+error 1: "Rb_id" must start with GSM, TDSCDMA, TDDLTE
+error 2: "Rb_id" can not found in ieconfig
+error 1: "DL_UM_L1_Size" must start with GSM, TDSCDMA, TDDLTE
+error 2: "DL_UM_L1_Size" can not found in ieconfig
+error 1: "User_id" must start with GSM, TDSCDMA, TDDLTE
+error 2: "User_id" can not found in ieconfig
+error 1: "timer_dar" must start with GSM, TDSCDMA, TDDLTE
+error 2: "timer_dar" can not found in ieconfig
+error 1: "win_size_dar" must start with GSM, TDSCDMA, TDDLTE
+error 2: "win_size_dar" can not found in ieconfig
+error 1: "timer_osd" must start with GSM, TDSCDMA, TDDLTE
+error 2: "timer_osd" can not found in ieconfig
+error 1: "win_size_osd" must start with GSM, TDSCDMA, TDDLTE
+error 2: "win_size_osd" can not found in ieconfig
+error 2: "GSM_reselection_information_Ncell_Gsm_arfcn" can not found in ieconfig
+error 2: "GSM_CHN_Information_MAIO" can not found in ieconfig
+error 2: "GSM_CHN_Information_MAIO" can not found in ieconfig
+error 2: "GSM_PDP_Context_PDP_Delay_Class" can not found in ieconfig
+error 2: "GSM_PDP_Context_PDP_Reliability_Class" can not found in ieconfig
+error 2: "GSM_PDP_Context_PDP_Precedence_Class" can not found in ieconfig
+error 2: "GSM_PDP_Context_PDP_Peak_Throughput" can not found in ieconfig
+error 2: "GSM_PDP_Context_PDP_Mean_Throughput" can not found in ieconfig
+error 2: "GSM_PDP_Context_PDP_Radio_Priority" can not found in ieconfig
+error 2: "GSM_CHN_Information_GMM_Ciphering_algorithm" can not found in ieconfig
+error 1: "ul_Coding_scheme" must start with GSM, TDSCDMA, TDDLTE
+error 2: "ul_Coding_scheme" can not found in ieconfig
+error 1: "dl_Coding_scheme" must start with GSM, TDSCDMA, TDDLTE
+error 2: "dl_Coding_scheme" can not found in ieconfig
+error 2: "GSM_CCH_Info_Max._Retransmission" can not found in ieconfig
+error 2: "TDSCDMA_L1_Measurement_TimeSlot_Measurement_DL_ISCP" can not found in ieconfig
+error 2: "TDSCDMA_L1_Procedure_Information_Cell_Search_Information_Cell_Selection__Reselection_Information_(NCell)_Qoffset" can not found in ieconfig
+error 2: "TDSCDMA_L1_Procedure_Information_Cell_Search_Information_Cell_Selection__Reselection_Information_(NCell)_Rn" can not found in ieconfig
+error 2: "TDSCDMA_L1_Measurement_Neighbour_Cell_Measurement_P-CCPCH_RSCP" can not found in ieconfig
+error 2: "TDSCDMA_L1_Measurement_TimeSlot_Measurement_DL_DPCH_RSCP" can not found in ieconfig

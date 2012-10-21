@@ -8,6 +8,7 @@ module SpanCheck
       @recentindex = 0;
       @recentindex_count = 10;
       @maxindex = 0
+      @sql_map = {}
     end
 
     def load_old_log
@@ -66,10 +67,13 @@ module SpanCheck
               info = ieconfigs_short[item]
               if info.nil?
                 type = "double"
+                line_item_name = item
                 if (item == "msg" || item == "Event" || item == "Signals")
                   type = "string"
+                  line_item_name = "#{line_item_name}#"
                 end
-                e.LogLine("Name" => item, "Type" => type)
+                e.LogItem("Name" => item, "Type" => type)
+                add_sql_map line_index, line_item_name
               else
                 count1 = info["paramcount1"].to_i
                 count2 = info["paramcount2"].to_i
@@ -91,16 +95,34 @@ module SpanCheck
                     end
                   end
                   @item_map.each do |name, aliasname|
-                    e.LogLine("Name" => name, "Type" => "double", "Alias" => aliasname)  
+                    e.LogItem("Name" => name, "Type" => "double", "Alias" => aliasname)  
+                    add_sql_map line_index, name
                   end
                 else
-                  e.LogLine("Name" => item, "Type" => "double", "Alias" => info["name"])
+                  e.LogItem("Name" => item, "Type" => "double", "Alias" => info["name"])
+                  add_sql_map line_index, item
                 end
               end
             end
           end
         end
       end
+    end
+
+    def to_sql_config
+      sql_config = ""
+      @sql_map.each do |line_index, line_items|
+        sql_config << "index:#{line_index}\n"
+        line_items.each do |item|
+          sql_config << "#{item}\n"
+        end
+      end
+      sql_config
+    end
+
+    def add_sql_map line_index, line_item_name
+      @sql_map[line_index] ||= []
+      @sql_map[line_index] << line_item_name
     end
 
   end

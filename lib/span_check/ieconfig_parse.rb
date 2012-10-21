@@ -57,6 +57,7 @@ module SpanCheck
       write_file(to_config_xml, "IEConfig.xml")
       write_file(to_list_xml(@ielist), "IEList.xml")
       write_file(to_log_xml, "LogFormat_100.xml")
+      write_file(to_sql_config, "TableIEsConfig.ini")
     end
 
     def get_shortname longname
@@ -119,6 +120,10 @@ module SpanCheck
 
     def to_log_xml
       @logparser.to_log_xml @ieconfigs_short
+    end
+
+    def to_sql_config
+      @logparser.to_sql_config      
     end
 
     def write_file xml_string, filename

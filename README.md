@@ -21,3 +21,8 @@ IE工具生成和校验
 
 2. 检验功能
   
+
+安装
+gem install parseexcel
+gem install builder
+gem install nokogiri
