@@ -1,0 +1,4 @@
+error 2: "TDDLTE_HARQ_DL_NACK_Count" can not found in ieconfig
+error 2: "TDDLTE_Scell_Radio_Parameters_AccessMode" can not found in ieconfig
+error 2: "TDDLTE_CQI_Report_PeriodPeriodic_CQI_Information.usCQIRptPeriod" can not found in ieconfig
+error 2: "TDSCDMA_HSDPA_HSDPA_Statistic_Information_HS_DSCH_NACK_Ratio" can not found in ieconfig

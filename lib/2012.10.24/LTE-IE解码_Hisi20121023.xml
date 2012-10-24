@@ -1,0 +1,1442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<all>
+  <msg id="0xb47" msgname="UE_NAS_GUTI">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_NAS_GUTI">
+        <attr name="GutiHead" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="GutiInfo" type="STRUCT#11" structname="GutiInfo_st"/>
+      </struct>
+      <struct name="GutiInfo_st">
+        <attr name="PlmnId0" type="UINT8#1" extend=""/>
+        <attr name="PlmnId1" type="UINT8#1" extend=""/>
+        <attr name="PlmnId2" type="UINT8#1" extend=""/>
+        <attr name="res1" type="UINT8#1" extend=""/>
+        <attr name="GroupId" type="UINT8#1" extend=""/>
+        <attr name="GroupIdCnt" type="UINT8#1" extend=""/>
+        <attr name="res2" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="MmeCode" type="UINT8#1" extend=""/>
+        <attr name="res3" type="UINT8#1" extend=""/>
+        <attr name="res4" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="MTmsi" type="UINT8#1" extend=""/>
+        <attr name="MTmsiCnt1" type="UINT8#1" extend=""/>
+        <attr name="MTmsiCnt2" type="UINT8#1" extend=""/>
+        <attr name="MTmsiCnt3" type="UINT8#1" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i619=UE_NAS_GUTI.GutiInfo.GroupId" insidepara="" outsidepara=""/>
+      <ierule equalrule="i620=UE_NAS_GUTI.GutiInfo.MmeCode" insidepara="" outsidepara=""/>
+      <ierule equalrule="i621=0" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0xb49" msgname="UE_IMSI_INFO">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_IMSI_INFO">
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i933=strstr(TDDLTE_UE_Info_IMSI=UE_IMSI.Imsi" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0xb4b" msgname="UE_EMM_STATE_">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_EMM_STATE_">
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i1059=UE_EMM_STATE.EmmMainState" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1060=UE_EMM_STATE.EmmSubState" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0xc4c" msgname="UE_PDP_INFO">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_PDP_INFO">
+        <attr name="ActivePdpNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="Pdp_Info_List" type="STRUCT#11" structname="Pdp_Info_List_st"/>
+      </struct>
+      <struct name="Pdp_Info_List_st">
+        <attr name="PDP_Id" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="PDP_Type" type="UINT8#1" extend=""/>
+        <attr name="res1" type="UINT8#1" extend=""/>
+        <attr name="res2" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="APN_Info" type="STRUCT#11" structname="APN_Info_st"/>
+        <attr name="UE_IP_Info" type="STRUCT#11" structname="UE_IP_Info_st"/>
+        <attr name="QoS_of_PDP" type="STRUCT#11" structname="QoS_of_PDP_st"/>
+      </struct>
+      <struct name="APN_Info_st">
+        <attr name="len" type="UINT8#1" extend=""/>
+        <attr name="content" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="99.0" arraytype="UINT8#1"/>
+        </attr>
+      </struct>
+      <struct name="UE_IP_Info_st">
+        <attr name="type" type="UINT8#1" extend=""/>
+        <attr name="res1" type="UINT8#1" extend=""/>
+        <attr name="res2" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="IPv4_Address" type="STRING#10">
+          <stringdesc is_length_fix="YES" stringlength="4.0" stringtype="UINT8#1"/>
+        </attr>
+        <attr name="IPv6_Address" type="STRING#10">
+          <stringdesc is_length_fix="YES" stringlength="16.0" stringtype="UINT8#1"/>
+        </attr>
+      </struct>
+      <struct name="QoS_of_PDP_st">
+        <attr name="QCI" type="UINT8#1" extend=""/>
+        <attr name="res1" type="UINT8#1" extend=""/>
+        <attr name="res2" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ULMaxRate" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="DLMaxRate" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ULGMaxRate" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="DLGMaxRate" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i925=UE_PDP_INFO.Pdp_Info_List.UE_IP_Info.IPv4_Address" insidepara="" outsidepara=""/>
+      <ierule equalrule="i926=UE_PDP_INFO.Pdp_Info_List.UE_IP_Info.IPv6_Address" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1064=UE_PDP_INFO.Pdp_Info_List.APN_Info.content_0" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0xd12" msgname="UE_SERVING_CELL_INFO">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_SERVING_CELL_INFO">
+        <attr name="CellIdentity" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="PhyCellId" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="UlFreq" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="DlFreq" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="UlBandWidth" type="UINT8#1" extend=""/>
+        <attr name="DlBandWidth" type="UINT8#1" extend=""/>
+        <attr name="AdditionalSpectrumEmission" type="UINT8#1" extend=""/>
+        <attr name="ServeCellBandInd" type="UINT8#1" extend=""/>
+        <attr name="Rsrp" type="INT16_REVERSE#3" extend=""/>
+        <attr name="Rsrq" type="INT16_REVERSE#3" extend=""/>
+        <attr name="Rssi" type="INT16_REVERSE#3" extend=""/>
+        <attr name="StPlmnList" type="STRUCT#11" structname="StPlmnList_st"/>
+        <attr name="stTac" type="STRUCT#11" structname="stTac_st"/>
+        <attr name="stAttenaInfo" type="STRUCT#11" structname="stAttenaInfo_st"/>
+        <attr name="UlEarfcn" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="DlEarfcn" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="AccMode" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="PhichDura" type="UINT8#1" extend=""/>
+        <attr name="PhichRsrc" type="UINT8#1" extend=""/>
+        <attr name="stTddCfg" type="STRUCT#11" structname="stTddCfg_st"/>
+      </struct>
+      <struct name="StPlmnList_st">
+        <attr name="suitPlmnNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="suitPlmnList" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="64.0" arraytype="UINT8#1"/>
+        </attr>
+      </struct>
+      <struct name="stTac_st">
+        <attr name="Tac" type="UINT8#1" extend=""/>
+        <attr name="TacCon" type="UINT8#1" extend=""/>
+        <attr name="Reserved" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+      <struct name="stAttenaInfo_st">
+        <attr name="stCommAnttenaInfo" type="ARRAY#12">
+          <arraydesc is_length_fix="NO" arraylength="" arraytype="#"/>
+        </attr>
+        <attr name="DedicateAnttenaInfo" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="28.0" arraytype="UINT8#1"/>
+        </attr>
+      </struct>
+      <struct name="stCommAnttenaInfo_st">
+        <attr name="AnttenaPortCount" type="UINT8#1" extend=""/>
+        <attr name="res1" type="UINT8#1" extend=""/>
+        <attr name="res2" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+      <struct name="stTddCfg_st">
+        <attr name="SubframeAssign" type="UINT8#1" extend=""/>
+        <attr name="Special_SubFrame_Pattern" type="UINT8#1" extend=""/>
+        <attr name="Reserved" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i623=UE_SERVING_CELL_INFO.CellIdentity" insidepara="" outsidepara=""/>
+      <ierule equalrule="i624=UE_SERVING_CELL_INFO.PhyCellId" insidepara="" outsidepara=""/>
+      <ierule equalrule="i627=UE_SERVING_CELL_INFO.DlFreq" insidepara="" outsidepara=""/>
+      <ierule equalrule="i632=UE_SERVING_CELL_INFO.UlBandWidth" insidepara="" outsidepara=""/>
+      <ierule equalrule="i629=UE_SERVING_CELL_INFO.DlBandWidth" insidepara="" outsidepara=""/>
+      <ierule equalrule="i628=UE_SERVING_CELL_INFO.ServeCellBandInd" insidepara="" outsidepara=""/>
+      <ierule equalrule="i637=UE_SERVING_CELL_INFO.Rsrp" insidepara="" outsidepara=""/>
+      <ierule equalrule="i640=UE_SERVING_CELL_INFO.Rsrq" insidepara="" outsidepara=""/>
+      <ierule equalrule="i641=UE_SERVING_CELL_INFO.Rssi" insidepara="" outsidepara=""/>
+      <ierule equalrule="i626=UE_SERVING_CELL_INFO.DlEarfcn" insidepara="" outsidepara=""/>
+      <ierule equalrule="i625=UE_SERVING_CELL_INFO.stTac.Tac+UE_SERVING_CELL_INFO.stTac.TacCon" insidepara="" outsidepara=""/>
+      <ierule equalrule="i636=UE_SERVING_CELL_INFO.stAttenaInfo.stCommAnttenaInfo.AnttenaPortCount" insidepara="" outsidepara=""/>
+      <ierule equalrule="i630=UE_SERVING_CELL_INFO.stTddCfg.SubframeAssign" insidepara="" outsidepara=""/>
+      <ierule equalrule="i631=UE_SERVING_CELL_INFO.stTddCfg.Special_SubFrame_Pattern" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0xd15" msgname="UE_Radio_Capability_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_Radio_Capability_Info">
+        <attr name="UE_Access_Stratum_Release" type="UINT8#1" extend=""/>
+        <attr name="UE_category" type="UINT8#1" extend=""/>
+        <attr name="UEMaxTxPwr" type="UINT8#1" extend=""/>
+        <attr name="CDRX_Status_" type="UINT8#1" extend=""/>
+        <attr name="featureGroupIndicators" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i931=UE_Radio_Capability_Info.UE_category" insidepara="" outsidepara=""/>
+      <ierule equalrule="i932=UE_Radio_Capability_Info.UEMaxTxPwr_" insidepara="" outsidepara=""/>
+      <ierule equalrule="i924=UE_Radio_Capability_Info.CDRX_Status_" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1062=UE_Radio_Capability_Info.UE_Access_Stratum_Release" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1063=UE_Radio_Capability_Info.featureGroupIndicators" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0xd0d" msgname="UE_RRC_Status">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_RRC_Status">
+        <attr name="RRC_protocol_state" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i1061=UE_RRC_Status.RRC_protocol_state" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0xd18" msgname="AC_Barring_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="AC_Barring_Info">
+        <attr name="SigACandDataAC" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ac_BaringforEmergency" type="UINT8#1" extend=""/>
+        <attr name="res1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res2" type="UINT8#1" extend=""/>
+        <attr name="stMOSignalACBarring" type="STRUCT#11" structname="stMOSignalACBarring_st"/>
+        <attr name="stMODataACBarring" type="STRUCT#11" structname="stMODataACBarring_st"/>
+      </struct>
+      <struct name="stMOSignalACBarring_st">
+        <attr name="ac_BarringFactor" type="UINT8#1" extend=""/>
+        <attr name="ac_BarringTime" type="UINT8#1" extend=""/>
+        <attr name="ac_BarringForSpecialAC" type="UINT8#1" extend=""/>
+        <attr name="res" type="UINT8#1" extend=""/>
+      </struct>
+      <struct name="stMODataACBarring_st">
+        <attr name="ac_BarringFactor" type="UINT8#1" extend=""/>
+        <attr name="ac_BarringTime" type="UINT8#1" extend=""/>
+        <attr name="ac_BarringForSpecialAC" type="UINT8#1" extend=""/>
+        <attr name="res" type="UINT8#1" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+    </iemap>
+  </msg>
+  <msg id="0x107d" msgname="L2_Throughput">
+    <msgbody skip_length="" msg_length="">
+      <struct name="L2_Throughput">
+        <attr name="Time_stamp" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="Radio_frame_No" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Subframe" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Report_period" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="Application_ul_throughput" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="Application_dl_throughput" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="PDCP_ul_throughput" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="PDCP_dl_throughput" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="RLC_ul_throughput" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="RLC_dl_throughput" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="MAC_ul_throughput" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="MAC_dl_throughput" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="stDRBThrList" type="ARRAY#12">
+          <arraydesc is_length_fix="" arraylength="" arraytype="STRUCT#11"/>
+        </attr>
+      </struct>
+      <struct name="stDRBThrList_st">
+        <attr name="DRB_ID" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="RB_Uplink_throught" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="RB_Downlink_throught" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i947=L2_Throughput.PDCP_dl_throughput" insidepara="" outsidepara=""/>
+      <ierule equalrule="i948=L2_Throughput.PDCP_ul_throughput" insidepara="" outsidepara=""/>
+      <ierule equalrule="i949=L2_Throughput.RLC_dl_throughput" insidepara="" outsidepara=""/>
+      <ierule equalrule="i950=L2_Throughput.RLC_ul_throughput" insidepara="" outsidepara=""/>
+      <ierule equalrule="i951=L2_Throughput.MAC_dl_throughput" insidepara="" outsidepara=""/>
+      <ierule equalrule="i952=L2_Throughput.MAC_ul_throughput" insidepara="" outsidepara=""/>
+      <ierule equalrule="i945=L2_Throughput.Application_dl_throughput" insidepara="" outsidepara=""/>
+      <ierule equalrule="i946=L2_Throughput.Application_ul_throughput" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0xe17" msgname="RB_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="RB_Info">
+        <attr name="LCH_num" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="RBnum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="stRbList" type="ARRAY#12">
+          <arraydesc is_length_fix="NO" arraylength="" arraytype="STRUCT#11"/>
+        </attr>
+      </struct>
+      <struct name="stRbList_st">
+        <attr name="LchId" type="UINT8#1" extend=""/>
+        <attr name="RB_ID" type="UINT8#1" extend=""/>
+        <attr name="RLC_mode" type="UINT8#1" extend=""/>
+        <attr name="TYPE" type="UINT8#1" extend=""/>
+        <attr name="RB_Direction" type="UINT8#1" extend=""/>
+        <attr name="res1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res2" type="UINT8#1" extend=""/>
+        <attr name="RB_Buffer_Size" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="RlcReTxRatio" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="B0Average" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="B0Average" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="VarianceB0" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="PdcpCompressRatio" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i944=RB_Info.RBnum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i943=RB_Info.stRbList_0.RB_ID" insidepara="" outsidepara=""/>
+      <ierule equalrule="i937=RB_Info.stRbList_0.TYPE" insidepara="" outsidepara=""/>
+      <ierule equalrule="i941=RB_Info.stRbList_0.RLC_mode" insidepara="" outsidepara=""/>
+      <ierule equalrule="i940=RB_Info.stRbList_0.Status" insidepara="" outsidepara=""/>
+      <ierule equalrule="i938=RB_Info.stRbList_0.LchId" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x108a" msgname="RA_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="RA_Info">
+        <attr name="SFN" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="SBFN" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="RAPeriod" type="UINT8#1" extend=""/>
+        <attr name="RA_Signature" type="UINT8#1" extend=""/>
+        <attr name="RA_Preamble" type="UINT8#1" extend="[0,63]"/>
+        <attr name="PblPwrStep" type="UINT8#1" extend="{0,2,4,6}"/>
+        <attr name="MaxPreamblePower" type="UINT16_REVERSE#5" extend="[-40,23]"/>
+        <attr name="intPreamblePower" type="UINT16_REVERSE#5" extend="[-40,23]"/>
+        <attr name="MaxPreambleTxNum" type="UINT8#1" extend="[0,255]"/>
+        <attr name="res1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res2" type="UINT8#1" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i771=RA_Info.RAPeriod" insidepara="" outsidepara=""/>
+      <ierule equalrule="i772=RA_Info.RA_Signature" insidepara="" outsidepara=""/>
+      <ierule equalrule="i991=RA_Info.RA_Preamble" insidepara="" outsidepara=""/>
+      <ierule equalrule="i780=RA_Info.PblPwrStep" insidepara="" outsidepara=""/>
+      <ierule equalrule="i781=RA_Info.MaxPreamblePower" insidepara="" outsidepara=""/>
+      <ierule equalrule="i778=RA_Info.intPreamblePower" insidepara="" outsidepara=""/>
+      <ierule equalrule="i776=RA_Info.MaxPreambleTxNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1007=RA_Info.SFN" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1008=RA_Info.SBFN" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1009=RA_Info.MaxPreambleTxNum" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30a21001" msgname="CFI_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="CFI_Information">
+        <attr name="usSFN" type="UINT16_REVERSE#5" extend="[0,1023]"/>
+        <attr name="usSubFn" type="UINT16_REVERSE#5" extend="[0,9]"/>
+        <attr name="ulCfi" type="UINT32_REVERSE#9" extend="[0,3]"/>
+      </struct>
+    </msgbody>
+    <iemap>
+    </iemap>
+  </msg>
+  <msg id="0x30821001" msgname="Uplink_Power_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="Uplink_Power_Info">
+        <attr name="usSFN" type="UINT16_REVERSE#5" extend="[0,1023]"/>
+        <attr name="usSubFn" type="UINT16_REVERSE#5" extend="[0,9]"/>
+        <attr name="sPuschTransPwr" type="INT16_REVERSE#3" extend=""/>
+        <attr name="sP0" type="INT16_REVERSE#3" extend=""/>
+        <attr name="usPl" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usAlf" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="sFi" type="INT16_REVERSE#3" extend=""/>
+        <attr name="sPucchTransPwr" type="INT16_REVERSE#3" extend=""/>
+        <attr name="sGiValue" type="INT16_REVERSE#3" extend=""/>
+        <attr name="sSrsTransPwr" type="INT16_REVERSE#3" extend=""/>
+        <attr name="usSrsRBNum" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usRsv" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i660=Uplink_Power_Info.usAlf" insidepara="" outsidepara=""/>
+      <ierule equalrule="i659=Uplink_Power_Info.sP0" insidepara="" outsidepara=""/>
+      <ierule equalrule="i661=Uplink_Power_Info.sPuschTransPwr" insidepara="" outsidepara=""/>
+      <ierule equalrule="i654=Uplink_Power_Info.usPl" insidepara="" outsidepara=""/>
+      <ierule equalrule="i657=Uplink_Power_Info.sPucchTransPwr" insidepara="" outsidepara=""/>
+      <ierule equalrule="i656=Uplink_Power_Info.sGiValue" insidepara="" outsidepara=""/>
+      <ierule equalrule="i666=Uplink_Power_Info.sSrsTransPwr" insidepara="" outsidepara=""/>
+      <ierule equalrule="i828=Uplink_Power_Info.usSrsRBNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1001=Uplink_Power_Info.sFi" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1002=Uplink_Power_Info.usSrsRBNum" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30821002" msgname="PUSCH_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PUSCH_Information">
+        <attr name="usSFN" type="UINT16_REVERSE#5" extend="[0,1023]"/>
+        <attr name="usSubFn" type="UINT16_REVERSE#5" extend="[0,9]"/>
+        <attr name="usPuschRbNum" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usPuschRbStart" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usRvIndex" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usUlMcs" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usUlModSched" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usTbSize" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usHarqId" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usRsv" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i838=PUSCH_Information.usUlMcs" insidepara="" outsidepara=""/>
+      <ierule equalrule="i825=PUSCH_Information.usPuschRbNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1010=PUSCH_Information.usPuschRbNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1011=PUSCH_Information.usPuschRbStart" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30a21002" msgname="PDCCH_Grant_Statistic_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PDCCH_Grant_Statistic_Information">
+        <attr name="ulAccuUlGrantNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuDlGrantNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuCce1Num" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuCce2Num" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuCce4Num" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuCce8Num" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuDci0Num" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuDci1Num" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuDci1ANum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuDci1BNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuDci1CNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuDci1DNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuDci2Num" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuDci2ANum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuDci2BNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuDci3Num" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuDci3ANum" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i804=PDCCH_Grant_Statistic_Information.ulAccuCce1Num" insidepara="" outsidepara=""/>
+      <ierule equalrule="i805=PDCCH_Grant_Statistic_Information.ulAccuCce2Num" insidepara="" outsidepara=""/>
+      <ierule equalrule="i806=PDCCH_Grant_Statistic_Information.ulAccuCce4Num" insidepara="" outsidepara=""/>
+      <ierule equalrule="i807=PDCCH_Grant_Statistic_Information.ulAccuCce8Num" insidepara="" outsidepara=""/>
+      <ierule equalrule="i811=PDCCH_Grant_Statistic_Information.ulAccuDci0Num" insidepara="" outsidepara=""/>
+      <ierule equalrule="i812=PDCCH_Grant_Statistic_Information.ulAccuDci1Num" insidepara="" outsidepara=""/>
+      <ierule equalrule="i813=PDCCH_Grant_Statistic_Information.ulAccuDci1ANum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i814=PDCCH_Grant_Statistic_Information.ulAccuDci1BNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i815=PDCCH_Grant_Statistic_Information.ulAccuDci1CNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i816=PDCCH_Grant_Statistic_Information.ulAccuDci1DNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i817=PDCCH_Grant_Statistic_Information.ulAccuDci2Num" insidepara="" outsidepara=""/>
+      <ierule equalrule="i818=PDCCH_Grant_Statistic_Information.ulAccuDci2ANum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i819=PDCCH_Grant_Statistic_Information.ulAccuDci2BNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i820=PDCCH_Grant_Statistic_Information.ulAccuDci3Num" insidepara="" outsidepara=""/>
+      <ierule equalrule="i821=PDCCH_Grant_Statistic_Information.ulAccuDci3ANum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i822=PDCCH_Grant_Statistic_Information.ulAccuUlGrantNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i823=PDCCH_Grant_Statistic_Information.ulAccuDlGrantNum" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30a21003" msgname="PDCCH_DL_Grant_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PDCCH_DL_Grant_Information">
+        <attr name="usSFN" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usSubFn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usRbNum" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usRbStart" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usHarqId" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usRsv" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ucCW0Mcs" type="UINT8#1" extend=""/>
+        <attr name="ucCW1Mcs" type="UINT8#1" extend=""/>
+        <attr name="ucDlCW0ModSched" type="UINT8#1" extend=""/>
+        <attr name="ucDlCW1ModSched" type="UINT8#1" extend=""/>
+        <attr name="usCW0RvIndex" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usCW1RvIndex" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ulCW0TbSize" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulCW1TbSize" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i824=PDCCH_DL_Grant_Information.usRbNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1012=PDCCH_DL_Grant_Information." insidepara="" outsidepara=""/>
+      <ierule equalrule="i1013=PDCCH_DL_Grant_Information." insidepara="" outsidepara=""/>
+      <ierule equalrule="i1016=PDCCH_DL_Grant_Information.ucDlCW0ModSched" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1017=PDCCH_DL_Grant_Information.ucDlCW1ModSched" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1015=PDCCH_DL_Grant_Information.ucCW1Mcs" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1014=PDCCH_DL_Grant_Information.ucCW0Mcs" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30821003" msgname="UL_Schedule_Statistic_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UL_Schedule_Statistic_Information">
+        <attr name="aulMcsCnt" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="32.0" arraytype="UINT32_REVERSE#9"/>
+        </attr>
+        <attr name="ulQPSKTotalNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ul16QAMTotalNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="Ul64QAMTotalNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulThroughput" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i843[i]=UL_Schedule_Statistic_Information.UL_MCS_Count.aulMcsCnt[i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i844=UL_Schedule_Statistic_Information.UL_MCS_Count.aulMcsCnt[i]/SUM(UL_Schedule_Statistic_Information.UL_MCS_Count.aulMcsCnt[i])" insidepara="" outsidepara=""/>
+      <ierule equalrule="i857=UL_Schedule_Statistic_Information.ulQPSKTotalNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i858=UL_Schedule_Statistic_Information.ul16QAMTotalNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i859=UL_Schedule_Statistic_Information.Ul64QAMTotalNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i860=UL_Schedule_Statistic_Information.ulQPSKTotalNum/(UL_Schedule_Statistic_Information.ulQPSKTotalNum+UL_Schedule_Statistic_Information.ul16QAMTotalNum+UL_Schedule_Statistic_Information.Ul64QAMTotalNum)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i861=UL_Schedule_Statistic_Information.ul16QAMTotalNum/(UL_Schedule_Statistic_Information.ulQPSKTotalNum+UL_Schedule_Statistic_Information.ul16QAMTotalNum+UL_Schedule_Statistic_Information.Ul64QAMTotalNum)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i862=UL_Schedule_Statistic_Information.Ul64QAMTotalNum/(UL_Schedule_Statistic_Information.ulQPSKTotalNum+UL_Schedule_Statistic_Information.ul16QAMTotalNum+UL_Schedule_Statistic_Information.Ul64QAMTotalNum)" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30421001" msgname="PDSCH_MCS_Statistic_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PDSCH_MCS_Statistic_Information">
+        <attr name="usCW0McsStatArray" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="32.0" arraytype="UINT32_REVERSE#9"/>
+        </attr>
+        <attr name="usCW1McsStatArray" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="32.0" arraytype="UINT32_REVERSE#9"/>
+        </attr>
+        <attr name="ulCW0QPSKTotalNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulCW1QPSKTotalNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulCW016QAMTotalNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulCW116QAMTotalNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulCW064QAMTotalNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulCW164QAMTotalNum" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i839=_PDSCH_MCS_Statistic_Information.usCW0McsStatArray[i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i840[i]=PDSCH_MCS_Statistic_Information.usCW0McsStatArray[i]/sum(PDSCH_MCS_Statistic_Information.usCW0McsStatArray[i])" insidepara="" outsidepara=""/>
+      <ierule equalrule="i841=PDSCH_MCS_Statistic_Information.usCW1McsStatArray[i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i842[i]=PDSCH_MCS_Statistic_Information.usCW1McsStatArray[i]/sum(PDSCH_MCS_Statistic_Information.usCW1McsStatArray[i])" insidepara="" outsidepara=""/>
+      <ierule equalrule="i845=PDSCH_MCS_Statistic_Information.ulCW0QPSKTotalNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i846=PDSCH_MCS_Statistic_Information.ulCW016QAMTotalNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i847=PDSCH_MCS_Statistic_Information.ulCW064QAMTotalNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i848=PDSCH_MCS_Statistic_Information.ulCW0QPSKTotalNum/(PDSCH_MCS_Statistic_Information.ulCW0QPSKTotalNum+PDSCH_MCS_Statistic_Information.ulCW1QPSKTotalNum)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i849=PDSCH_MCS_Statistic_Information.ulCW016QAMTotalNum/(PDSCH_MCS_Statistic_Information.ulCW016QAMTotalNum+PDSCH_MCS_Statistic_Information.ulCW116QAMTotalNum)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i850=PDSCH_MCS_Statistic_Information.ulCW064QAMTotalNum/(PDSCH_MCS_Statistic_Information.ulCW064QAMTotalNum+PDSCH_MCS_Statistic_Information.ulCW164QAMTotalNum)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i851=PDSCH_MCS_Statistic_Information.ulCW1QPSKTotalNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i852=PDSCH_MCS_Statistic_Information.ulCW116QAMTotalNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i853=PDSCH_MCS_Statistic_Information.ulCW164QAMTotalNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i854=PDSCH_MCS_Statistic_Information.ulCW1QPSKTotalNum/(PDSCH_MCS_Statistic_Information.ulCW0QPSKTotalNum+PDSCH_MCS_Statistic_Information.ulCW1QPSKTotalNum)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i855=PDSCH_MCS_Statistic_Information.ulCW116QAMTotalNum/(PDSCH_MCS_Statistic_Information.ulCW016QAMTotalNum+PDSCH_MCS_Statistic_Information.ulCW116QAMTotalNum)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i856=PDSCH_MCS_Statistic_Information.ulCW164QAMTotalNum/(PDSCH_MCS_Statistic_Information.ulCW064QAMTotalNum+PDSCH_MCS_Statistic_Information.ulCW164QAMTotalNum)" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30421002" msgname="PHICH_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PHICH_Information">
+        <attr name="ulACKAccuNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulNAKAccuNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usFirstTransSuccNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usFirstReTransSuccNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usSecReTransSuccNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usThirdReTransSuccNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usForthReTransSuccNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usReTransFailNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAccuTotalNum" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i1056=PHICH_Information.ulACKAccuNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1057=PHICH_Information.ulNAKAccuNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i884=PHICH_Information.ulintTransNACKNum/PHICH_Information.ulintTransTotalNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i885=PHICH_Information.ulReTransNACKNum/PHICH_Information.ulReTransTotalNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i886=PHICH_Information.ulResidualNACKNum/PHICH_Information.ulResidualTotalNum" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30aa1001" msgname="DLSCH_Bler_Stastitic_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="DLSCH_Bler_Stastitic_Information">
+        <attr name="ulDlschCW0AccuTotalNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulDlschCW0AccuNackNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulDlschCW0AccuAckNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usCW0FirstTransSuccNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usCW0FirstReTransSuccNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usCW0SecReTransSuccNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usCW0ThirdReTransSuccNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usCW0ForthReTransSuccNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usCW0ReTransFailNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulDlschCW1AccuTotalNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulDlschCW1AccuNackNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulDlschCW1AccuAckNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usCW1FirstTransSuccNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usCW1FirstReTransSuccNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usCW1SecReTransSuccNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usCW1ThirdReTransSuccNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usCW1ForthReTransSuccNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usCW1ReTransFailNum" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i1032=DLSCH_Bler_Stastitic_Information.usCW0FirstTransSuccNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1033=DLSCH_Bler_Stastitic_Information.usCW0FirstReTransSuccNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1034=DLSCH_Bler_Stastitic_Information.usCW0SecReTransSuccNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1035=DLSCH_Bler_Stastitic_Information.usCW0ThirdReTransSuccNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1036=DLSCH_Bler_Stastitic_Information.usCW0ForthReTransSuccNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1037=DLSCH_Bler_Stastitic_Information.usCW1FirstTransSuccNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1038=DLSCH_Bler_Stastitic_Information.usCW1FirstReTransSuccNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1039=DLSCH_Bler_Stastitic_Information.usCW1SecReTransSuccNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1040=DLSCH_Bler_Stastitic_Information.usCW1ThirdReTransSuccNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1041=DLSCH_Bler_Stastitic_Information.usCW1ForthReTransSuccNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1044=DLSCH_Bler_Stastitic_Information.ulDlschCW0AccuAckNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1045=DLSCH_Bler_Stastitic_Information.ulDlschCW0AccuNackNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1046=DLSCH_Bler_Stastitic_Information.ulDlschCW1AccuAckNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1047=DLSCH_Bler_Stastitic_Information.ulDlschCW1AccuNackNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1043=DLSCH_Bler_Stastitic_Information.ulDlschCW0AccuAckNum+DLSCH_Bler_Stastitic_Information.ulDlschCW1AccuAckNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1048=DLSCH_Bler_Stastitic_Information.ulDlschCW0AccuNackNum+DLSCH_Bler_Stastitic_Information.ulDlschCW1AccuNackNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i881=(DLSCH_Bler_Stastitic_Information.ulDlschCW0AccuTotalNum-DLSCH_Bler_Stastitic_Information.usCW0FirstTransSuccNum+DLSCH_Bler_Stastitic_Information.ulDlschCW1AccuTotalNum-DLSCH_Bler_Stastitic_Information.usCW1FirstTransSuccNum)/(DLSCH_Bler_Stastitic_Information.ulDlschCW0AccuTotalNum+DLSCH_Bler_Stastitic_Information.ulDlschCW1AccuTotalNum)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i882=(DLSCH_Bler_Stastitic_Information.ulDlschCW0AccuNackNum+DLSCH_Bler_Stastitic_Information.ulDlschCW1AccuNackNum)/(DLSCH_Bler_Stastitic_Information.ulDlschCW0AccuTotalNum+DLSCH_Bler_Stastitic_Information.ulDlschCW1AccuTotalNum)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i883=(DLSCH_Bler_Stastitic_Information.usCW0ReTransFailNum+DLSCH_Bler_Stastitic_Information.usCW1ReTransFailNum)/(DLSCH_Bler_Stastitic_Information.ulDlschCW0AccuTotalNum+DLSCH_Bler_Stastitic_Information.ulDlschCW1AccuTotalNum)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i887=(DLSCH_Bler_Stastitic_Information.usCW0FirstReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW0SecReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW0ThirdReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW0ForthReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW0ReTransFailNum)/(DLSCH_Bler_Stastitic_Information.usCW0FirstTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW0FirstReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW0SecReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW0ThirdReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW0ForthReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW0ReTransFailNum)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i888=DLSCH_Bler_Stastitic_Information.ulDlschCW0AccuNackNum/DLSCH_Bler_Stastitic_Information.ulDlschCW0AccuTotalNum+" insidepara="" outsidepara=""/>
+      <ierule equalrule="i889=DLSCH_Bler_Stastitic_Information.usCW0ReTransFailNum/(DLSCH_Bler_Stastitic_Information.usCW0FirstTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW0FirstReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW0SecReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW0ThirdReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW0ForthReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW0ReTransFailNum)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i890=(DLSCH_Bler_Stastitic_Information.usCW1FirstReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW1SecReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW1ThirdReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW1ForthReTransSuccNum)/(DLSCH_Bler_Stastitic_Information.usCW1FirstTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW1FirstReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW1SecReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW1ThirdReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW1ForthReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW1ReTransFailNum)" insidepara="" outsidepara=""/>
+      <ierule equalrule="i891=DLSCH_Bler_Stastitic_Information.ulDlschCW1AccuNackNum/DLSCH_Bler_Stastitic_Information.ulDlschCW1AccuTotalNum" insidepara="" outsidepara=""/>
+      <ierule equalrule="i892=DLSCH_Bler_Stastitic_Information.usCW1ReTransFailNum/(DLSCH_Bler_Stastitic_Information.usCW1FirstTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW1FirstReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW1SecReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW1ThirdReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW1ForthReTransSuccNum+DLSCH_Bler_Stastitic_Information.usCW1ReTransFailNum)" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30a21004" msgname="PDCCH_Bler_Stastitic_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PDCCH_Bler_Stastitic_Information">
+        <attr name="ulPdcchAccuErrorNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulPdcchAccuTotalNum" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+    </iemap>
+  </msg>
+  <msg id="0x30aa1002" msgname="DL_Throughput_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="DL_Throughput_Information">
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i954=DL_Throughput_Information.ulCW0TotalBitNum/1000" insidepara="" outsidepara=""/>
+      <ierule equalrule="i955=DL_Throughput_Information.ulCW1TotalBitNum/1000" insidepara="" outsidepara=""/>
+      <ierule equalrule="i953=(DL_Throughput_Information.ulCW0TotalBitNum+DL_Throughput_Information.ulCW1TotalBitNum)/1000" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30821004" msgname="HARQ_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="HARQ_Information">
+        <attr name="ulPuschMaxTransNum" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="usUlHarqProcessNum" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usDlHarqProcessNum" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+    </iemap>
+  </msg>
+  <msg id="0x302a1001" msgname="Measurement_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="Measurement_Information">
+        <attr name="enCpType" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="sCRS_SinrR0" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="sCRS_SinrR1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="sDRS_AvgSinr" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="lCRS_Rsrq" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="lCRS_RsrpR0" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="lCRS_RsrpR1" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="lDRS_RsrpR0" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="lDRS_RsrpR1" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="lCRS_RssiR0" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="lCRS_RssiR1" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i638=Measurement_Information.lCRS_RsrpR0" insidepara="" outsidepara=""/>
+      <ierule equalrule="i639=Measurement_Information.lCRS_RsrpR0" insidepara="" outsidepara=""/>
+      <ierule equalrule="i637=Max{Measurement_Information.lCRS_RsrpR0,Measurement_Information.lCRS_RsrpR0}" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30821005" msgname="Random_Access_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="Random_Access_Information">
+        <attr name="usSFN" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usSubFn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="sPrachTransPower" type="INT16_REVERSE#3" extend=""/>
+        <attr name="usRaRntiValue" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i662=Random_Access_Information.sPrachTransPower" insidepara="" outsidepara=""/>
+      <ierule equalrule="i777=Random_Access_Information.usRaRntiValue" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0xb5d" msgname="UE_NAS_Status">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_NAS_Status">
+        <attr name="Roaming_Status" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="Service_domain" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="Access_Mode" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="stPlmnId" type="STRUCT#11" structname="PlmnId_st"/>
+        <attr name="Track_area_code" type="STRUCT#11" structname="Track_area_code_st"/>
+      </struct>
+      <struct name="stPlmnId_st">
+        <attr name="PlmnId0" type="UINT8#1" extend=""/>
+        <attr name="PlmnId1" type="UINT8#1" extend=""/>
+        <attr name="PlmnId2" type="UINT8#1" extend=""/>
+        <attr name="res" type="UINT8#1" extend=""/>
+      </struct>
+      <struct name="Track_area_code_st">
+        <attr name="Tac" type="UINT8#1" extend=""/>
+        <attr name="TacCount" type="UINT8#1" extend=""/>
+        <attr name="res" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="CellIdentity" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i625=UE_NAS_Status.Track_area_code.Tac" insidepara="" outsidepara=""/>
+      <ierule equalrule="i929=UE_NAS_Status.Roaming_Status" insidepara="" outsidepara=""/>
+      <ierule equalrule="i623=UE_NAS_Status.Track_area_code.CellIdentity" insidepara="" outsidepara=""/>
+      <ierule equalrule="i617=UE_NAS_Status.stPlmnId.{PlmnId[0]+PlmnId[1]+PlmnId[2]}" insidepara="" outsidepara=""/>
+      <ierule equalrule="i618=UE_NAS_Status.stPlmnId.{PlmnId[0]+PlmnId[1]}" insidepara="" outsidepara=""/>
+      <ierule equalrule="i633=UE_NAS_Status.Access_Mode" insidepara="" outsidepara=""/>
+      <ierule equalrule="i927=UE_NAS_Status.Service_domain" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x988" msgname="Cell_Meas_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="Cell_Meas_Info">
+        <attr name="Report_type" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Meas_mode" type="UINT8#1" extend=""/>
+        <attr name="res" type="UINT8#1" extend=""/>
+        <attr name="IntraFreqResult" type="STRUCT#11" structname="IntraFreqResult_st" bitrelateattr="Report_type" bitrelatedetailinfo="valid(Report_type,value=51)"/>
+        <attr name="InterFreqResult" type="STRUCT#11" structname="InterFreqResult_st" bitrelateattr="Report_type" bitrelatedetailinfo="valid(Report_type,value=52)"/>
+      </struct>
+      <struct name="IntraFreqResult_st">
+        <attr name="Frequency" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="IntraFreqCellNum" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="DetectedCellNum" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="IntraMeasResult" type="ARRAY#12">
+          <arraydesc is_length_fix="NO" arraylength="" arraytype="STRUCT#11"/>
+        </attr>
+      </struct>
+      <struct name="IntraMeasResult_st">
+        <attr name="CellId" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Rsrp" type="INT16_REVERSE#3" extend=""/>
+        <attr name="Rsrq" type="INT16_REVERSE#3" extend=""/>
+        <attr name="Rssi" type="INT16_REVERSE#3" extend=""/>
+      </struct>
+      <struct name="InterFreqResult_st">
+        <attr name="InterFreqNum" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="InterFreqResultList" type="ARRAY#12">
+          <arraydesc is_length_fix="NO" arraylength="" arraytype="STRUCT#11"/>
+        </attr>
+      </struct>
+      <struct name="InterFreqResultList_st">
+        <attr name="Frequency" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="InterFreqCellNum" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="DetectedCellNum" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="InterMeasResult" type="ARRAY#12">
+          <arraydesc is_length_fix="NO" arraylength="" arraytype="STRUCT#11"/>
+        </attr>
+      </struct>
+      <struct name="InterMeasResult_st">
+        <attr name="CellId" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Rsrp" type="INT16_REVERSE#3" extend=""/>
+        <attr name="Rsrq" type="INT16_REVERSE#3" extend=""/>
+        <attr name="Rssi" type="INT16_REVERSE#3" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i671=Cell_Meas_Info.IntraMeasResult_st.Rsrp" insidepara="" outsidepara=""/>
+      <ierule equalrule="i670=Cell_Meas_Info.IntraMeasResult_st.CellId" insidepara="" outsidepara=""/>
+      <ierule equalrule="i668=Cell_Meas_Info.IntraFreqResult_st.Frequency" insidepara="" outsidepara=""/>
+      <ierule equalrule="i672=Cell_Meas_Info.IntraMeasResult_st.Rsrq" insidepara="" outsidepara=""/>
+      <ierule equalrule="i673=Cell_Meas_Info.IntraMeasResult_st.Rssi" insidepara="" outsidepara=""/>
+      <ierule equalrule="i669=Cell_Meas_Info.IntraFreqResult_0.Frequency" insidepara="" outsidepara=""/>
+      <ierule equalrule="i675=Cell_Meas_Info.InterFreqResultList_0.Frequency" insidepara="" outsidepara=""/>
+      <ierule equalrule="i676=Cell_Meas_Info.InterMeasResult.CellId" insidepara="" outsidepara=""/>
+      <ierule equalrule="i677=Cell_Meas_Info.InterMeasResult.Rsrp" insidepara="" outsidepara=""/>
+      <ierule equalrule="i678=Cell_Meas_Info.InterMeasResult.Rsrq" insidepara="" outsidepara=""/>
+      <ierule equalrule="i679=Cell_Meas_Info.InterMeasResult.Rssi" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30821006" msgname="TA_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="TA_Information">
+        <attr name="usSFN" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usSubFn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usTaValue" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i998=TA_Information.usTaValue" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x301a1001" msgname="AFC_Report_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="AFC_Report_Information">
+        <attr name="usSFN" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usSubFn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usPeriod" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="lCurFOAdj" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i1004=AFC_Report_Information.usPeriod" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1005=AFC_Report_Information.lCurFOAdj" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30521001" msgname="Aperiodic_CQI_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="Aperiodic_CQI_Information">
+        <attr name="usSFN" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usSubFn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="enAperMode" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usRI" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ucR2WbCqi" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ucR2SbCqi" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="25.0" arraytype="UINT16_REVERSE#5"/>
+        </attr>
+        <attr name="ucR2WbPmi" type="UINT8#1" extend=""/>
+        <attr name="ucR2SbPmi" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="25.0" arraytype="UINT8#1"/>
+        </attr>
+        <attr name="sR2WbCqiSnr1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="sR2WbCqiSnr2" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="sR2SbCqiSnr" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="50.0" arraytype="UINT16_REVERSE#5"/>
+        </attr>
+        <attr name="ucR1WbCqi" type="UINT8#1" extend=""/>
+        <attr name="ucR1SbCqi" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="25.0" arraytype="UINT8#1"/>
+        </attr>
+        <attr name="ucR1WbPmi" type="UINT8#1" extend=""/>
+        <attr name="ucR1SbPmi" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="25.0" arraytype="UINT8#1"/>
+        </attr>
+        <attr name="sR1WbCqiSnr" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="sR1SbCqiSnr" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="25.0" arraytype="UINT16_REVERSE#5"/>
+        </attr>
+        <attr name="usBestMNum" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ulCombinationrialIndex" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i992=Aperiodic_CQI_Information.enAperMode" insidepara="" outsidepara=""/>
+      <ierule equalrule="i868=Aperiodic_CQI_Information.usRI" insidepara="" outsidepara=""/>
+      <ierule equalrule="i871=Aperiodic_CQI_Information.ucR2WbCqi[0]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i872=Aperiodic_CQI_Information.ucR2WbCqi[1]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i869[i]=Aperiodic_CQI_Information.ucR2SbCqi[0][i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i870[i]=Aperiodic_CQI_Information.ucR2SbCqi[1][i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1025[i]=Aperiodic_CQI_Information.ucR1SbCqi[i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1024=Aperiodic_CQI_Information.ucR1WbCqi" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1023=Aperiodic_CQI_Information.ucR2WbPmi" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1022[i]=Aperiodic_CQI_Information.ucR2SbPmi[i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1021=Aperiodic_CQI_Information.ucR1WbPmi" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1020[i]=Aperiodic_CQI_Information.ucR1SbPmi[i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1026=Aperiodic_CQI_Information.sR1WbCqiSnr" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1027[i]=Aperiodic_CQI_Information.sR1SbCqiSnr[i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1028=Aperiodic_CQI_Information.sR2WbCqiSnr[0]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1029=Aperiodic_CQI_Information.sR2WbCqiSnr[1]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1030[i]=Aperiodic_CQI_Information.sR2SbCqiSnr[0][i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1031[i]=Aperiodic_CQI_Information.sR2SbCqiSnr[1][i]" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30521002" msgname="Periodic_CQI_Information">
+    <msgbody skip_length="" msg_length="">
+      <struct name="Periodic_CQI_Information">
+        <attr name="usSFN" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usSubFn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="enCurRptType" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="enPeriMode" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usCQIRptPeriod" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usLabelLen" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usBpNum" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usK" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usMRI" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usRI" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ucR2WbCqi1" type="UINT8#1" extend=""/>
+        <attr name="ucR2WbCqi2" type="UINT8#1" extend=""/>
+        <attr name="ucR2SbCqi" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="25.0" arraytype="UINT16_REVERSE#5"/>
+        </attr>
+        <attr name="ucR2WbPmi" type="UINT8#1" extend=""/>
+        <attr name="ucR2SbPmi" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="25.0" arraytype="UINT8#1"/>
+        </attr>
+        <attr name="sR2WbCqiSnr1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="sR2WbCqiSnr2" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="sR2SbCqiSnr" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="25.0" arraytype="UINT32_REVERSE#9"/>
+        </attr>
+        <attr name="ucR1WbCqi" type="UINT8#1" extend=""/>
+        <attr name="ucR1SbCqi" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="25.0" arraytype="UINT8#1"/>
+        </attr>
+        <attr name="ucR1WbPmi" type="UINT8#1" extend=""/>
+        <attr name="ucR1SbPmi" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="25.0" arraytype="UINT8#1"/>
+        </attr>
+        <attr name="sR1WbCqiSnr" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="sR1SbCqiSnr" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="25.0" arraytype="UINT16_REVERSE#5"/>
+        </attr>
+        <attr name="res" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i993=Periodic_CQI_Information.enPeriMode" insidepara="" outsidepara=""/>
+      <ierule equalrule="i866=Periodic_CQI_Information.usCQIRptPeriod" insidepara="" outsidepara=""/>
+      <ierule equalrule="i868=Periodic_CQI_Information.usRI" insidepara="" outsidepara=""/>
+      <ierule equalrule="i871=Periodic_CQI_Information.ucR2WbCqi[0]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i872=Periodic_CQI_Information.ucR2WbCqi[1]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i869[i]=Periodic_CQI_Information.ucR2SbCqi[0][i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i870[i]=Periodic_CQI_Information.ucR2SbCqi[1][i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1025[i]=Periodic_CQI_Information.ucR1SbCqi[i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1024=Periodic_CQI_Information.ucR1WbCqi" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1023=Periodic_CQI_Information.ucR2WbPmi" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1022[i]=Periodic_CQI_Information.ucR2SbPmi[i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1021=Periodic_CQI_Information.ucR1WbPmi" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1020[i]=Periodic_CQI_Information.ucR1SbPmi[i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1026=Periodic_CQI_Information.sR1WbCqiSnr" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1027[i]=Periodic_CQI_Information.sR1SbCqiSnr[i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1028=Periodic_CQI_Information.sR2WbCqiSnr[0]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1029=Periodic_CQI_Information.sR2WbCqiSnr[1]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1030[i]=Periodic_CQI_Information.sR2SbCqiSnr[0][i]" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1031[i]=Periodic_CQI_Information.sR2SbCqiSnr[1][i]" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30421003" msgname="PDSCH_Transmit_Mode_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PDSCH_Transmit_Mode_Info">
+        <attr name="usSFN" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usSubFn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="enTransMode" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i652=PDSCH_Transmit_Mode_Information.enTransMode" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x305a1001" msgname="Antenna_Corrsponding_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="Antenna_Corrsponding_Info">
+        <attr name="usSFN" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ucSubFn" type="UINT8#1" extend=""/>
+        <attr name="enRecCorr" type="UINT8#1" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i1019=Antenna_Corrsponding_Info.enRecCorr" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x1092" msgname="Content_Timer_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="Content_Timer_Info">
+        <attr name="SFN" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="SBFN" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="TimerStatus" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="RA_Signature1" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="RA_Signature2" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i772=Content_Timer_Info.RA_Signature" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1080=Content_Timer_Info.TimerStatus" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x1094" msgname="SR_Status_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="SR_Status_Info">
+        <attr name="SFN" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="SBFN" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="SRStatus" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i1081=SR_Status_Info.SRStatus" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0xd14" msgname="LTE_Neighbor_Cell_Reselect_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="LTE_Neighbor_Cell_Reselect_Info">
+        <attr name="enIntraFreqResel" type="UINT8#1" extend=""/>
+        <attr name="cQRxLevMin" type="INT8#7" extend=""/>
+        <attr name="cQRxLevMinOffset" type="INT8#7" extend=""/>
+        <attr name="cPMax" type="INT8#7" extend=""/>
+        <attr name="sQqualMin" type="INT16_REVERSE#3" extend=""/>
+        <attr name="sQqualMinOffset" type="INT16_REVERSE#3" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+    </iemap>
+  </msg>
+  <msg id="0xd19" msgname="UTRA_Neighbor_Cell_Reselect_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UTRA_Neighbor_Cell_Reselect_Info">
+      </struct>
+    </msgbody>
+    <iemap>
+    </iemap>
+  </msg>
+  <msg id="0xd1a" msgname="GERAN_Neighbor_Cell_Reselect_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="GERAN_Neighbor_Cell_Reselect_Info">
+      </struct>
+    </msgbody>
+    <iemap>
+    </iemap>
+  </msg>
+  <msg id="0xd1c" msgname="UE_LTE_DRX-Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_LTE_DRX-Info">
+        <attr name="DrxEnableFlg" type="UINT8#1" extend=""/>
+        <attr name="AnrEnableFlg" type="UINT8#1" extend=""/>
+        <attr name="ShortDrxCycleFlg" type="UINT8#1" extend=""/>
+        <attr name="OndurationTimer" type="UINT8#1" extend=""/>
+        <attr name="InactiveTimer" type="UINT8#1" extend=""/>
+        <attr name="RetransmissionTimer" type="UINT8#1" extend=""/>
+        <attr name="DrxStartOffset" type="UINT8#1" extend=""/>
+        <attr name="LongDrxCycle" type="UINT8#1" extend=""/>
+        <attr name="ShortDrxCycle" type="UINT8#1" extend=""/>
+        <attr name="res" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i924=UE_LTE_DRX_Info.DrxEnableFlg" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1068=UE_LTE_DRX_Info.DrxEnableFlg" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1069=UE_LTE_DRX_Info.AnrEnableFlg" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1085=UE_LTE_DRX_Info.ShortDrxCycleFlg" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1071=UE_LTE_DRX_Info.OndurationTimer" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1072=UE_LTE_DRX_Info.InactiveTimer" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1073=UE_LTE_DRX_Info.RetransmissionTimer" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1074=UE_LTE_DRX_Info.DrxStartOffset" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1075=UE_LTE_DRX_Info.LongDrxCycle" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1076=UE_LTE_DRX_Info.ShortDrxCycle" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30721001" msgname="DRX_Status_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="DRX_Status_Info">
+        <attr name="usSFN" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usSubFn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="enDrxCycleType" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="enOndurationTimerState" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="enInactivityTimer" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i1077=DRX_Status_information.enDrxCycleType" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1078=DRX_Status_information.enOndurationTimerState" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1079=DRX_Status_information.enInactivityTimer" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x30821007" msgname="PUSCH_HARQ_Bler_Stastic_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="PUSCH_HARQ_Bler_Stastic_Info">
+        <attr name="ulTransSuccNum0" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulTransSuccNum1" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulTransSuccNum2" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulTransSuccNum3" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulTransSuccNum4" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulReTransFailNum" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i1050=PUSCH_HARQ_Bler_Stastic_Information.ulTransSuccNum0" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1051=PUSCH_HARQ_Bler_Stastic_Information.ulTransSuccNum1" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1052=PUSCH_HARQ_Bler_Stastic_Information.ulTransSuccNum2" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1053=PUSCH_HARQ_Bler_Stastic_Information.ulTransSuccNum3" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1054=PUSCH_HARQ_Bler_Stastic_Information.ulTransSuccNum4" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x1c17" msgname="UE_TDS_BASIC_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_TDS_BASIC_Info">
+        <attr name="enRat" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="Cell_Id" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="aucCellIdentity" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="Rsv" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Cell_usUarfcn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="PlmnId[0]" type="UINT8#1" extend=""/>
+        <attr name="PlmnId[1]" type="UINT8#1" extend=""/>
+        <attr name="PlmnId[2]" type="UINT8#1" extend=""/>
+        <attr name="reserved" type="UINT8#1" extend=""/>
+        <attr name="Lac" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Rac" type="UINT8#1" extend=""/>
+        <attr name="reserved" type="UINT8#1" extend=""/>
+        <attr name="SrncIdentiy" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="reserved" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Max_Power" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="RRC_Current_Main_State" type="UINT8#1" extend=""/>
+        <attr name="RRC_Last_Main_State" type="UINT8#1" extend=""/>
+        <attr name="RRC_Current_Sub_State" type="UINT8#1" extend=""/>
+        <attr name="RRC_Last_Sub_State" type="UINT8#1" extend=""/>
+        <attr name="T3212" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i87=UE_TDS_BASIC_Info.Cell_Id" insidepara="" outsidepara=""/>
+      <ierule equalrule="i86=UE_TDS_BASIC_Info.Cell_usUarfcn" insidepara="" outsidepara=""/>
+      <ierule equalrule="i81=UE_UE_TDS_BASIC_Info.{PlmnId[0]+PlmnId[1]}" insidepara="" outsidepara=""/>
+      <ierule equalrule="i82=UE_UE_TDS_BASIC_Info.{PlmnId[1]+PlmnId[2]}" insidepara="" outsidepara=""/>
+      <ierule equalrule="i83=UE_TDS_BASIC_Info.Lac" insidepara="" outsidepara=""/>
+      <ierule equalrule="i84=UE_TDS_BASIC_Info.Rac" insidepara="" outsidepara=""/>
+      <ierule equalrule="i109=UE_TDS_BASIC_Info.Max_Power" insidepara="" outsidepara=""/>
+      <ierule equalrule="i88=UE_TDS_BASIC_Info.T3212" insidepara="" outsidepara=""/>
+      <ierule equalrule="i295=UE_TDS_BASIC_Info.RRC_Current_Sub_State" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x1c57" msgname="UE_TDS_Throughput">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_TDS_Throughput">
+        <attr name="ulRlcUlThp" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulRlcDlThp" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulPdcpUlThp" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulPdcpDlThp" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAppUlThp" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulAppDlThp" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="ulHsdschThp" type="UINT32_REVERSE#9" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i258=UE_TDS_Throughput.ulRlcUlThp" insidepara="" outsidepara=""/>
+      <ierule equalrule="i259=UE_TDS_Throughput.ulRlcDlThp" insidepara="" outsidepara=""/>
+      <ierule equalrule="i282=UE_TDS_Throughput.ulPdcpUlThp" insidepara="" outsidepara=""/>
+      <ierule equalrule="i283=UE_TDS_Throughput.ulPdcpDlThp" insidepara="" outsidepara=""/>
+      <ierule equalrule="i416=UE_TDS_Throughput.ulHsdschThp" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x1477" msgname="UE_TDS_Cell_Meas_Info">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_TDS_Cell_Meas_Info">
+        <attr name="Meas_mode" type="UINT8#1" extend=""/>
+        <attr name="Valid_Num" type="UINT8#1" extend=""/>
+        <attr name="Reserved" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="stMeasResult" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="64.0" arraytype="STRUCT#11"/>
+        </attr>
+      </struct>
+      <struct name="stMeasResult">
+        <attr name="Frequency" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="cellparameterId" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="rscpLevel" type="UINT8#1" extend=""/>
+        <attr name="resv" type="UINT8#1" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i173=UE_TDS_Cell_Meas_Info.stMeasResult.cellparameterId" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x70011001" msgname="TPHY_DT_UE_PCCPCH_MEAS_INFO">
+    <msgbody skip_length="" msg_length="">
+      <struct name="TPHY_DT_UE_PCCPCH_MEAS_INFO">
+        <attr name="usTdsSfn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="sPccpchRscp" type="INT16_REVERSE#3" extend=""/>
+        <attr name="sPccpchSir" type="INT16_REVERSE#3" extend=""/>
+        <attr name="usRsvd" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i166=TPHY_DT_UE_PCCPCH_MEAS_INFO.usTdsSfn" insidepara="" outsidepara=""/>
+      <ierule equalrule="i168=TPHY_DT_UE_PCCPCH_MEAS_INFO.sPccpchRscp" insidepara="" outsidepara=""/>
+      <ierule equalrule="i170=TPHY_DT_UE_PCCPCH_MEAS_INFO.sPccpchSir" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x70011002" msgname="TPHY_DT_UE_TS_INFO">
+    <msgbody skip_length="" msg_length="">
+      <struct name="TPHY_DT_UE_TS_INFO">
+        <attr name="usTdsSfn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsIscp_ts0" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsIscp_ts1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsIscp_ts2" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsIscp_ts3" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsIscp_ts4" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsIscp_ts5" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsIscp_ts6" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usDpchTsBitMap" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsDpchRscp_ts0" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsDpchRscp_ts1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsDpchRscp_ts2" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsDpchRscp_ts3" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsDpchRscp_ts4" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsDpchRscp_ts5" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsDpchRscp_ts6" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsDpchSir_ts0" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsDpchSir_ts1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsDpchSir_ts2" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsDpchSir_ts3" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsDpchSir_ts4" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsDpchSir_ts5" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsDpchSir_ts6" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usPdschTsBitMap" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usRsvd" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsPdschRscp_ts0" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsPdschRscp_ts1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsPdschRscp_ts2" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsPdschRscp_ts3" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsPdschRscp_ts4" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsPdschRscp_ts5" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsPdschRscp_ts6" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsPdschSir_ts0" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsPdschSir_ts1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsPdschSir_ts2" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsPdschSir_ts3" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsPdschSir_ts4" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsPdschSir_ts5" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsPdschSir_ts6" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsTxPower_ts0" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsTxPower_ts1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsTxPower_ts2" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsTxPower_ts3" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsTxPower_ts4" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsTxPower_ts5" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="ausTsTxPower_ts6" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i186=TPHY_DT_UE_PCCPCH_MEAS_INFO.usTdsSfn" insidepara="（不确定）" outsidepara=""/>
+      <ierule equalrule="i192=TPHY_DT_UE_TS_INFO.ausTsIscp_ts0" insidepara="" outsidepara=""/>
+      <ierule equalrule="i193=TPHY_DT_UE_TS_INFO.ausTsIscp_ts1" insidepara="" outsidepara=""/>
+      <ierule equalrule="i194=TPHY_DT_UE_TS_INFO.ausTsIscp_ts2" insidepara="" outsidepara=""/>
+      <ierule equalrule="i195=TPHY_DT_UE_TS_INFO.ausTsIscp_ts3" insidepara="" outsidepara=""/>
+      <ierule equalrule="i196=TPHY_DT_UE_TS_INFO.ausTsIscp_ts4" insidepara="" outsidepara=""/>
+      <ierule equalrule="i197=TPHY_DT_UE_TS_INFO.ausTsIscp_ts5" insidepara="" outsidepara=""/>
+      <ierule equalrule="i198=TPHY_DT_UE_TS_INFO.ausTsIscp_ts6" insidepara="" outsidepara=""/>
+      <ierule equalrule="i187=TPHY_DT_UE_TS_INFO.ausTsDpchRscp_ts2" insidepara="" outsidepara=""/>
+      <ierule equalrule="i188=TPHY_DT_UE_TS_INFO.ausTsDpchRscp_ts3" insidepara="" outsidepara=""/>
+      <ierule equalrule="i189=TPHY_DT_UE_TS_INFO.ausTsDpchRscp_ts4" insidepara="" outsidepara=""/>
+      <ierule equalrule="i190=TPHY_DT_UE_TS_INFO.ausTsDpchRscp_ts5" insidepara="" outsidepara=""/>
+      <ierule equalrule="i191=TPHY_DT_UE_TS_INFO.ausTsDpchRscp_ts6" insidepara="" outsidepara=""/>
+      <ierule equalrule="i199=TPHY_DT_UE_TS_INFO.ausTsDpchSir_ts0" insidepara="" outsidepara=""/>
+      <ierule equalrule="i200=TPHY_DT_UE_TS_INFO.ausTsDpchSir_ts1" insidepara="" outsidepara=""/>
+      <ierule equalrule="i201=TPHY_DT_UE_TS_INFO.ausTsDpchSir_ts2" insidepara="" outsidepara=""/>
+      <ierule equalrule="i202=TPHY_DT_UE_TS_INFO.ausTsDpchSir_ts3" insidepara="" outsidepara=""/>
+      <ierule equalrule="i203=TPHY_DT_UE_TS_INFO.ausTsDpchSir_ts4" insidepara="" outsidepara=""/>
+      <ierule equalrule="i204=TPHY_DT_UE_TS_INFO.ausTsDpchSir_ts5" insidepara="" outsidepara=""/>
+      <ierule equalrule="i205=TPHY_DT_UE_TS_INFO.ausTsDpchSir_ts6" insidepara="" outsidepara=""/>
+      <ierule equalrule="i361=TPHY_DT_UE_TS_INFO.ausTsPdschRscp_ts2" insidepara="" outsidepara=""/>
+      <ierule equalrule="i362=TPHY_DT_UE_TS_INFO.ausTsPdschRscp_ts3" insidepara="" outsidepara=""/>
+      <ierule equalrule="i363=TPHY_DT_UE_TS_INFO.ausTsPdschRscp_ts4" insidepara="" outsidepara=""/>
+      <ierule equalrule="i364=TPHY_DT_UE_TS_INFO.ausTsPdschRscp_ts5" insidepara="" outsidepara=""/>
+      <ierule equalrule="i365=TPHY_DT_UE_TS_INFO.ausTsPdschRscp_ts6" insidepara="" outsidepara=""/>
+      <ierule equalrule="i371=TPHY_DT_UE_TS_INFO.ausTsPdschSir_ts2" insidepara="" outsidepara=""/>
+      <ierule equalrule="i372=TPHY_DT_UE_TS_INFO.ausTsPdschSir_ts3" insidepara="" outsidepara=""/>
+      <ierule equalrule="i373=TPHY_DT_UE_TS_INFO.ausTsPdschSir_ts4" insidepara="" outsidepara=""/>
+      <ierule equalrule="i374=TPHY_DT_UE_TS_INFO.ausTsPdschSir_ts5" insidepara="" outsidepara=""/>
+      <ierule equalrule="i375=TPHY_DT_UE_TS_INFO.ausTsPdschSir_ts6" insidepara="" outsidepara=""/>
+      <ierule equalrule="i213=TPHY_DT_UE_TS_INFO.ausTsTxPower_ts0" insidepara="" outsidepara=""/>
+      <ierule equalrule="i214=TPHY_DT_UE_TS_INFO.ausTsTxPower_ts1" insidepara="" outsidepara=""/>
+      <ierule equalrule="i215=TPHY_DT_UE_TS_INFO.ausTsTxPower_ts2" insidepara="" outsidepara=""/>
+      <ierule equalrule="i216=TPHY_DT_UE_TS_INFO.ausTsTxPower_ts3" insidepara="" outsidepara=""/>
+      <ierule equalrule="i217=TPHY_DT_UE_TS_INFO.ausTsTxPower_ts4" insidepara="" outsidepara=""/>
+      <ierule equalrule="i218=TPHY_DT_UE_TS_INFO.ausTsTxPower_ts5" insidepara="" outsidepara=""/>
+      <ierule equalrule="i219=TPHY_DT_UE_TS_INFO.ausTsTxPower_ts6" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x70011003" msgname="TPHY_DT_UE_DPCH_INFO">
+    <msgbody skip_length="" msg_length="">
+      <struct name="TPHY_DT_UE_DPCH_INFO">
+        <attr name="usTdsSfn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="sDpchRscp" type="INT16_REVERSE#3" extend=""/>
+        <attr name="sTargetDpchSir" type="INT16_REVERSE#3" extend=""/>
+        <attr name="usSf" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usOvsfID" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usMidambleID" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="sDchSir" type="INT16_REVERSE#3" extend=""/>
+        <attr name="usTpcDl" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usTpcUl" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usTpcStep" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usTimeTsCnt" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i381=TPHY_DT_UE_DPCH_INFO.usTdsSfn" insidepara="(不确定)" outsidepara=""/>
+      <ierule equalrule="i353=TPHY_DT_UE_DPCH_INFO.sDpchRscp" insidepara="(不确定)" outsidepara=""/>
+      <ierule equalrule="i154=TPHY_DT_UE_DPCH_INFO.sTargetDpchSir" insidepara="" outsidepara=""/>
+      <ierule equalrule="i96=TPHY_DT_UE_DPCH_INFO.usSf" insidepara="0:Search for DwPTS;1: Scrambling and basic midamble code identification;2: Control multi-frame synchronization;3: Read BCH" outsidepara=""/>
+      <ierule equalrule="i96=TPHY_DT_UE_DPCH_INFO.usMidambleID" insidepara="0:Search for DwPTS;1: Scrambling and basic midamble code identification;2: Control multi-frame synchronization;3: Read BCH" outsidepara=""/>
+      <ierule equalrule="i161=TPHY_DT_UE_DPCH_INFO.sDchSir" insidepara="" outsidepara=""/>
+      <ierule equalrule="i155=TPHY_DT_UE_DPCH_INFO.usTpcDl" insidepara="" outsidepara=""/>
+      <ierule equalrule="i156=TPHY_DT_UE_DPCH_INFO.usTpcDl" insidepara="" outsidepara=""/>
+      <ierule equalrule="i157=TPHY_DT_UE_DPCH_INFO.usTpcUl" insidepara="" outsidepara=""/>
+      <ierule equalrule="i158=TPHY_DT_UE_DPCH_INFO.usTpcUl" insidepara="" outsidepara=""/>
+      <ierule equalrule="i152=TPHY_DT_UE_DPCH_INFO.usTpcStep" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x70011004" msgname="TPHY_DT_UE_HS_SICH_INFO">
+    <msgbody skip_length="" msg_length="">
+      <struct name="TPHY_DT_UE_HS_SICH_INFO">
+        <attr name="usTdsSfn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usCqiOutTbi" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usCqiOutMod" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i394=TPHY_DT_UE_HS_SICH_INFO.usTdsSfn" insidepara="" outsidepara=""/>
+      <ierule equalrule="i396=TPHY_DT_UE_HS_SICH_INFO.usCqiOutTbi" insidepara="" outsidepara=""/>
+      <ierule equalrule="i396=TPHY_DT_UE_HS_SICH_INFO.usCqiOutMod" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x70011005" msgname="TPHY_DT_UE_HSDPA_INFO">
+    <msgbody skip_length="" msg_length="">
+      <struct name="TPHY_DT_UE_HSDPA_INFO">
+        <attr name="usTdsSfn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usHsdschAckRate" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usHsdschNackRate" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="usHsDschBler" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i381=TPHY_DT_UE_DPCH_INFO.usTdsSfn" insidepara="" outsidepara=""/>
+      <ierule equalrule="i422=TPHY_DT_UE_HSDPA_INFO.usHsdschAckRate" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1132=TPHY_DT_UE_HSDPA_INFO.usHsdschNackRate" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1131=TPHY_DT_UE_HSDPA_INFO.usHsDschBler" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x19a2" msgname="UE_LRRC_TO_TRRC_Meas">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_LRRC_TO_TRRC_Meas">
+        <attr name="res1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Meas_mode" type="UINT8#1" extend=""/>
+        <attr name="res2" type="UINT8#1" extend=""/>
+        <attr name="stMeasResult" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="4.0" arraytype="STRUCT#11"/>
+        </attr>
+      </struct>
+      <struct name="stMeasResult">
+        <attr name="Valid_Num" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Single_EUTRAN_meas" type="STRUCT#0" extend=""/>
+      </struct>
+      <struct name="Single_EUTRAN_meas">
+        <attr name="earfcn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Valid_Cell_Num" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="cell_meas_result" type="ARRAY#12">
+          <arraydesc is_length_fix="NO" arraylength="" arraytype="STRUCT#11"/>
+        </attr>
+      </struct>
+      <struct name="cell_meas_result">
+        <attr name="cellid" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Rsrp" type="INT16_REVERSE#3" extend=""/>
+        <attr name="Rsrq" type="INT16_REVERSE#3" extend=""/>
+        <attr name="Rssi" type="INT16_REVERSE#3" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i1113=UE_LRRC_TO_TRRC_Meas.stMeasResult.Single_EUTRAN_meas.earfcn" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1110=UE_LRRC_TO_TRRC_Meas.stMeasResult.Single_EUTRAN_meas.cell_meas_result.cellid" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1111=UE_LRRC_TO_TRRC_Meas.stMeasResult.Single_EUTRAN_meas.cell_meas_result.Rsrp" insidepara="" outsidepara=""/>
+      <ierule equalrule="i1112=UE_LRRC_TO_TRRC_Meas.stMeasResult.Single_EUTRAN_meas.cell_meas_result.Rsrq" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x19ed" msgname="UE_TRRC_TO_LRRC_Meas">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_TRRC_TO_LRRC_Meas">
+        <attr name="res1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Meas_mode" type="UINT8#1" extend=""/>
+        <attr name="res2" type="UINT8#1" extend=""/>
+        <attr name="stMeasResult" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="Max_Num4" arraytype="STRUCT#11"/>
+        </attr>
+      </struct>
+      <struct name="stMeasResult">
+        <attr name="Valid_Num" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Single_EUTRAN_meas" type="STRUCT#0" extend=""/>
+      </struct>
+      <struct name="Single_EUTRAN_meas">
+        <attr name="earfcn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Valid_Cell_Num" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="cell_meas_result" type="ARRAY#12">
+          <arraydesc is_length_fix="NO" arraylength="Max_Num32" arraytype="STRUCT#11"/>
+        </attr>
+      </struct>
+      <struct name="cell_meas_result_st">
+        <attr name="cellid" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Reserved" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Rsrp" type="INT16_REVERSE#3" extend=""/>
+        <attr name="Ecno" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+    </iemap>
+  </msg>
+  <msg id="0x18ae" msgname="UE_GRRC_TO_TRRC_Meas">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_GRRC_TO_TRRC_Meas">
+        <attr name="res" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="stMeasResult" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="4.0" arraytype="STRUCT#11"/>
+        </attr>
+      </struct>
+      <struct name="stMeasResult">
+        <attr name="Valid_Afcn_Num" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Single_meas_result" type="STRUCT#0" extend=""/>
+      </struct>
+      <struct name="Single_meas_result">
+        <attr name="arfcn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Bandindex" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Rssi" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res2" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i232=UE_GRRC_TO_TRRC_Meas.stMeasResult.Single_meas_result.arfcn" insidepara="" outsidepara=""/>
+      <ierule equalrule="i227=UE_GRRC_TO_TRRC_Meas.stMeasResult.Single_meas_result.Bandindex" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x1880" msgname="UE_TRRC_TO_GRRC_Meas">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_TRRC_TO_GRRC_Meas">
+        <attr name="res" type="UINT32_REVERSE#9" extend=""/>
+        <attr name="stMeasResult" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="9.0" arraytype="STRUCT#11"/>
+        </attr>
+      </struct>
+      <struct name="stMeasResult">
+        <attr name="Valid_Num" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Uarfcn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Rssi" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res2" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Valid_Cell_Num" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="cell_meas_result" type="ARRAY#12">
+          <arraydesc is_length_fix="NO" arraylength="" arraytype="STRUCT#11"/>
+        </attr>
+      </struct>
+      <struct name="cell_meas_result">
+        <attr name="cellid" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Rscp" type="UINT16_REVERSE#5" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+      <ierule equalrule="i220=UE_TRRC_TO_GRRC_Meas.stMeasResult.Uarfcn" insidepara="" outsidepara=""/>
+    </iemap>
+  </msg>
+  <msg id="0x12bc" msgname="UE_LRRC_TO_GSM_Meas">
+    <msgbody skip_length="" msg_length="">
+      <struct name="UE_LRRC_TO_GSM_Meas">
+        <attr name="res1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Meas_mode" type="UINT8#1" extend=""/>
+        <attr name="res2" type="UINT8#1" extend=""/>
+        <attr name="MeasResult" type="ARRAY#12">
+          <arraydesc is_length_fix="YES" arraylength="4.0" arraytype="STRUCT#11"/>
+        </attr>
+      </struct>
+      <struct name="MeasResult_st">
+        <attr name="Valid_Num" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="res1" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="earfcn" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Valid_Cell_Num" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="cell_meas_result" type="ARRAY#12">
+          <arraydesc is_length_fix="NO" arraylength="" arraytype="STRUCT#11"/>
+        </attr>
+      </struct>
+      <struct name="cell_meas_result_st">
+        <attr name="cellid" type="UINT16_REVERSE#5" extend=""/>
+        <attr name="Rsrp" type="INT16_REVERSE#3" extend=""/>
+        <attr name="Rsrq" type="INT16_REVERSE#3" extend=""/>
+        <attr name="Rssi" type="INT16_REVERSE#3" extend=""/>
+      </struct>
+    </msgbody>
+    <iemap>
+    </iemap>
+  </msg>
+</all>

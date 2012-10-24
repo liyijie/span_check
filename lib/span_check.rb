@@ -27,12 +27,14 @@ module SpanCheck
   end
 
   #遍历文件夹下指定类型的文件
-  def self.list_files(file_path, file_type)
+  def self.list_files(file_path, file_types)
     files = []
     if (File.directory? file_path)
       Dir.foreach(file_path) do |file|
-        if file=~/.#{file_type}$/
-          files << "#{file_path}/#{file}"
+        file_types.each do |file_type|
+          if file=~/.#{file_type}$/
+            files << "#{file_path}/#{file}"
+          end
         end
       end
     end 
@@ -41,12 +43,14 @@ module SpanCheck
 
 end
 
-ieconfig_files = SpanCheck::list_files("../doc/ieconfig", "xls")
+
+file_types = ["xls", "xlsx"]
+ieconfig_files = SpanCheck::list_files("../doc/ieconfig", file_types)
 ieconfig = SpanCheck::IeconfigParse.instance
 ieconfig.load(ieconfig_files)
 ieconfig.parse
 
-iemap_files = SpanCheck::list_files("../doc/iemap", "xls")
+iemap_files = SpanCheck::list_files("../doc/iemap", file_types)
 puts "processing #{iemap_files} ......"
 ieconvert = SpanCheck::IeExpConvert.new(iemap_files)
 ieconvert.parse

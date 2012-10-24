@@ -60,7 +60,7 @@ module SpanCheck
       e.instruct! :xml,:version =>'1.0',:encoding => 'utf-8'
       e.LogFormat("Version" => "10000") do
         @logline_map.each do |line_index, line_name|
-          e.LogLine("Name" => line_name, "line_index" => line_index) do
+          e.LogLine("Name" => line_name, "Index" => line_index) do
             items = line_items_map[line_index]
             items ||= []
             items.each do |item|

@@ -28,7 +28,7 @@ module SpanCheck
       def initialize(msginfo)
         infos = msginfo.split(/\(|\)/)
         @msgname = infos[0]
-        @msgid = infos[1]
+        @msgid = infos[1].downcase
         @structs = []
         @ie_rules = []
       end

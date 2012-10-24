@@ -3,10 +3,10 @@ module SpanCheck::AttrParse
   class StructA < Base
     def write_xml_element e
       if @bitrelatedetailinfo.empty?
-        e.attr("name" => @name, "type" => attr_type, "strcutname" =>@structname)
+        e.attr("name" => @name, "type" => attr_type, "structname" =>@structname)
       else
         bitrelateattr = @bitrelatedetailinfo.split(/\(|,/)[1] unless @bitrelatedetailinfo.empty?
-        e.attr("name" => @name, "type" => attr_type, "strcutname" =>@structname,  
+        e.attr("name" => @name, "type" => attr_type, "structname" =>@structname,  
           "bitrelateattr" => bitrelateattr, "bitrelatedetailinfo" => @bitrelatedetailinfo)     
       end
     end

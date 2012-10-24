@@ -30,9 +30,10 @@ module SpanCheck
           row = SpanCheck::row_format(raw_row)
           contentmap = {}
           @head.each_with_index do |key, i|
-            contentmap[key] = row[i]
+            contentmap[key] = row[i] unless key.empty?
           end
           longname = contentmap["name"]
+          next if longname.empty?
           shortname = @ielist.get_shortname longname
           if shortname.nil?
             shortname = @ielist.generate_ie_shortname(longname, to_list_map(contentmap))
@@ -70,7 +71,7 @@ module SpanCheck
       doc.search("EUnit").each do |ie|
         contentmap = {}
         ie.each do |key, value|
-          contentmap[key] = value
+          contentmap[key] = value unless key.empty?
         end
         shortname = contentmap["name"]
         longname = @ielist.get_longname(shortname)
