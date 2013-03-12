@@ -43,6 +43,9 @@ module SpanCheck
 
       def write_xml_element e
         e.msg("id" => @msgid, "msgname" => @msgname) do
+          if (@msgname =~ / /)
+            Logger.instance.log "error 3: \"#{@msgname}\" should not has white space in stuct name"
+          end
           e.msgbody("skip_length" => "", "msg_length" => "") do
             @structs.each do |struct_parse|
               struct_parse.write_xml_element e
@@ -57,7 +60,7 @@ module SpanCheck
       end
     end
 
-    IEMAP_KEY = "IEMap"
+    IEMAP_KEY = "IEMAP"
     def initialize(xml_files)
       @xml_files = xml_files
     end
@@ -81,7 +84,7 @@ module SpanCheck
               next if raw_row.nil?
               row = SpanCheck::row_format raw_row
               keyname = row[0]
-              if keyname == IEMAP_KEY
+              if keyname.upcase == IEMAP_KEY
                 step = 2
               elsif !keyname.empty?
                 struct_name = keyname
@@ -97,6 +100,10 @@ module SpanCheck
               #strcut
               if step == 1
                 next if row[2].nil? || row[2].empty?
+                if (xml_file =~ /LTE/i)
+                  row[2] = AttrParse.convert_reverse row[2]
+                  row[8] = AttrParse.convert_reverse row[8]
+                end
                 attr_parse = AttrParse.create(row)
                 @recent_struct << attr_parse
               #IEMap
