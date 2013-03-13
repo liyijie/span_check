@@ -95,6 +95,8 @@ module SpanCheck
         type_int = 12
       elsif type == 'choice'
         type_int = 13
+      else
+        type_int = -1
       end
     end
   end

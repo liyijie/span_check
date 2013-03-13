@@ -8,12 +8,20 @@ module SpanCheck::AttrParse
           "is_length_fix" => @is_length_fix,
           "relateattr" => @relateattr,
           "arraylength" => @arraylength,
-          "arraytype" => "#{@arraytype.upcase}##{type_int}",
+          "arraytype" => "#{@arraytype.upcase}#{get_arraytype_str(type_int)}",
           "structname" => @structname)
       end
       if @structname.empty? && @arraytype.upcase == "STRUCT"
         Logger.instance.log "error struct: \"#{@name}\" structname can not be empty"
       end
+    end
+
+    def get_arraytype_str type_int
+      type_str = ''
+      if type_int != -1
+        type_str = "##{@type_int}"
+      end
+      type_str
     end
   end
 end
