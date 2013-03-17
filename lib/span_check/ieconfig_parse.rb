@@ -1,5 +1,7 @@
 # encoding: utf-8
 require "singleton"
+require "roo"
+require "builder"
 
 module SpanCheck
 
@@ -22,18 +24,22 @@ module SpanCheck
       @logparser.load_old_log
 
       configfiles.each do |configfile|
-        workbook = Spreadsheet::ParseExcel.parse(configfile)
-        worksheet = workbook.worksheet(1)
-        @head = SpanCheck::row_format worksheet.row(0)
+        workbook = Roo::Spreadsheet.open(configfile)
+        worksheet = workbook.sheet(1)
+        @head = []
+        (1..worksheet.last_column).each do |col_index|
+          if worksheet.cell(1,col_index)
+            @head[col_index-1] = worksheet.cell(1,col_index).to_s
+          end
+        end
 
-        worksheet.each(1) do |raw_row|
-          row = SpanCheck::row_format(raw_row)
+        (2..worksheet.last_row).each do |row_index|
           contentmap = {}
           @head.each_with_index do |key, i|
-            contentmap[key] = row[i] unless key.empty?
+            contentmap[key] = worksheet.cell(row_index, i+1) unless key.empty?
           end
           longname = contentmap["name"]
-          next if longname.empty?
+          next if longname.nil? || longname.empty?
           shortname = @ielist.get_shortname longname
           if shortname.nil?
             shortname = @ielist.generate_ie_shortname(longname, to_list_map(contentmap))
@@ -45,6 +51,26 @@ module SpanCheck
           is_group = contentmap["paramcount1"].to_i > 0
           @logparser.update_logitem shortname, is_group
         end
+
+        # worksheet.each(1) do |raw_row|
+        #   row = SpanCheck::row_format(raw_row)
+        #   contentmap = {}
+        #   @head.each_with_index do |key, i|
+        #     contentmap[key] = row[i] unless key.empty?
+        #   end
+        #   longname = contentmap["name"]
+        #   next if longname.empty?
+        #   shortname = @ielist.get_shortname longname
+        #   if shortname.nil?
+        #     shortname = @ielist.generate_ie_shortname(longname, to_list_map(contentmap))
+        #   end
+        #   contentmap["shortname"] = shortname
+        #   @ieconfigs[contentmap["name"]] = contentmap
+        #   @ielist.update(to_list_map(contentmap))
+
+        #   is_group = contentmap["paramcount1"].to_i > 0
+        #   @logparser.update_logitem shortname, is_group
+        # end
       end
     end
 

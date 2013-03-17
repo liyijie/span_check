@@ -1,11 +1,7 @@
 # encoding: utf-8
-# require 'spreadsheet'
-require 'parseexcel'
-require "parseexcel/parser"
-require 'builder' 
+# require 'builder' 
 require "nokogiri"
 
-# require "span_check/ie_exp_convert"
 
 module SpanCheck
   autoload :AttrParse, "./span_check/attr_parse"
@@ -19,7 +15,7 @@ module SpanCheck
   def self.row_format row
     rlt = []
     row.each do |cell|
-      content = cell.nil? ? "" : cell.to_s('utf-8')
+      content = cell.nil? ? "" : cell.to_s.encode('utf-8')
       rlt << content
     end
     

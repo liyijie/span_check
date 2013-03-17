@@ -1,4 +1,7 @@
 # encoding: utf-8
+
+require "roo"
+
 module SpanCheck
   class IeExpConvert
 
@@ -66,21 +69,24 @@ module SpanCheck
     end
 
     def parse
-      # Spreadsheet.client_encoding = "UTF-8"
       tempstring = ""
       e = Builder::XmlMarkup.new(:target => tempstring, :indent => 2)
       e.instruct! :xml,:version =>'1.0',:encoding => 'utf-8'
       e.all do
         @xml_files.each do |xml_file|
-          workbook = Spreadsheet::ParseExcel.parse(xml_file)
-          sheet_count = workbook.sheet_count
+          workbook = Roo::Spreadsheet.open(xml_file)
+
+          worksheets = workbook.sheets
+          sheet_count = workbook.sheets.size
           (0..sheet_count-2).each do |count|
-            worksheet = workbook.worksheet count
+            worksheet = workbook.sheet count
+
             skip = 1
             struct_name = ""
             step = 1;
 
-            worksheet.each(skip) do |raw_row|
+            (2..worksheet.last_row).each do |row_index|
+              raw_row = worksheet.row(row_index)
               next if raw_row.nil?
               row = SpanCheck::row_format raw_row
               keyname = row[0]
